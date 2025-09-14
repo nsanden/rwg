@@ -142,6 +142,17 @@ export default function Homepage({ auth }: HomepageProps) {
                         />
                     </div>
 
+                    {/* Video Player Ad - Matches legacy "RWG_Under_Video_Player" */}
+                    <div className="mb-8">
+                        <div id="RWG_Under_Video_Player" className="text-center mb-4" style={{ height: '100px', marginBottom: '10px', overflow: 'hidden' }}>
+                            <AdSpace
+                                adId="div-gpt-ad-1619013591139-0"
+                                className="google-ad-container"
+                                style={{ height: '100px', maxWidth: '320px', marginBottom: '10px', overflow: 'hidden', margin: '0 auto' }}
+                            />
+                        </div>
+                    </div>
+
                     {/* Middle Mobile Ad */}
                     <div className="lg:hidden mb-8">
                         <AdSpace

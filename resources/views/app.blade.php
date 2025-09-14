@@ -23,50 +23,19 @@
 
         <!-- Preload critical assets are handled by Vite automatically -->
 
-        <!-- jQuery (required for Papaya Ads) -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- BTLoader for ad optimization -->
+        <script src="https://btloader.com/tag?o=4905162506764288&upapi=true" async></script>
 
-        <!-- Initialize Google AdManager first -->
+        <!-- Papaya Ads - Updated to match legacy version -->
+        <script src="https://www.papayads.net/clnt/randomwordgenerator/v51/adtags.js" type="text/javascript"></script>
+
+        <!-- Initialize Google AdManager -->
         <script>
             window.googletag = window.googletag || {cmd: []};
         </script>
 
         <!-- Google AdManager Scripts -->
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-
-        <!-- Load and initialize Papaya Ads after DOM is ready -->
-        <script>
-        $(document).ready(function() {
-            // Initialize AdManager first with safety check
-            function initializeAdManager() {
-                googletag.cmd.push(function() {
-                    if (googletag && googletag.pubads) {
-                        try {
-                            googletag.pubads().enableSingleRequest();
-                            googletag.pubads().collapseEmptyDivs();
-                            googletag.enableServices();
-                            console.log('Google AdManager initialized');
-                        } catch (e) {
-                            console.log('Error initializing Google AdManager:', e);
-                        }
-                    }
-                });
-            }
-
-            // Load Papaya Ads script with better error handling
-            $.getScript('https://papayads.net/clnt/randomwordgenerator/v13/adtags.js')
-                .done(function() {
-                    console.log('Papaya Ads script loaded successfully');
-                    // Wait a bit for Papaya to initialize before starting AdManager
-                    setTimeout(initializeAdManager, 500);
-                })
-                .fail(function() {
-                    console.log('Papaya Ads script failed to load');
-                    // Initialize AdManager anyway after a delay
-                    setTimeout(initializeAdManager, 1000);
-                });
-        });
-        </script>
 
         <!-- VDO.ai with enhanced error handling -->
         <script>
@@ -101,6 +70,17 @@
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'UA-33613488-12');
+            </script>
+
+            <!-- Facebook SDK -->
+            <script>
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=420272148007912";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
             </script>
         @endif
 

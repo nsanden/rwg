@@ -20,33 +20,25 @@ export default function AdSpace({ adId, className = '', style = {}, placeholder 
     useEffect(() => {
         if (placeholder) return;
 
-        // Wait for both googletag and the Papaya ads script to be ready
-        const attemptDisplay = () => {
+        // Simple display call that matches the legacy implementation
+        const displayAd = () => {
             if (window.googletag && window.googletag.cmd) {
                 window.googletag.cmd.push(() => {
-                    // Check if the slot is defined before attempting to display
-                    const slots = window.googletag.pubads().getSlots();
-                    const slotExists = slots.some((slot: any) => {
-                        const slotId = slot.getSlotElementId();
-                        return slotId === adId;
-                    });
-
-                    if (slotExists) {
+                    try {
                         window.googletag.display(adId);
-                    } else {
-                        console.log(`Ad slot ${adId} not yet defined, will retry...`);
-                        // Retry after a short delay
-                        setTimeout(() => attemptDisplay(), 500);
+                        console.log(`Ad displayed: ${adId}`);
+                    } catch (e) {
+                        console.log(`Error displaying ad ${adId}:`, e);
                     }
                 });
             } else {
                 // Retry if googletag not ready
-                setTimeout(() => attemptDisplay(), 100);
+                setTimeout(() => displayAd(), 100);
             }
         };
 
-        // Initial delay to allow Papaya script to define slots
-        setTimeout(() => attemptDisplay(), 1000);
+        // Call display immediately, just like the legacy implementation
+        displayAd();
     }, [adId, placeholder]);
 
     if (placeholder) {
