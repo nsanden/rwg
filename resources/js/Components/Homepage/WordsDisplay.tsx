@@ -33,22 +33,24 @@ export default function WordsDisplay({
                     <button
                         onClick={() => setShowFavorites(!showFavorites)}
                         className={`text-sm px-3 py-1 rounded ${showFavorites ? 'bg-red-100 text-red-600' : 'text-gray-600 hover:text-red-600'} transition-colors`}
+                        aria-pressed={showFavorites}
+                        aria-label={showFavorites ? 'Switch to view generated words' : `Switch to view saved favorites (${favorites.length} words)`}
                     >
                         {showFavorites ? 'View Generated' : `View Saved (${favorites.length})`}
                     </button>
                     <button
                         onClick={copyToClipboard}
                         className="text-gray-600 hover:text-blue-600 transition-colors"
-                        title="Copy to clipboard"
+                        aria-label={`Copy ${showFavorites ? favorites.length + ' favorite' : words.length + ' generated'} words to clipboard`}
                     >
-                        <Copy className="w-4 h-4" />
+                        <Copy className="w-4 h-4" aria-hidden="true" />
                     </button>
                 </div>
             </div>
 
             <div className="max-h-96 overflow-y-auto">
                 {loading ? (
-                    <div className="text-center py-8">
+                    <div className="text-center py-8" role="status" aria-live="polite">
                         <div className="text-gray-500">Loading...</div>
                     </div>
                 ) : (
@@ -63,20 +65,21 @@ export default function WordsDisplay({
                                     <button
                                         onClick={() => favorites.includes(words[0]) ? removeFromFavorites(words[0]) : addToFavorites(words[0])}
                                         className="inline-flex items-center px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-md transition-colors duration-200"
-                                        title={favorites.includes(words[0]) ? 'Remove from favorites' : 'Add to favorites'}
+                                        aria-label={favorites.includes(words[0]) ? `Remove "${words[0]}" from favorites` : `Add "${words[0]}" to favorites`}
                                     >
-                                        <Heart className={`w-4 h-4 mr-2 ${favorites.includes(words[0]) ? 'fill-red-500' : ''}`} />
+                                        <Heart className={`w-4 h-4 mr-2 ${favorites.includes(words[0]) ? 'fill-red-500' : ''}`} aria-hidden="true" />
                                         {favorites.includes(words[0]) ? 'Remove' : 'Add to favorites'}
                                     </button>
                                 </div>
                             )
                         ) : (
                             // Multiple words or favorites display - list format
-                            <div className="space-y-2">
+                            <div className="space-y-2" role="list" aria-label={showFavorites ? 'Favorite words' : 'Generated words'}>
                                 {(showFavorites ? favorites : words).map((word, index) => (
                                     <div
                                         key={index}
                                         className="group flex items-center justify-between p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors duration-200"
+                                        role="listitem"
                                     >
                                         <span className="text-gray-800 font-medium">{word}</span>
                                         <div className="flex items-center gap-2">
@@ -84,17 +87,17 @@ export default function WordsDisplay({
                                                 <button
                                                     onClick={() => addToFavorites(word)}
                                                     className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                                                    title="Add to favorites"
+                                                    aria-label={`Add "${word}" to favorites`}
                                                 >
-                                                    <Heart className={`w-4 h-4 ${favorites.includes(word) ? 'fill-red-500 text-red-500' : 'text-gray-400 hover:text-red-500'}`} />
+                                                    <Heart className={`w-4 h-4 ${favorites.includes(word) ? 'fill-red-500 text-red-500' : 'text-gray-400 hover:text-red-500'}`} aria-hidden="true" />
                                                 </button>
                                             ) : (
                                                 <button
                                                     onClick={() => removeFromFavorites(word)}
                                                     className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-gray-400 hover:text-red-500"
-                                                    title="Remove from favorites"
+                                                    aria-label={`Remove "${word}" from favorites`}
                                                 >
-                                                    <X className="w-4 h-4" />
+                                                    <X className="w-4 h-4" aria-hidden="true" />
                                                 </button>
                                             )}
                                         </div>

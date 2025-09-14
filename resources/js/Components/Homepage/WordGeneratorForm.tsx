@@ -54,31 +54,36 @@ export default function WordGeneratorForm({
             <form>
                 {/* Number of Words */}
                 <div className="mb-4">
-                    <label className="font-medium text-gray-700 mr-3">
+                    <label htmlFor="quantity-input" className="font-medium text-gray-700 mr-3">
                         Number of Words:
                     </label>
                     <input
+                        id="quantity-input"
                         type="number"
                         min="1"
                         max="100"
                         value={quantity}
                         onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
                         className="inline-block w-20 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        aria-label="Number of words to generate"
                     />
                 </div>
 
                 {/* More Options */}
                 {showMoreOptions && (
-                    <div>
+                    <div id="more-options-panel" role="region" aria-labelledby="more-options-heading">
+                        <h2 id="more-options-heading" className="sr-only">Additional Word Generation Options</h2>
                         {/* Word Type */}
                         <div className="mb-4">
-                            <label className="font-medium text-gray-700 mr-3">
+                            <label htmlFor="word-type-select" className="font-medium text-gray-700 mr-3">
                                 Word Type:
                             </label>
                             <select
+                                id="word-type-select"
                                 value={wordType}
                                 onChange={(e) => setWordType(e.target.value)}
                                 className="inline-block px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                aria-label="Select word type"
                             >
                                 <option value="all">All</option>
                                 <option value="noun">Nouns</option>
@@ -92,13 +97,15 @@ export default function WordGeneratorForm({
                         {/* Language (shown only for non-english) */}
                         {wordType === 'non-english' && (
                             <div className="mb-4">
-                                <label className="font-medium text-gray-700 mr-3">
+                                <label htmlFor="language-select" className="font-medium text-gray-700 mr-3">
                                     Language:
                                 </label>
                                 <select
+                                    id="language-select"
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
                                     className="inline-block px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    aria-label="Select language for non-English words"
                                 >
                                     <option value="es">Spanish</option>
                                     <option value="hi">Hindi</option>
@@ -116,73 +123,93 @@ export default function WordGeneratorForm({
 
                         {/* First and Last Letter */}
                         <div className="mb-4">
-                            <label className="font-medium text-gray-700 mr-3">
+                            <label htmlFor="first-letter-input" className="font-medium text-gray-700 mr-3">
                                 First letter:
                             </label>
                             <input
+                                id="first-letter-input"
                                 type="text"
                                 maxLength={1}
                                 value={firstLetter}
                                 onChange={(e) => setFirstLetter(e.target.value)}
                                 className="inline-block w-12 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mr-6"
+                                aria-label="First letter of words"
+                                placeholder="A"
                             />
-                            <label className="font-medium text-gray-700 mr-3">
+                            <label htmlFor="last-letter-input" className="font-medium text-gray-700 mr-3">
                                 Last letter:
                             </label>
                             <input
+                                id="last-letter-input"
                                 type="text"
                                 maxLength={1}
                                 value={lastLetter}
                                 onChange={(e) => setLastLetter(e.target.value)}
                                 className="inline-block w-12 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                aria-label="Last letter of words"
+                                placeholder="Z"
                             />
                         </div>
 
                         {/* Word Size */}
-                        <div className="mb-4">
-                            <span className="font-medium text-gray-700 mr-4">Word size by:</span>
+                        <fieldset className="mb-4">
+                            <legend className="font-medium text-gray-700 mr-4 mb-2">Word size by:</legend>
                             <label className="inline-flex items-center mr-4">
                                 <input
                                     type="radio"
+                                    name="word-size-type"
                                     value="syllables"
                                     checked={wordSizeType === 'syllables'}
                                     onChange={(e) => setWordSizeType(e.target.value)}
                                     className="mr-2"
+                                    aria-describedby="syllables-description"
                                 />
-                                <span>Syllables</span>
+                                <span id="syllables-description">Syllables</span>
                             </label>
                             <label className="inline-flex items-center">
                                 <input
                                     type="radio"
+                                    name="word-size-type"
                                     value="letters"
                                     checked={wordSizeType === 'letters'}
                                     onChange={(e) => setWordSizeType(e.target.value)}
                                     className="mr-2"
+                                    aria-describedby="letters-description"
                                 />
-                                <span>Letters</span>
+                                <span id="letters-description">Letters</span>
                             </label>
 
                             {wordSizeType && (
                                 <div className="mt-3">
+                                    <label htmlFor="comparing-select" className="sr-only">
+                                        Size comparison method
+                                    </label>
                                     <select
+                                        id="comparing-select"
                                         value={comparing}
                                         onChange={(e) => setComparing(e.target.value)}
                                         className="inline-block px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2"
+                                        aria-label="Size comparison method"
                                     >
                                         <option value="equals">Equals</option>
                                         <option value="less_than">Less Than</option>
                                         <option value="greater_than">Greater Than</option>
                                     </select>
+                                    <label htmlFor="count-input" className="sr-only">
+                                        Number of {wordSizeType}
+                                    </label>
                                     <input
+                                        id="count-input"
                                         type="number"
                                         min="1"
                                         value={count}
                                         onChange={(e) => setCount(parseInt(e.target.value) || 1)}
                                         className="inline-block w-20 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        aria-label={`Number of ${wordSizeType}`}
                                     />
                                 </div>
                             )}
-                        </div>
+                        </fieldset>
 
                         {/* Reset Button and More Options Toggle */}
                         <div className="flex justify-between items-center">
@@ -190,6 +217,7 @@ export default function WordGeneratorForm({
                                 type="button"
                                 onClick={resetOptions}
                                 className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-200"
+                                aria-label="Reset all form options to default values"
                             >
                                 Reset Options
                             </button>
@@ -197,8 +225,11 @@ export default function WordGeneratorForm({
                                 type="button"
                                 onClick={() => setShowMoreOptions(!showMoreOptions)}
                                 className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                                aria-expanded={showMoreOptions}
+                                aria-controls="more-options-panel"
+                                aria-label={showMoreOptions ? 'Hide additional options' : 'Show additional options'}
                             >
-                                {showMoreOptions ? <ChevronUp className="w-4 h-4 mr-1" /> : <ChevronDown className="w-4 h-4 mr-1" />}
+                                {showMoreOptions ? <ChevronUp className="w-4 h-4 mr-1" aria-hidden="true" /> : <ChevronDown className="w-4 h-4 mr-1" aria-hidden="true" />}
                                 {showMoreOptions ? 'Less' : 'More'} Options
                             </button>
                         </div>
@@ -211,8 +242,11 @@ export default function WordGeneratorForm({
                             type="button"
                             onClick={() => setShowMoreOptions(!showMoreOptions)}
                             className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                            aria-expanded={showMoreOptions}
+                            aria-controls="more-options-panel"
+                            aria-label={showMoreOptions ? 'Hide additional options' : 'Show additional options'}
                         >
-                            {showMoreOptions ? <ChevronUp className="w-4 h-4 mr-1" /> : <ChevronDown className="w-4 h-4 mr-1" />}
+                            {showMoreOptions ? <ChevronUp className="w-4 h-4 mr-1" aria-hidden="true" /> : <ChevronDown className="w-4 h-4 mr-1" aria-hidden="true" />}
                             {showMoreOptions ? 'Hide' : 'Show'} More Options
                         </button>
                     </div>
@@ -225,13 +259,14 @@ export default function WordGeneratorForm({
                         onClick={generateWords}
                         disabled={loading}
                         className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center disabled:opacity-50"
+                        aria-label={loading ? 'Generating random words, please wait' : 'Generate random words'}
                     >
                         {loading ? (
-                            <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                            <RefreshCw className="w-5 h-5 mr-2 animate-spin" aria-hidden="true" />
                         ) : (
-                            <RefreshCw className="w-5 h-5 mr-2" />
+                            <RefreshCw className="w-5 h-5 mr-2" aria-hidden="true" />
                         )}
-                        Generate Random Words
+                        {loading ? 'Generating...' : 'Generate Random Words'}
                     </button>
                 </div>
             </form>
