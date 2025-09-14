@@ -30,4 +30,5 @@ createServer((page) =>
             return <App {...props} />;
         },
     }),
+    parseInt(import.meta.env.VITE_INERTIA_SSR_PORT || '13714')
 );
