@@ -23,10 +23,26 @@
 
         <!-- Preload critical assets are handled by Vite automatically -->
 
+        <!-- jQuery (required for Papaya Ads) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <!-- Google AdManager Scripts -->
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
         <script src="https://papayads.net/clnt/randomwordgenerator/v13/adtags.js" type="text/javascript"></script>
-        <script>(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-randomwordgenerator/vdo.ai.js');</script>
+
+        <!-- VDO.ai with error handling -->
+        <script>
+        (function() {
+            var script = document.createElement('script');
+            script.defer = true;
+            script.async = true;
+            script.src = '//a.vdo.ai/core/v-randomwordgenerator/vdo.ai.js';
+            script.onerror = function() {
+                console.log('VDO.ai script unavailable');
+            };
+            document.head.appendChild(script);
+        })();
+        </script>
 
         <!-- Initialize Google AdManager -->
         <script>
