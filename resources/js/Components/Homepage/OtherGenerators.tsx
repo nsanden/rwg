@@ -1,5 +1,3 @@
-import AdSpace from '@/Components/AdSpace';
-
 export default function OtherGenerators() {
     return (
         <div>
@@ -15,18 +13,6 @@ export default function OtherGenerators() {
                 <li><a href="/adjective" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Random Adjective Generator</a></li>
                 <li><a href="/sentence" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Random Sentence Generator</a></li>
                 <li><a href="/phrase" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Random Phrase Generator</a></li>
-            </ul>
-
-            {/* Mid-list Ad - After 8th generator */}
-            <div className="my-6">
-                <AdSpace
-                    adId="div-gpt-ad-1578532080811-0"
-                    className="google-ad-container"
-                    style={{ height: '280px', maxWidth: '336px' }}
-                />
-            </div>
-
-            <ul className="space-y-2 list-disc list-inside">
                 <li><a href="/paragraph" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Random Paragraph Generator</a></li>
                 <li><a href="/weird-word" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Weird Words</a></li>
                 <li><a href="/fake-word" className="text-brand-teal hover:text-brand-teal-600 underline underline-offset-2">Fake Words</a></li>

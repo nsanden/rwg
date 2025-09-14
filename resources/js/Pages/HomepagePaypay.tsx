@@ -6,6 +6,7 @@ import WordGeneratorForm from '@/Components/Homepage/WordGeneratorForm';
 import WordsDisplay from '@/Components/Homepage/WordsDisplay';
 import ArticleContent from '@/Components/Homepage/ArticleContent';
 import OtherGenerators from '@/Components/Homepage/OtherGenerators';
+import AdSpace from '@/Components/AdSpace';
 
 interface HomepageProps {
     auth: {
@@ -94,6 +95,12 @@ export default function Homepage({ auth }: HomepageProps) {
 
             <div className="min-h-screen bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    {/* Top Banner Ad */}
+                    <AdSpace
+                        adId="div-gpt-ad-1586096937154-0"
+                        className="mb-12 google-ad-container morethan728px"
+                        style={{ height: '250px', maxWidth: '970px', margin: '0 auto 3rem auto' }}
+                    />
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Options Panel - Left Column */}
@@ -135,6 +142,26 @@ export default function Homepage({ auth }: HomepageProps) {
                         />
                     </div>
 
+                    {/* Video Player Ad - Matches legacy "RWG_Under_Video_Player" */}
+                    <div className="mb-8">
+                        <div id="RWG_Under_Video_Player" className="text-center mb-4" style={{ height: '100px', marginBottom: '10px', overflow: 'hidden' }}>
+                            <AdSpace
+                                adId="div-gpt-ad-1619013591139-0"
+                                className="google-ad-container"
+                                style={{ height: '100px', maxWidth: '320px', marginBottom: '10px', overflow: 'hidden', margin: '0 auto' }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Middle Mobile Ad */}
+                    <div className="lg:hidden mb-8">
+                        <AdSpace
+                            adId="div-gpt-ad-1578531360465-0"
+                            className="google-ad-container lessthan970px"
+                            style={{ height: '280px', maxWidth: '336px', margin: '0 auto' }}
+                        />
+                    </div>
+
                     {/* About Section */}
                     <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
@@ -144,10 +171,55 @@ export default function Homepage({ auth }: HomepageProps) {
                             {/* Right Column - Other Random Generators */}
                             <div>
                                 <OtherGenerators />
+
+                                {/* Bottom Sidebar Ad */}
+                                <div className="mt-5">
+                                    <AdSpace
+                                        adId="div-gpt-ad-1378532080619-0"
+                                        className="google-ad-container"
+                                        style={{ height: '600px', maxWidth: '336px' }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Bottom Banner Desktop */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="hidden lg:block">
+                    <AdSpace
+                        adId="div-gpt-ad-1586097229156-0"
+                        className="google-ad-container morethan728px"
+                        style={{ height: '250px', maxWidth: '970px', margin: '0 auto' }}
+                    />
+                </div>
+
+                {/* Bottom Mobile Ad */}
+                <div className="lg:hidden">
+                    <AdSpace
+                        adId="div-gpt-ad-1578531621024-0"
+                        className="google-ad-container lessthan970px"
+                        style={{ height: '280px', maxWidth: '336px', margin: '0 auto' }}
+                    />
+                </div>
+            </div>
+            {/* Large Desktop Vertical Banners - Only show on very wide screens */}
+            <div className="fixed top-12 left-0 h-96 hidden 2xl:block">
+                <AdSpace
+                    adId="div-gpt-ad-1594596253835-0"
+                    className="google-ad-container"
+                    style={{ width: '160px', height: '600px' }}
+                />
+            </div>
+
+            <div className="fixed top-12 right-0 h-96 hidden 2xl:block">
+                <AdSpace
+                    adId="div-gpt-ad-1594596361194-0"
+                    className="google-ad-container"
+                    style={{ width: '160px', height: '600px' }}
+                />
             </div>
         </GeneratorLayout>
     );

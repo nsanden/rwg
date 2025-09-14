@@ -21,6 +21,50 @@
         <!-- Fonts with display swap for better performance -->
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- Preload critical assets are handled by Vite automatically -->
+
+        <!-- jQuery (required for some ad scripts) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- BTLoader for ad optimization -->
+        <script src="https://btloader.com/tag?o=4905162506764288&upapi=true" async></script>
+
+        <!-- Papaya Ads - Updated to match legacy version -->
+        <script src="https://www.papayads.net/clnt/randomwordgenerator/v51/adtags.js" type="text/javascript"></script>
+
+        <!-- Initialize Google AdManager -->
+        <script>
+            window.googletag = window.googletag || {cmd: []};
+        </script>
+
+        <!-- Google AdManager Scripts -->
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+        <!-- VDO.ai with enhanced error handling -->
+        <script>
+        (function() {
+            var script = document.createElement('script');
+            script.defer = true;
+            script.async = true;
+            script.src = '//a.vdo.ai/core/v-randomwordgenerator/vdo.ai.js';
+            script.onload = function() {
+                console.log('VDO.ai script loaded successfully');
+            };
+            script.onerror = function() {
+                console.log('VDO.ai script unavailable - continuing without video ads');
+            };
+
+            // Set a timeout in case the script hangs
+            setTimeout(function() {
+                if (!script.onload.called && !script.onerror.called) {
+                    console.log('VDO.ai script timed out - continuing without video ads');
+                }
+            }, 5000);
+
+            document.head.appendChild(script);
+        })();
+        </script>
+
         @if(app()->environment('production'))
             <!-- Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33613488-12"></script>

@@ -1,15 +1,6 @@
-import AdSpace from '@/Components/AdSpace';
-
 export default function ArticleContent() {
     return (
         <div className="space-y-6 text-gray-700 leading-relaxed">
-            {/* Video Ad */}
-            <AdSpace
-                adId="vdo_ai_div"
-                className="mb-6 google-ad-container"
-                style={{ height: '336px' }}
-            />
-
             <p>
                 Welcome to the website. If you're here, you're likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn't a word creator, it is a word generator that will generate random words for a variety of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs.
             </p>
