@@ -37,39 +37,58 @@
         <!-- Load and initialize Papaya Ads after DOM is ready -->
         <script>
         $(document).ready(function() {
-            // Load Papaya Ads script
+            // Initialize AdManager first with safety check
+            function initializeAdManager() {
+                googletag.cmd.push(function() {
+                    if (googletag && googletag.pubads) {
+                        try {
+                            googletag.pubads().enableSingleRequest();
+                            googletag.pubads().collapseEmptyDivs();
+                            googletag.enableServices();
+                            console.log('Google AdManager initialized');
+                        } catch (e) {
+                            console.log('Error initializing Google AdManager:', e);
+                        }
+                    }
+                });
+            }
+
+            // Load Papaya Ads script with better error handling
             $.getScript('https://papayads.net/clnt/randomwordgenerator/v13/adtags.js')
                 .done(function() {
                     console.log('Papaya Ads script loaded successfully');
-                    // Initialize AdManager after Papaya script loads
-                    googletag.cmd.push(function() {
-                        googletag.pubads().enableSingleRequest();
-                        googletag.pubads().collapseEmptyDivs();
-                        googletag.enableServices();
-                    });
+                    // Wait a bit for Papaya to initialize before starting AdManager
+                    setTimeout(initializeAdManager, 500);
                 })
                 .fail(function() {
                     console.log('Papaya Ads script failed to load');
-                    // Initialize AdManager anyway
-                    googletag.cmd.push(function() {
-                        googletag.pubads().enableSingleRequest();
-                        googletag.pubads().collapseEmptyDivs();
-                        googletag.enableServices();
-                    });
+                    // Initialize AdManager anyway after a delay
+                    setTimeout(initializeAdManager, 1000);
                 });
         });
         </script>
 
-        <!-- VDO.ai with error handling -->
+        <!-- VDO.ai with enhanced error handling -->
         <script>
         (function() {
             var script = document.createElement('script');
             script.defer = true;
             script.async = true;
             script.src = '//a.vdo.ai/core/v-randomwordgenerator/vdo.ai.js';
-            script.onerror = function() {
-                console.log('VDO.ai script unavailable');
+            script.onload = function() {
+                console.log('VDO.ai script loaded successfully');
             };
+            script.onerror = function() {
+                console.log('VDO.ai script unavailable - continuing without video ads');
+            };
+
+            // Set a timeout in case the script hangs
+            setTimeout(function() {
+                if (!script.onload.called && !script.onerror.called) {
+                    console.log('VDO.ai script timed out - continuing without video ads');
+                }
+            }, 5000);
+
             document.head.appendChild(script);
         })();
         </script>
