@@ -23,6 +23,9 @@
 
         <!-- Preload critical assets are handled by Vite automatically -->
 
+        <!-- jQuery (required for some ad scripts) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <!-- BTLoader for ad optimization -->
         <script src="https://btloader.com/tag?o=4905162506764288&upapi=true" async></script>
 
