@@ -26,9 +26,39 @@
         <!-- jQuery (required for Papaya Ads) -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+        <!-- Initialize Google AdManager first -->
+        <script>
+            window.googletag = window.googletag || {cmd: []};
+        </script>
+
         <!-- Google AdManager Scripts -->
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-        <script src="https://papayads.net/clnt/randomwordgenerator/v13/adtags.js" type="text/javascript"></script>
+
+        <!-- Load and initialize Papaya Ads after DOM is ready -->
+        <script>
+        $(document).ready(function() {
+            // Load Papaya Ads script
+            $.getScript('https://papayads.net/clnt/randomwordgenerator/v13/adtags.js')
+                .done(function() {
+                    console.log('Papaya Ads script loaded successfully');
+                    // Initialize AdManager after Papaya script loads
+                    googletag.cmd.push(function() {
+                        googletag.pubads().enableSingleRequest();
+                        googletag.pubads().collapseEmptyDivs();
+                        googletag.enableServices();
+                    });
+                })
+                .fail(function() {
+                    console.log('Papaya Ads script failed to load');
+                    // Initialize AdManager anyway
+                    googletag.cmd.push(function() {
+                        googletag.pubads().enableSingleRequest();
+                        googletag.pubads().collapseEmptyDivs();
+                        googletag.enableServices();
+                    });
+                });
+        });
+        </script>
 
         <!-- VDO.ai with error handling -->
         <script>
@@ -42,16 +72,6 @@
             };
             document.head.appendChild(script);
         })();
-        </script>
-
-        <!-- Initialize Google AdManager -->
-        <script>
-            window.googletag = window.googletag || {cmd: []};
-            googletag.cmd.push(function() {
-                googletag.pubads().enableSingleRequest();
-                googletag.pubads().collapseEmptyDivs();
-                googletag.enableServices();
-            });
         </script>
 
         @if(app()->environment('production'))
