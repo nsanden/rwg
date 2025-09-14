@@ -60,4 +60,7 @@ export default defineConfig({
             usePolling: true,
         },
     },
+    ssr: {
+        port: 13715,
+    },
 });
