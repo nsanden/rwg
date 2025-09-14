@@ -61,6 +61,6 @@ export default defineConfig({
         },
     },
     ssr: {
-        port: 13715,
+        port: 13714,
     },
 });
