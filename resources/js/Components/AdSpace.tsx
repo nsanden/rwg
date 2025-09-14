@@ -26,7 +26,7 @@ export default function AdSpace({ adId, className = '', style = {}, placeholder 
                 window.googletag.cmd.push(() => {
                     // Check if the slot is defined before attempting to display
                     const slots = window.googletag.pubads().getSlots();
-                    const slotExists = slots.some(slot => {
+                    const slotExists = slots.some((slot: any) => {
                         const slotId = slot.getSlotElementId();
                         return slotId === adId;
                     });
