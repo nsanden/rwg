@@ -20,12 +20,33 @@ export default function AdSpace({ adId, className = '', style = {}, placeholder 
     useEffect(() => {
         if (placeholder) return;
 
-        // Initialize Google AdManager/AdSense ads
-        if (window.googletag && window.googletag.cmd) {
-            window.googletag.cmd.push(() => {
-                window.googletag.display(adId);
-            });
-        }
+        // Wait for both googletag and the Papaya ads script to be ready
+        const attemptDisplay = () => {
+            if (window.googletag && window.googletag.cmd) {
+                window.googletag.cmd.push(() => {
+                    // Check if the slot is defined before attempting to display
+                    const slots = window.googletag.pubads().getSlots();
+                    const slotExists = slots.some(slot => {
+                        const slotId = slot.getSlotElementId();
+                        return slotId === adId;
+                    });
+
+                    if (slotExists) {
+                        window.googletag.display(adId);
+                    } else {
+                        console.log(`Ad slot ${adId} not yet defined, will retry...`);
+                        // Retry after a short delay
+                        setTimeout(() => attemptDisplay(), 500);
+                    }
+                });
+            } else {
+                // Retry if googletag not ready
+                setTimeout(() => attemptDisplay(), 100);
+            }
+        };
+
+        // Initial delay to allow Papaya script to define slots
+        setTimeout(() => attemptDisplay(), 1000);
     }, [adId, placeholder]);
 
     if (placeholder) {
