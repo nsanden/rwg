@@ -64,8 +64,8 @@ class SecurityHeaders
             $scriptSrc .= " http://localhost:5173 http://host.docker.internal:5173 ws://localhost:5173 ws://host.docker.internal:5173";
         }
 
-        // Production: Add analytics and CDN
-        $scriptSrc .= " https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com";
+        // Production: Add analytics, CDN, and AdSense
+        $scriptSrc .= " https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://www.google.com";
 
         $csp .= "script-src {$scriptSrc}; ";
 
@@ -87,7 +87,7 @@ class SecurityHeaders
         $csp .= "img-src 'self' data: https: blob:; ";
 
         // Connect sources
-        $connectSrc = "'self' https://www.google-analytics.com";
+        $connectSrc = "'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net";
 
         if ($isDev) {
             // Development: Allow Vite HMR
@@ -95,6 +95,9 @@ class SecurityHeaders
         }
 
         $csp .= "connect-src {$connectSrc}; ";
+
+        // Frame sources for AdSense
+        $csp .= "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com; ";
 
         // Other directives
         $csp .= "frame-ancestors 'none'; ";

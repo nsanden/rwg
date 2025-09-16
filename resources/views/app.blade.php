@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#FF2D20">
+        <meta name="google-adsense-account" content="ca-pub-8949118578199171">
+
+        <!-- Google AdSense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8949118578199171" crossorigin="anonymous"></script>
 
         <!-- PWA -->
         <link rel="manifest" href="/manifest.json">

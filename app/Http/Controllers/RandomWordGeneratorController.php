@@ -7,10 +7,12 @@ use Inertia\Inertia;
 use Inertia\Response;
 use App\Models\ForeignWord;
 use App\Models\ExtendedWord;
+use App\Traits\UsesJsonCache;
 use Illuminate\Support\Facades\Log;
 
 class RandomWordGeneratorController extends Controller
 {
+    use UsesJsonCache;
     /**
      * Display the homepage with random word generator
      */
@@ -1560,7 +1562,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Vocabulary data file not found');
             }
 
-            $vocabulary = json_decode(file_get_contents($filePath), true);
+            $vocabulary = $this->getJsonData($filePath);
 
             if (empty($vocabulary)) {
                 throw new \Exception('No vocabulary data available');
@@ -1669,7 +1671,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Motivational quotes data file not found');
             }
 
-            $quotesData = json_decode(file_get_contents($filePath), true);
+            $quotesData = $this->getJsonData($filePath);
 
             // Handle both direct array and wrapped in "data" key
             $quotes = isset($quotesData['data']) ? $quotesData['data'] : $quotesData;
@@ -1754,7 +1756,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Bible verses data file not found');
             }
 
-            $verses = json_decode(file_get_contents($filePath), true);
+            $verses = $this->getJsonData($filePath);
 
             if (empty($verses)) {
                 throw new \Exception('No Bible verses data available');
@@ -1831,7 +1833,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Facts data file not found');
             }
 
-            $factsData = json_decode(file_get_contents($filePath), true);
+            $factsData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $facts = isset($factsData['data']) ? $factsData['data'] : $factsData;
@@ -1911,7 +1913,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Gift ideas data file not found');
             }
 
-            $giftData = json_decode(file_get_contents($filePath), true);
+            $giftData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $gifts = isset($giftData['data']) ? $giftData['data'] : $giftData;
@@ -2000,7 +2002,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Dinner ideas data file not found');
             }
 
-            $dinnerData = json_decode(file_get_contents($filePath), true);
+            $dinnerData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $dinners = isset($dinnerData['data']) ? $dinnerData['data'] : $dinnerData;
@@ -2070,7 +2072,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Breakfast ideas data file not found');
             }
 
-            $breakfastData = json_decode(file_get_contents($filePath), true);
+            $breakfastData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $breakfasts = isset($breakfastData['data']) ? $breakfastData['data'] : $breakfastData;
@@ -2155,7 +2157,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Wedding hashtag templates not found');
             }
 
-            $templatesData = json_decode(file_get_contents($filePath), true);
+            $templatesData = $this->getJsonData($filePath);
             $templates = $templatesData['templates'] ?? [];
 
             if (empty($templates)) {
@@ -2262,7 +2264,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Interview questions data file not found');
             }
 
-            $questionsData = json_decode(file_get_contents($filePath), true);
+            $questionsData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $questions = isset($questionsData['data']) ? $questionsData['data'] : $questionsData;
@@ -2339,7 +2341,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Tongue twisters data file not found');
             }
 
-            $twistersData = json_decode(file_get_contents($filePath), true);
+            $twistersData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $twisters = isset($twistersData['data']) ? $twistersData['data'] : $twistersData;
@@ -2609,7 +2611,7 @@ class RandomWordGeneratorController extends Controller
                     throw new \Exception('Legacy data file not found: ' . $legacyFile);
                 }
 
-                $gameData = json_decode(file_get_contents($filePath), true);
+                $gameData = $this->getJsonData($filePath);
                 $words = array_map(function ($word) {
                     return ['word' => $word];
                 }, $gameData['words'] ?? []);
@@ -2685,7 +2687,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Questions data file not found');
             }
 
-            $questionsData = json_decode(file_get_contents($filePath), true);
+            $questionsData = $this->getJsonData($filePath);
             $allQuestions = $questionsData['data'] ?? [];
 
             if (empty($allQuestions)) {
@@ -2754,7 +2756,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Never Have I Ever data file not found');
             }
 
-            $neverHaveIEverData = json_decode(file_get_contents($filePath), true);
+            $neverHaveIEverData = $this->getJsonData($filePath);
             $allCategories = $neverHaveIEverData['data'] ?? [];
 
             if (empty($allCategories)) {
@@ -2847,7 +2849,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Would You Rather data file not found');
             }
 
-            $wouldYouRatherData = json_decode(file_get_contents($filePath), true);
+            $wouldYouRatherData = $this->getJsonData($filePath);
             $allQuestions = $wouldYouRatherData['data']['all'] ?? [];
 
             if (empty($allQuestions)) {
@@ -2925,7 +2927,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Truth or Dare data file not found');
             }
 
-            $truthOrDareData = json_decode(file_get_contents($filePath), true);
+            $truthOrDareData = $this->getJsonData($filePath);
             $truths = $truthOrDareData['data']['truths'] ?? [];
             $dares = $truthOrDareData['data']['dares'] ?? [];
 
@@ -3048,7 +3050,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Charades data file not found');
             }
 
-            $charadesData = json_decode(file_get_contents($filePath), true);
+            $charadesData = $this->getJsonData($filePath);
 
             // Get words for the specified difficulty
             $words = $charadesData['data'][$difficulty] ?? [];
@@ -3120,7 +3122,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Hangman data file not found');
             }
 
-            $hangmanData = json_decode(file_get_contents($filePath), true);
+            $hangmanData = $this->getJsonData($filePath);
             $words = $hangmanData['data'] ?? [];
 
             if (empty($words)) {
@@ -3191,7 +3193,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Drawing ideas data file not found');
             }
 
-            $drawingData = json_decode(file_get_contents($filePath), true);
+            $drawingData = $this->getJsonData($filePath);
             $ideas = $drawingData['data'] ?? [];
 
             if (empty($ideas)) {
@@ -3273,7 +3275,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Coloring pages data file not found');
             }
 
-            $coloringData = json_decode(file_get_contents($filePath), true);
+            $coloringData = $this->getJsonData($filePath);
             $pages = $coloringData['data'] ?? [];
 
             if (empty($pages)) {
@@ -3355,7 +3357,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Pictures data file not found');
             }
 
-            $picturesData = json_decode(file_get_contents($filePath), true);
+            $picturesData = $this->getJsonData($filePath);
             $allPictures = $picturesData['data'] ?? [];
 
             if (empty($allPictures)) {
@@ -3438,7 +3440,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Letter sequence data file not found');
             }
 
-            $letterData = json_decode(file_get_contents($filePath), true);
+            $letterData = $this->getJsonData($filePath);
             $allLetters = $letterData[$language] ?? [];
 
             if (empty($allLetters)) {
@@ -3541,7 +3543,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Computer code data file not found');
             }
 
-            $codeData = json_decode(file_get_contents($filePath), true);
+            $codeData = $this->getJsonData($filePath);
             $allExamples = $codeData['data'] ?? [];
 
             if (empty($allExamples)) {
@@ -3648,7 +3650,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Make money ideas data file not found');
             }
 
-            $ideasData = json_decode(file_get_contents($filePath), true);
+            $ideasData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $ideas = isset($ideasData['data']) ? $ideasData['data'] : $ideasData;
@@ -3712,7 +3714,7 @@ class RandomWordGeneratorController extends Controller
                 throw new \Exception('Books data file not found');
             }
 
-            $booksData = json_decode(file_get_contents($filePath), true);
+            $booksData = $this->getJsonData($filePath);
 
             // Handle both formats: direct array or wrapped in "data" key
             $books = isset($booksData['data']) ? $booksData['data'] : $booksData;

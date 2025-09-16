@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Traits\UsesJsonCache;
 
 class ColorController extends Controller
 {
+    use UsesJsonCache;
     public function generateColors(Request $request)
     {
         $request->validate([
@@ -25,7 +27,7 @@ class ColorController extends Controller
                 ], 500);
             }
 
-            $colorsData = json_decode(file_get_contents($colorsPath), true);
+            $colorsData = $this->getJsonData($colorsPath);
 
             if (empty($colorsData)) {
                 return response()->json([
