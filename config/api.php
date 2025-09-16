@@ -32,7 +32,7 @@ return [
 
     'rate_limits' => [
         'external' => [
-            'requests' => 10,      // requests per minute for external users
+            'requests' => 5,      // requests per minute for external users
             'minutes' => 1,
         ],
         'internal' => [
@@ -50,6 +50,7 @@ return [
     'allowed_domains' => [
         'https://randomwordgenerator.com',
         'https://www.randomwordgenerator.com',
+        'https://newrwg.vps.webdock.cloud',
         'http://localhost',
         'http://localhost:8000',
         'http://localhost:5173',
