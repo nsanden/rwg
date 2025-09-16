@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed word databases
+        $this->call([
+            ForeignWordsSeeder::class,
+            ExtendedWordsSeeder::class,
+        ]);
     }
 }
