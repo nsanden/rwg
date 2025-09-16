@@ -1,0 +1,610 @@
+{
+  "data": [
+    {
+      "prompt": {
+        "value": "Street Artwork",
+        "description": "Who and why a character created a piece of street artwork."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Abandoned Beauty",
+        "description": "A place that became beautiful because it was abandoned."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Last Person",
+        "description": "Write about the last person you had contact with."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Red Faced",
+        "description": "Write about an embarrassing moment."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Question Mark",
+        "description": "An unexpected question asked to a character and their reaction."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Missing You",
+        "description": "Describe the emotions of missing someone."
+      }
+    },
+    {
+      "prompt": {
+        "value": "World Map",
+        "description": "Place a character in an exotic location."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Looney Tune",
+        "description": "Your character is a cartoon."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Heroic Gesture",
+        "description": "A small deed that's actually a heroic gesture."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Morning Sunrise",
+        "description": "Strange activities a character does once getting up."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Beautiful Sunset",
+        "description": "Something magical happens as the sun disappears over the horizon."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Memory Lane",
+        "description": "A character looks back on the things they've done."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Tear-Jerker",
+        "description": "Something that makes you cry."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Dear Diary",
+        "description": "What secrets are hidden in a child's diary?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Holding Hands",
+        "description": "Why are the couple on the subway holding hands?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Picture Perfect",
+        "description": "Something that is supposed to be perfect but has a hidden flaw."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Alarm Clock",
+        "description": "What is the perfect sound to wake up to?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Darkness My Old Friend",
+        "description": "What is hiding in the shadows?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Refreshed",
+        "description": "A unexpectedly refreshing situation,"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Handle With Care",
+        "description": "An unexpected journey of something fragile."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Sound of Silence",
+        "description": "Write about something breaking a calm silence."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Backhanded Insult",
+        "description": "Write about a character being backhandedly insulted,"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Mirror Mirror",
+        "description": "Write about the most beautiful thing you can imagine."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Dirty Laundry",
+        "description": "Write about the deep secrets of a character."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Light Bulb",
+        "description": "Write about the moment that everything about the situation made sense."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Stars",
+        "description": "What do you see when you look out into the stars?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Joker",
+        "description": "Write about a wildcard."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Just Say No",
+        "description": "Write a story about drugs."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Peace Out",
+        "description": "What do you find peaceful?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Frame It",
+        "description": "Write about a painting that speaks to you."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Puzzle",
+        "description": "Write something that the answer isn't known until the end"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Fire Flies",
+        "description": "Write about a secluded stream with lots of wildlife."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Coffee or Tea",
+        "description": "A dialog about the merits of coffee versus tea."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Car Keys",
+        "description": "Where is the car going to take the character?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Unknown",
+        "description": "What happens when someone steps into an unknown situation."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Warehouse",
+        "description": "The secrets that are taking place in an old, abandoned warehouse."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Peak Outside",
+        "description": "What is going on outside at this moment?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Unrequited Love",
+        "description": "Someone you love does not love you back."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Voyage",
+        "description": "A unique vessel takes you somewhere you've never before been."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Dancing Shoes",
+        "description": "What type of dancing shoes does your character have on and what music are they listening to?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Meal",
+        "description": "You find yourself in a unique eating situation while having a meal."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Glance",
+        "description": "Two people can't stop glancing at each other."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Into Space",
+        "description": "What does the spaceship look like and where are you going?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Dream Catcher",
+        "description": "Someone is able to steal your dreams."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Animal Crossing",
+        "description": "What happens when two different animals cross paths?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "True Friendship",
+        "description": "Describe a situation that exudes true friendship."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Dragon Breath",
+        "description": "What happens to a character that has terribly bad breath?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Last Dragon",
+        "description": "How does the last dragon on earth feel?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Greeter",
+        "description": "A character who spends his day greeting people."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Lost Letter",
+        "description": "A letter written many years ago unexpectedly arrives."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Random Page",
+        "description": "Open a random page of a book or magazine and use that to write."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Eavesdropper",
+        "description": "Write about the last thing you accidentally overheard."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Addict",
+        "description": "Write about a character addicted to something good."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Dictionary",
+        "description": "Open up a dictionary to a random page and point to a word. Write a paragraph with that word as the main theme."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Help",
+        "description": "Write about a person helping others."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Cleaner",
+        "description": "Write about the feelings of a person cleaning up a terrible mess."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Missed Connections",
+        "description": "Write about two people who keep crossing paths but miss actually meeting."
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Foreclosure",
+        "description": "What happens when the bank comes to take away a family's home?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Purple Haze",
+        "description": "There is something keeping you from seeing what's going on around you."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Sugar Addict",
+        "description": "Write about your favorite dessert from the dessert's perspective."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Favorite Number",
+        "description": "How does a favorite number affect a person during their life?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Coming Dread",
+        "description": "Write about doing something that needs to be done right away, but nobody wants to do it."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Fear Factor",
+        "description": "What is your deepest fear?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Closed Doors",
+        "description": "A situation where an opportunity ended up being taken away for a bad reason."
+      }
+    },
+    {
+      "prompt": {
+        "value": "In The Shadows",
+        "description": "What is lurking just out of your sight?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Good Vibes",
+        "description": "What's a situation where the character is getting great vibes?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Shopping Addict",
+        "description": "What happens to someone who can't stop shopping?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "The Professor",
+        "description": "Write about a situation where someone taught you something in an interesting way."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Rewritten",
+        "description": "Rewrite another piece of your writing from the opposite perspective."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Magic Jewels",
+        "description": "What are they and what powers do they have?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Sound of Thunder",
+        "description": "A loud rumble is heard in the distance. What does it foretell?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Drama Queen",
+        "description": "A character who always attracts drama."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Slip Knot",
+        "description": "What is getting tied up and why?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Spice Rack",
+        "description": "How does a character add spice to a situation?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Sing Along",
+        "description": "A song you like that you think has hidden meanings."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Telephone Tag",
+        "description": "Two people who never seem able to get together."
+      }
+    },
+    {
+      "prompt": {
+        "value": "What's My Name",
+        "description": "Why has the character lost their memory?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Miniature Dollhouse",
+        "description": "Write from the perspective of the dolls."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Random Wink",
+        "description": "A random wink is received and what are the results?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Silly Sports",
+        "description": "Characters taking a sport much too seriously."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Perfect Recipe",
+        "description": "Write about events that created a perfect disaster."
+      }
+    },
+    {
+      "prompt": {
+        "value": "People Watching",
+        "description": "Tell the story of a random person who passes by."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Apple and Oranges",
+        "description": "Write a story about comparisons."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Book Worm",
+        "description": "Write a conversation between the different words on the pages of a book."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Magic Lamp",
+        "description": "What are the three wishes?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Fancy Pants",
+        "description": "Someone who thinks they are better than everyone else."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Routine Exam",
+        "description": "Examine and write about a daily routine."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Convenience Store",
+        "description": "What's the importance of convenience?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Natural Wonders",
+        "description": "Something that is naturally wonderful."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Status Update",
+        "description": "Where are you along your current journey?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Green Thumb",
+        "description": "Something is growing. What is it?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Family Heirloom",
+        "description": "What is it and why is it one?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Bug Catcher",
+        "description": "From the perspective of the bugs."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Magic Potion",
+        "description": "Who created it and what happens when it's used?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Constant Motion",
+        "description": "Write about something that can't stop and why."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Cozy Night",
+        "description": "What's happening outside while you're cozy and warm?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Fairy Tales",
+        "description": "Faries have invaded the world."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Secret Whispers",
+        "description": "What is everyone whispering about?"
+      }
+    },
+    {
+      "prompt": {
+        "value": "Perfect Smile",
+        "description": "A situation that brings a smile to your face."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Four Seasons",
+        "description": "The changes that occur throughout the year."
+      }
+    },
+    {
+      "prompt": {
+        "value": "Not Normal",
+        "description": "What is normal and why are you not?"
+      }
+    }
+  ]
+}

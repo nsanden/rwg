@@ -1,0 +1,1204 @@
+{
+  "data": [
+    {
+      "text": "Sunglasses",
+      "category": 3
+    },
+    {
+      "text": "Doll",
+      "category": 48
+    },
+    {
+      "text": "Concert ticket",
+      "category": 67
+    },
+    {
+      "text": "Jigsaw Puzzle",
+      "category": 32
+    },
+    {
+      "text": "Textured ball",
+      "category": 4
+    },
+    {
+      "text": "Wooden blocks",
+      "category": 8
+    },
+    {
+      "text": "Briefcase",
+      "category": 1
+    },
+    {
+      "text": "Perfume",
+      "category": 2
+    },
+    {
+      "text": "Eye Shadow Palette",
+      "category": 2
+    },
+    {
+      "text": "Watch",
+      "category": 3
+    },
+    {
+      "text": "Cologne",
+      "category": 1
+    },
+    {
+      "text": "Video game console",
+      "category": 96
+    },
+    {
+      "text": "Hair dryer",
+      "category": 2
+    },
+    {
+      "text": "Coloring book",
+      "category": 48
+    },
+    {
+      "text": "Play dough",
+      "category": 32
+    },
+    {
+      "text": "Wallet",
+      "category": 1
+    },
+    {
+      "text": "Fairy lights",
+      "category": 96
+    },
+    {
+      "text": "Nail Polish",
+      "category": 2
+    },
+    {
+      "text": "Musical toy",
+      "category": 12
+    },
+    {
+      "text": "Stack up cups",
+      "category": 12
+    },
+    {
+      "text": "Shower duck",
+      "category": 12
+    },
+    {
+      "text": "Polaroid Camera",
+      "category": 64
+    },
+    {
+      "text": "Poster",
+      "category": 64
+    },
+    {
+      "text": "Phone case",
+      "category": 67
+    },
+    {
+      "text": "Ukulele",
+      "category": 66
+    },
+    {
+      "text": "Walkie Talkie",
+      "category": 48
+    },
+    {
+      "text": "Drawing mat",
+      "category": 48
+    },
+    {
+      "text": "Friendship bracelets",
+      "category": 64
+    },
+    {
+      "text": "Bath Bombs",
+      "category": 66
+    },
+    {
+      "text": "Disney costume",
+      "category": 56
+    },
+    {
+      "text": "Stuffed Animal",
+      "category": 28
+    },
+    {
+      "text": "Laptop",
+      "category": 65
+    },
+    {
+      "text": "Coffee Machine",
+      "category": 3
+    },
+    {
+      "text": "Scented Candles",
+      "category": 2
+    },
+    {
+      "text": "Tie Dye kit",
+      "category": 96
+    },
+    {
+      "text": "Headphones",
+      "category": 67
+    },
+    {
+      "text": "Gift Card",
+      "category": 67
+    },
+    {
+      "text": "Piano Mat",
+      "category": 12
+    },
+    {
+      "text": "Sorting Cube",
+      "category": 12
+    },
+    {
+      "text": "Nursery rhymes book",
+      "category": 12
+    },
+    {
+      "text": "Water rocket kit",
+      "category": 32
+    },
+    {
+      "text": "Lego",
+      "category": 32
+    },
+    {
+      "text": "Mermaid Blanket",
+      "category": 48
+    },
+    {
+      "text": "Spirograph Design Set",
+      "category": 32
+    },
+    {
+      "text": "Knee socks",
+      "category": 66
+    },
+    {
+      "text": "Slime",
+      "category": 96
+    },
+    {
+      "text": "Bike",
+      "category": 48
+    },
+    {
+      "text": "Skates",
+      "category": 48
+    },
+    {
+      "text": "Connect 4",
+      "category": 48
+    },
+    {
+      "text": "Pedal Go Kart",
+      "category": 48
+    },
+    {
+      "text": "Leather shoes",
+      "category": 3
+    },
+    {
+      "text": "Water Gun",
+      "category": 24
+    },
+    {
+      "text": "Silicone Bib",
+      "category": 4
+    },
+    {
+      "text": "Sensory book",
+      "category": 12
+    },
+    {
+      "text": "High chair",
+      "category": 8
+    },
+    {
+      "text": "Romper",
+      "category": 66
+    },
+    {
+      "text": "Suitcase",
+      "category": 3
+    },
+    {
+      "text": "Beard trimming kit",
+      "category": 1
+    },
+    {
+      "text": "Power Bank",
+      "category": 3
+    },
+    {
+      "text": "Remote Control Car",
+      "category": 48
+    },
+    {
+      "text": "Metal Chess Set",
+      "category": 1
+    },
+    {
+      "text": "Play tent",
+      "category": 24
+    },
+    {
+      "text": "Teething toy",
+      "category": 4
+    },
+    {
+      "text": "Car Seat",
+      "category": 4
+    },
+    {
+      "text": "Natural Dusting Powder",
+      "category": 4
+    },
+    {
+      "text": "Snuggle Pod",
+      "category": 4
+    },
+    {
+      "text": "Pacifier",
+      "category": 4
+    },
+    {
+      "text": "Beewax crayons",
+      "category": 16
+    },
+    {
+      "text": "Beach Sandals",
+      "category": 48
+    },
+    {
+      "text": "Xylophone",
+      "category": 48
+    },
+    {
+      "text": "Dollhouse",
+      "category": 24
+    },
+    {
+      "text": "Tutu",
+      "category": 24
+    },
+    {
+      "text": "Trampoline",
+      "category": 56
+    },
+    {
+      "text": "Echo Dot",
+      "category": 67
+    },
+    {
+      "text": "Savings Jar",
+      "category": 32
+    },
+    {
+      "text": "Necklace",
+      "category": 2
+    },
+    {
+      "text": "Hammock",
+      "category": 67
+    },
+    {
+      "text": "Hydroflask",
+      "category": 64
+    },
+    {
+      "text": "Bluetooth speaker",
+      "category": 67
+    },
+    {
+      "text": "Popsocket",
+      "category": 67
+    },
+    {
+      "text": "Body scrub",
+      "category": 2
+    },
+    {
+      "text": "Passport holder",
+      "category": 3
+    },
+    {
+      "text": "Dress",
+      "category": 2
+    },
+    {
+      "text": "Makeup Brush",
+      "category": 2
+    },
+    {
+      "text": "Purse",
+      "category": 2
+    },
+    {
+      "text": "Moon lamp",
+      "category": 66
+    },
+    {
+      "text": "Ice cap",
+      "category": 65
+    },
+    {
+      "text": "Multitool",
+      "category": 1
+    },
+    {
+      "text": "Apron",
+      "category": 3
+    },
+    {
+      "text": "Pillow",
+      "category": 66
+    },
+    {
+      "text": "Electric toothbrush",
+      "category": 96
+    },
+    {
+      "text": "Skateboard",
+      "category": 64
+    },
+    {
+      "text": "Furr Slippers",
+      "category": 2
+    },
+    {
+      "text": "Crop top",
+      "category": 2
+    },
+    {
+      "text": "Planner",
+      "category": 3
+    },
+    {
+      "text": "Nail Clipper Set",
+      "category": 3
+    },
+    {
+      "text": "Inflatable Sofa",
+      "category": 3
+    },
+    {
+      "text": "Board game",
+      "category": 96
+    },
+    {
+      "text": "Waffle Maker",
+      "category": 3
+    },
+    {
+      "text": "Desk lamp",
+      "category": 1
+    },
+    {
+      "text": "Electric Wine Opener",
+      "category": 1
+    },
+    {
+      "text": "BBQ grill",
+      "category": 1
+    },
+    {
+      "text": "Stack ring toy",
+      "category": 12
+    },
+    {
+      "text": "Puzzle foam mat",
+      "category": 12
+    },
+    {
+      "text": "Crib bell",
+      "category": 4
+    },
+    {
+      "text": "Horse swing",
+      "category": 24
+    },
+    {
+      "text": "Race track set",
+      "category": 48
+    },
+    {
+      "text": "Matching & Sorting Activity box",
+      "category": 24
+    },
+    {
+      "text": "Walker",
+      "category": 4
+    },
+    {
+      "text": "Crawl around car",
+      "category": 12
+    },
+    {
+      "text": "Chatter telephone",
+      "category": 12
+    },
+    {
+      "text": "Jumperoo",
+      "category": 12
+    },
+    {
+      "text": "Sit-to-stand activity center",
+      "category": 12
+    },
+    {
+      "text": "Pull Along Rocket",
+      "category": 12
+    },
+    {
+      "text": "Count & go keys",
+      "category": 12
+    },
+    {
+      "text": "Bath pipes toy",
+      "category": 24
+    },
+    {
+      "text": "Animal farm playset",
+      "category": 24
+    },
+    {
+      "text": "Magnetic doodle board",
+      "category": 24
+    },
+    {
+      "text": "Cash register",
+      "category": 16
+    },
+    {
+      "text": "Train set",
+      "category": 8
+    },
+    {
+      "text": "Rings",
+      "category": 2
+    },
+    {
+      "text": "Picture frame",
+      "category": 2
+    },
+    {
+      "text": "Headscarf",
+      "category": 2
+    },
+    {
+      "text": "Sassy mirror",
+      "category": 4
+    },
+    {
+      "text": "Wagon",
+      "category": 12
+    },
+    {
+      "text": "Sippy lids",
+      "category": 12
+    },
+    {
+      "text": "Trumpette socks",
+      "category": 4
+    },
+    {
+      "text": "Growth Chart",
+      "category": 12
+    },
+    {
+      "text": "Zoom 'n crawl monster",
+      "category": 4
+    },
+    {
+      "text": "Mega blocks",
+      "category": 24
+    },
+    {
+      "text": "Meowsic keyboard",
+      "category": 24
+    },
+    {
+      "text": "Bead Maze",
+      "category": 20
+    },
+    {
+      "text": "Bath boat",
+      "category": 20
+    },
+    {
+      "text": "Discovery ball",
+      "category": 4
+    },
+    {
+      "text": "Bodysuit",
+      "category": 2
+    },
+    {
+      "text": "Classic operation game",
+      "category": 48
+    },
+    {
+      "text": "Twister mat",
+      "category": 48
+    },
+    {
+      "text": "Sewing kit",
+      "category": 2
+    },
+    {
+      "text": "Basketball set",
+      "category": 48
+    },
+    {
+      "text": "Play food",
+      "category": 12
+    },
+    {
+      "text": "Scrunchie set",
+      "category": 66
+    },
+    {
+      "text": "Indoor Slide",
+      "category": 24
+    },
+    {
+      "text": "Jenga",
+      "category": 32
+    },
+    {
+      "text": "Toilettery bag",
+      "category": 2
+    },
+    {
+      "text": "Nintendo",
+      "category": 96
+    },
+    {
+      "text": "Microfiber towel",
+      "category": 2
+    },
+    {
+      "text": "Lip balm",
+      "category": 2
+    },
+    {
+      "text": "Facial cleansing spin brush",
+      "category": 2
+    },
+    {
+      "text": "Duffle bag",
+      "category": 1
+    },
+    {
+      "text": "Flower pot",
+      "category": 66
+    },
+    {
+      "text": "LED light ring",
+      "category": 64
+    },
+    {
+      "text": "Laptop",
+      "category": 64
+    },
+    {
+      "text": "Natural henna",
+      "category": 2
+    },
+    {
+      "text": "Football table",
+      "category": 64
+    },
+    {
+      "text": "Mandala coloring book",
+      "category": 64
+    },
+    {
+      "text": "Hoverboard",
+      "category": 96
+    },
+    {
+      "text": "Bean Bag",
+      "category": 64
+    },
+    {
+      "text": "Heels",
+      "category": 2
+    },
+    {
+      "text": "Cigar humidor",
+      "category": 1
+    },
+    {
+      "text": "Vest",
+      "category": 1
+    },
+    {
+      "text": "Hourglass",
+      "category": 1
+    },
+    {
+      "text": "Portable campfire",
+      "category": 1
+    },
+    {
+      "text": "Sleep Aid device",
+      "category": 3
+    },
+    {
+      "text": "Yoga Mat",
+      "category": 2
+    },
+    {
+      "text": "Smartphone Camera lens",
+      "category": 64
+    },
+    {
+      "text": "Wristband",
+      "category": 65
+    },
+    {
+      "text": "USB charger Station",
+      "category": 1
+    },
+    {
+      "text": "Neck tie travel roll",
+      "category": 1
+    },
+    {
+      "text": "Keychain",
+      "category": 1
+    },
+    {
+      "text": "Fingerprint Sensor Lock",
+      "category": 1
+    },
+    {
+      "text": "Ripped jeans",
+      "category": 2
+    },
+    {
+      "text": "Belt",
+      "category": 1
+    },
+    {
+      "text": "Eye glass cleaner",
+      "category": 1
+    },
+    {
+      "text": "Razor handler",
+      "category": 1
+    },
+    {
+      "text": "Go pro camera",
+      "category": 64
+    },
+    {
+      "text": "Burrito blanket",
+      "category": 64
+    },
+    {
+      "text": "Curling iron",
+      "category": 2
+    },
+    {
+      "text": "Stereo turntable",
+      "category": 64
+    },
+    {
+      "text": "Dart board",
+      "category": 64
+    },
+    {
+      "text": "Unicorn cereal bowl",
+      "category": 64
+    },
+    {
+      "text": "Katamino Game",
+      "category": 64
+    },
+    {
+      "text": "Umbrella",
+      "category": 3
+    },
+    {
+      "text": "Surprise eggs",
+      "category": 16
+    },
+    {
+      "text": "Solar robot",
+      "category": 32
+    },
+    {
+      "text": "Ripstick caster board",
+      "category": 32
+    },
+    {
+      "text": "Meccano",
+      "category": 32
+    },
+    {
+      "text": "Monopoly",
+      "category": 32
+    },
+    {
+      "text": "Solar system Construction kit",
+      "category": 32
+    },
+    {
+      "text": "Explorer science kit",
+      "category": 32
+    },
+    {
+      "text": "Magic set",
+      "category": 32
+    },
+    {
+      "text": "Night mission googles",
+      "category": 32
+    },
+    {
+      "text": "Mini telescope",
+      "category": 32
+    },
+    {
+      "text": "Instant table tennis",
+      "category": 32
+    },
+    {
+      "text": "Harmonica set",
+      "category": 32
+    },
+    {
+      "text": "Air hockey table",
+      "category": 32
+    },
+    {
+      "text": "Dinosaurs bucket",
+      "category": 16
+    },
+    {
+      "text": "Corn poppers",
+      "category": 24
+    },
+    {
+      "text": "Pop-up book",
+      "category": 24
+    },
+    {
+      "text": "Cross stitch jewelery",
+      "category": 96
+    },
+    {
+      "text": "TS Blaster",
+      "category": 32
+    },
+    {
+      "text": "Decoupage craft set",
+      "category": 32
+    },
+    {
+      "text": "Cake decorating set",
+      "category": 16
+    },
+    {
+      "text": "Build 'n learn table",
+      "category": 16
+    },
+    {
+      "text": "Styling head",
+      "category": 16
+    },
+    {
+      "text": "Backpack",
+      "category": 32
+    },
+    {
+      "text": "Soft book",
+      "category": 4
+    },
+    {
+      "text": "Bedtime soother",
+      "category": 4
+    },
+    {
+      "text": "Activity cube",
+      "category": 4
+    },
+    {
+      "text": "Ball pit",
+      "category": 4
+    },
+    {
+      "text": "Sling 'n seat tub",
+      "category": 4
+    },
+    {
+      "text": "Rocker",
+      "category": 4
+    },
+    {
+      "text": "Smart seahorse",
+      "category": 4
+    },
+    {
+      "text": "Floor seat",
+      "category": 4
+    },
+    {
+      "text": "Sis' remote",
+      "category": 4
+    },
+    {
+      "text": "Push & Pop Bulldozer",
+      "category": 8
+    },
+    {
+      "text": "Spin and sing alphabet zoo",
+      "category": 8
+    },
+    {
+      "text": "Color flashlight",
+      "category": 8
+    },
+    {
+      "text": "Sketcher projector",
+      "category": 32
+    },
+    {
+      "text": "Fake nails set",
+      "category": 2
+    },
+    {
+      "text": "Name puzzle",
+      "category": 12
+    },
+    {
+      "text": "Milestone age blocks",
+      "category": 12
+    },
+    {
+      "text": "Shusher",
+      "category": 4
+    },
+    {
+      "text": "Handprint & footprint kit",
+      "category": 4
+    },
+    {
+      "text": "Bath fishing set",
+      "category": 12
+    },
+    {
+      "text": "Roller-pillar activity ball",
+      "category": 12
+    },
+    {
+      "text": "Pull-back cars",
+      "category": 12
+    },
+    {
+      "text": "Drop & Go dump truck",
+      "category": 12
+    },
+    {
+      "text": "Soccer Ball",
+      "category": 16
+    },
+    {
+      "text": "Transforming fire truck",
+      "category": 24
+    },
+    {
+      "text": "Color matching egg set",
+      "category": 8
+    },
+    {
+      "text": "Magnetic fishing game",
+      "category": 24
+    },
+    {
+      "text": "Click & Learn laptop",
+      "category": 8
+    },
+    {
+      "text": "Crankity brainteaser",
+      "category": 16
+    },
+    {
+      "text": "Sky Nook",
+      "category": 16
+    },
+    {
+      "text": "Marble run set",
+      "category": 16
+    },
+    {
+      "text": "Timber planks",
+      "category": 16
+    },
+    {
+      "text": "Memory game",
+      "category": 16
+    },
+    {
+      "text": "Personalized Santa bag",
+      "category": 16
+    },
+    {
+      "text": "Door pong",
+      "category": 32
+    },
+    {
+      "text": "Mosaic Kit",
+      "category": 32
+    },
+    {
+      "text": "Cloud message board",
+      "category": 32
+    },
+    {
+      "text": "Design a cap kit",
+      "category": 32
+    },
+    {
+      "text": "Pyramid dig kit",
+      "category": 32
+    },
+    {
+      "text": "Roller coaster building set",
+      "category": 32
+    },
+    {
+      "text": "Ribbon ninja",
+      "category": 32
+    },
+    {
+      "text": "Craft loom",
+      "category": 32
+    },
+    {
+      "text": "Hoodie",
+      "category": 64
+    },
+    {
+      "text": "Star map",
+      "category": 64
+    },
+    {
+      "text": "Sticker sheet",
+      "category": 96
+    },
+    {
+      "text": "Math wall clock",
+      "category": 64
+    },
+    {
+      "text": "Journal",
+      "category": 64
+    },
+    {
+      "text": "Rock painting kit",
+      "category": 64
+    },
+    {
+      "text": "Book shelf",
+      "category": 64
+    },
+    {
+      "text": "Guitar Pick",
+      "category": 64
+    },
+    {
+      "text": "Scratch off world map",
+      "category": 64
+    },
+    {
+      "text": "Ring toss game set",
+      "category": 96
+    },
+    {
+      "text": "Massage seat cushion",
+      "category": 3
+    },
+    {
+      "text": "Bath salt",
+      "category": 2
+    },
+    {
+      "text": "Exfoliator brush",
+      "category": 2
+    },
+    {
+      "text": "Leggings",
+      "category": 2
+    },
+    {
+      "text": "Body mist",
+      "category": 2
+    },
+    {
+      "text": "Automatic pan stirrer",
+      "category": 3
+    },
+    {
+      "text": "Wine pearls",
+      "category": 1
+    },
+    {
+      "text": "Poncho",
+      "category": 2
+    },
+    {
+      "text": "Mineral soap",
+      "category": 2
+    },
+    {
+      "text": "Vase",
+      "category": 2
+    },
+    {
+      "text": "Charging cord bracelet",
+      "category": 66
+    },
+    {
+      "text": "Wooden foot massager",
+      "category": 2
+    },
+    {
+      "text": "Handbag illuminator",
+      "category": 2
+    },
+    {
+      "text": "Coffee maker",
+      "category": 1
+    },
+    {
+      "text": "Storm glass",
+      "category": 1
+    },
+    {
+      "text": "Football on this day book",
+      "category": 1
+    },
+    {
+      "text": "Smartphone holder",
+      "category": 67
+    },
+    {
+      "text": "Smartphone projector",
+      "category": 67
+    },
+    {
+      "text": "Zippo Lighter",
+      "category": 1
+    },
+    {
+      "text": "Mug",
+      "category": 3
+    },
+    {
+      "text": "Desk sign",
+      "category": 1
+    },
+    {
+      "text": "Decorative tape",
+      "category": 32
+    },
+    {
+      "text": "Magic 8 ball",
+      "category": 64
+    },
+    {
+      "text": "Reel viewer",
+      "category": 64
+    },
+    {
+      "text": "Table cloth",
+      "category": 2
+    },
+    {
+      "text": "Ink pen",
+      "category": 1
+    },
+    {
+      "text": "Toaster",
+      "category": 3
+    },
+    {
+      "text": "Collapsible water bottle",
+      "category": 65
+    },
+    {
+      "text": "Dream catcher",
+      "category": 66
+    },
+    {
+      "text": "Bath robe",
+      "category": 3
+    },
+    {
+      "text": "Light gloves",
+      "category": 65
+    },
+    {
+      "text": "Microwave",
+      "category": 3
+    },
+    {
+      "text": "Dumbbells",
+      "category": 1
+    },
+    {
+      "text": "Picnic table",
+      "category": 3
+    },
+    {
+      "text": "Lunch box",
+      "category": 48
+    },
+    {
+      "text": "Wine glass",
+      "category": 3
+    },
+    {
+      "text": "Mason jar",
+      "category": 2
+    },
+    {
+      "text": "Desk year calendar",
+      "category": 1
+    },
+    {
+      "text": "Sleep mask",
+      "category": 2
+    },
+    {
+      "text": "Snow globe",
+      "category": 66
+    },
+    {
+      "text": "Shoe polishing kit",
+      "category": 1
+    },
+    {
+      "text": "Bookmark",
+      "category": 66
+    },
+    {
+      "text": "Wireless printer",
+      "category": 1
+    },
+    {
+      "text": "Pet Dog",
+      "category": 96
+    }
+  ]
+}

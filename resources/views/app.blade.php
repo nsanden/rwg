@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="High-performance Laravel application with React and SSR">
         <meta name="theme-color" content="#FF2D20">
 
         <!-- PWA -->
@@ -14,21 +13,16 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Preconnect and DNS Prefetch -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link rel="dns-prefetch" href="https://fonts.bunny.net">
-
-        <!-- Fonts with display swap for better performance -->
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <!-- Local fonts are loaded via CSS imports -->
 
         @if(app()->environment('production'))
             <!-- Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33613488-12"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JP09EK201"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'UA-33613488-12');
+                gtag('config', 'G-9JP09EK201');
             </script>
 
             <!-- Facebook SDK -->

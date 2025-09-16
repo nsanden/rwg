@@ -35,7 +35,6 @@ export default function GeneratorLayout({ user, children }: GeneratorLayoutProps
         { name: 'Phrase', href: '/phrase', icon: BookOpen },
         { name: 'Number', href: '/number', icon: Hash },
         { name: 'Letter', href: '/letter', icon: Type },
-        { name: 'More...', href: '/more', icon: Menu },
     ];
 
     return (
@@ -44,33 +43,49 @@ export default function GeneratorLayout({ user, children }: GeneratorLayoutProps
             <nav className="bg-brand-teal shadow-lg sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
-                        <div className="flex">
+                        <div className="flex items-center">
                             <Link href="/" className="flex items-center">
                                 <Shuffle className="w-8 h-8 text-white mr-2" />
-                                <span className="font-bold text-xl text-white">RandomWordGenerator</span>
+                                <span className="font-bold text-lg lg:text-xl text-white whitespace-nowrap">Random Word Generator</span>
                             </Link>
                         </div>
 
                         {/* Desktop Navigation */}
                         <div className="hidden md:flex items-center space-x-1">
-                            {generators.map((generator) => (
-                                <Link
-                                    key={generator.href}
-                                    href={generator.href}
-                                    className="text-white hover:text-emerald-200 px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    {generator.name}
-                                </Link>
-                            ))}
-                            {user ? (
-                                <Link href="/dashboard" className="bg-brand-teal-600 hover:bg-brand-teal-700 text-white px-4 py-2 rounded-md text-sm font-medium ml-4">
-                                    Dashboard
-                                </Link>
-                            ) : (
-                                <Link href="/login" className="bg-brand-teal-600 hover:bg-brand-teal-700 text-white px-4 py-2 rounded-md text-sm font-medium ml-4">
-                                    Sign In
-                                </Link>
-                            )}
+                            {/* Always visible items */}
+                            <Link href="/" className="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Word
+                            </Link>
+                            <Link href="/noun.php" className="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Noun
+                            </Link>
+                            <Link href="/verb.php" className="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Verb
+                            </Link>
+                            <Link href="/name.php" className="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Name
+                            </Link>
+                            <Link href="/sentence.php" className="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Sentence
+                            </Link>
+
+                            {/* Hide at xl (1280px) */}
+                            <Link href="/phrase.php" className="hidden xl:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Phrase
+                            </Link>
+
+                            {/* Hide at lg (1024px) */}
+                            <Link href="/number.php" className="hidden lg:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Number
+                            </Link>
+                            <Link href="/letter.php" className="hidden lg:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                                Letter
+                            </Link>
+
+                            {/* All Generators button always visible */}
+                            <Link href="/more.php" className="bg-white/20 hover:bg-white/30 text-white px-3 py-2 rounded-md text-sm font-medium ml-2">
+                                All Generators
+                            </Link>
                         </div>
 
                         {/* Mobile menu button */}
@@ -85,45 +100,38 @@ export default function GeneratorLayout({ user, children }: GeneratorLayoutProps
                     </div>
                 </div>
 
-                {/* Mobile Navigation */}
+                {/* Mobile Navigation - Overlay */}
                 {mobileMenuOpen && (
-                    <div className="md:hidden bg-white border-t">
-                        <div className="px-2 pt-2 pb-3 space-y-1">
-                            <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">
-                                Home
-                            </Link>
-                            <div className="px-3 py-2">
-                                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                                    Generators
-                                </div>
+                    <>
+                        {/* Backdrop */}
+                        <div
+                            className="md:hidden fixed inset-0 bg-black bg-opacity-25 z-40"
+                            onClick={() => setMobileMenuOpen(false)}
+                        ></div>
+
+                        {/* Menu */}
+                        <div className="md:hidden absolute right-0 top-16 bg-white border shadow-lg z-50">
+                            <div className="px-8 pt-2 pb-3">
                                 {generators.map((generator) => (
                                     <Link
                                         key={generator.href}
                                         href={generator.href}
-                                        className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md"
+                                        className="block py-2 text-sm text-gray-700 hover:text-indigo-600 text-left whitespace-nowrap"
+                                        onClick={() => setMobileMenuOpen(false)}
                                     >
-                                        <generator.icon className="w-4 h-4 mr-2" />
                                         {generator.name}
                                     </Link>
                                 ))}
+                                <Link
+                                    href="/more.php"
+                                    className="block py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 text-left whitespace-nowrap"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    All Generators
+                                </Link>
                             </div>
-                            <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">
-                                About
-                            </Link>
-                            <Link href="/api-docs" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">
-                                API
-                            </Link>
-                            {user ? (
-                                <Link href="/dashboard" className="block px-3 py-2 rounded-md text-base font-medium bg-brand-teal hover:bg-brand-teal-600 text-white">
-                                    Dashboard
-                                </Link>
-                            ) : (
-                                <Link href="/login" className="block px-3 py-2 rounded-md text-base font-medium bg-brand-teal hover:bg-brand-teal-600 text-white">
-                                    Sign In
-                                </Link>
-                            )}
                         </div>
-                    </div>
+                    </>
                 )}
             </nav>
 
@@ -131,22 +139,12 @@ export default function GeneratorLayout({ user, children }: GeneratorLayoutProps
             <main>{children}</main>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white mt-16">
+            <footer className="bg-gray-900 text-white mt-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                             <p className="text-gray-400">Email: <a href="mailto:info@1s0s.com" className="text-gray-400 hover:text-white underline underline-offset-2">info@1s0s.com</a></p>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-4">OTHER PROJECTS</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/cursive-letter" className="text-gray-400 hover:text-white underline underline-offset-2">Cursive Letters</Link></li>
-                                <li><Link href="/bible-verse" className="text-gray-400 hover:text-white underline underline-offset-2">Bible Verse Generator</Link></li>
-                                <li><Link href="/list" className="text-gray-400 hover:text-white underline underline-offset-2">Random List Generator</Link></li>
-                                <li><Link href="/picture" className="text-gray-400 hover:text-white underline underline-offset-2">Random Picture Generator</Link></li>
-                                <li><a href="#" className="text-gray-400 hover:text-white underline underline-offset-2">Alphabetize Any List</a></li>
-                            </ul>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-4">About Us</h3>

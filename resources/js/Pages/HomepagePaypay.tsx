@@ -1,11 +1,11 @@
-import { Head } from '@inertiajs/react';
+import SEO from '@/Components/SEO';
 import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import GeneratorLayout from '@/Layouts/GeneratorLayout';
-import WordGeneratorForm from '@/Components/Homepage/WordGeneratorForm';
-import WordsDisplay from '@/Components/Homepage/WordsDisplay';
-import ArticleContent from '@/Components/Homepage/ArticleContent';
-import OtherGenerators from '@/Components/Homepage/OtherGenerators';
+import WordGeneratorForm from '@/Components/Shared/WordGeneratorForm';
+import ItemsDisplay from '@/Components/Shared/ItemsDisplay';
+import ArticleContent from '@/Components/Shared/ArticleContent';
+import OtherGenerators from '@/Components/Shared/OtherGenerators';
 import AdSpace from '@/Components/AdSpace';
 
 interface HomepageProps {
@@ -78,6 +78,11 @@ export default function Homepage({ auth }: HomepageProps) {
         toast.success(`${count} word${count !== 1 ? 's' : ''} copied to clipboard!`);
     };
 
+    const clearAllFavorites = () => {
+        setFavorites([]);
+        toast.success('All favorites cleared!');
+    };
+
     const resetOptions = () => {
         setQuantity(1);
         setWordType('all');
@@ -91,7 +96,13 @@ export default function Homepage({ auth }: HomepageProps) {
 
     return (
         <GeneratorLayout user={auth.user}>
-            <Head title="Random Word Generator - Generate Random Words for Creative Ideas" />
+            <SEO
+                title="Random Word Generator"
+                description="Generate random words, nouns, verbs, adjectives, letters, phrases, sentences or numbers to brainstorm and create new ideas at Random Word Generator."
+                keywords={['random word generator', 'word generator', 'random words', 'vocabulary', 'creative writing', 'games', 'pictionary', 'madlibs']}
+                ogImage="https://randomwordgenerator.com/img/random-word-generator.jpg"
+                ogType="website"
+            />
 
             <div className="min-h-screen bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -129,7 +140,7 @@ export default function Homepage({ auth }: HomepageProps) {
                         />
 
                         {/* Results Panel - Right Column */}
-                        <WordsDisplay
+                        <ItemsDisplay
                             words={words}
                             favorites={favorites}
                             showFavorites={showFavorites}
@@ -139,6 +150,7 @@ export default function Homepage({ auth }: HomepageProps) {
                             addToFavorites={addToFavorites}
                             removeFromFavorites={removeFromFavorites}
                             copyToClipboard={copyToClipboard}
+                            clearAllFavorites={clearAllFavorites}
                         />
                     </div>
 
@@ -166,7 +178,9 @@ export default function Homepage({ auth }: HomepageProps) {
                     <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
                             {/* Left Column - Article Content */}
-                            <ArticleContent />
+                            <ArticleContent>
+                                <p>Welcome to our Random Word Generator! This tool helps you generate creative words for writing, games, and inspiration.</p>
+                            </ArticleContent>
 
                             {/* Right Column - Other Random Generators */}
                             <div>

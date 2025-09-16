@@ -1,0 +1,963 @@
+{"data": [
+  {
+    "act_of_kindness": "Compliment someone today!"
+  },
+  {
+    "act_of_kindness": "Let someone know how much you appreciate them"
+  },
+  {
+    "act_of_kindness": "See someone struggling with lots of bags? Offer to help them"
+  },
+  {
+    "act_of_kindness": "Someone wronged you? Forgive them"
+  },
+  {
+    "act_of_kindness": "Say good morning/afternoon/evening to a stranger"
+  },
+  {
+    "act_of_kindness": "Life can get really busy - take some time out to spend with a family member"
+  },
+  {
+    "act_of_kindness": "Someone looking lost? Help them with directions"
+  },
+  {
+    "act_of_kindness": "Help an elderly person cross the road or up the stairs"
+  },
+  {
+    "act_of_kindness": "Be someone’s shoulder to cry on"
+  },
+  {
+    "act_of_kindness": "Go the day without complaining"
+  },
+  {
+    "act_of_kindness": "Leave someone flowers anonymously"
+  },
+  {
+    "act_of_kindness": "Make an effort to get to know someone you don’t usually talk to"
+  },
+  {
+    "act_of_kindness": "Know someone going through something you’ve been through? Give them advice"
+  },
+  {
+    "act_of_kindness": "Help someone academically – lend them your study notes"
+  },
+  {
+    "act_of_kindness": "Old laptop or mobile lying around? Donate it"
+  },
+  {
+    "act_of_kindness": "Be eco-friendly – unplug electronics when you’re finished using them"
+  },
+  {
+    "act_of_kindness": "Plant a seed"
+  },
+  {
+    "act_of_kindness": "Apologise to someone you may have hurt"
+  },
+  {
+    "act_of_kindness": "Answer the phone in a cheerful voice – even if it is a sales person"
+  },
+  {
+    "act_of_kindness": "We rarely listen to others - ask someone about their day"
+  },
+  {
+    "act_of_kindness": "We all love surprises! Buy someone an unexpected gift"
+  },
+  {
+    "act_of_kindness": "Bake something for your family/friends"
+  },
+  {
+    "act_of_kindness": "We all need help sometimes; offer someone a helping hand"
+  },
+  {
+    "act_of_kindness": "Make a hot beverage for a friend/family"
+  },
+  {
+    "act_of_kindness": "Surprise your parents with flowers"
+  },
+  {
+    "act_of_kindness": "Give up your seat on the tube/bus"
+  },
+  {
+    "act_of_kindness": "Help a younger student with their work"
+  },
+  {
+    "act_of_kindness": "Write a complimentary note for someone"
+  },
+  {
+    "act_of_kindness": "Bake for your neighbour"
+  },
+  {
+    "act_of_kindness": "Offer to help your neighbours/friends with chores"
+  },
+  {
+    "act_of_kindness": "Reconnect with your grandparents or an elderly person you know – give them a call!"
+  },
+  {
+    "act_of_kindness": "It’s hard to stay connected – reach out to an elderly person you know"
+  },
+  {
+    "act_of_kindness": "House chores can be tiring – offer a helping hand"
+  },
+  {
+    "act_of_kindness": "Pay for someone else’s meal today"
+  },
+  {
+    "act_of_kindness": "Save your family some time and buy their groceries"
+  },
+  {
+    "act_of_kindness": "Wardrobe overflowing? Donate clothes to a charity"
+  },
+  {
+    "act_of_kindness": "Have lunch with a homeless person"
+  },
+  {
+    "act_of_kindness": "Surroundings looking messy? Tidy up the area around you"
+  },
+  {
+    "act_of_kindness": "Make a conscious effort to recycle"
+  },
+  {
+    "act_of_kindness": "Purchase ethical goods"
+  },
+  {
+    "act_of_kindness": "Open the door for someone"
+  },
+  {
+    "act_of_kindness": "Smile at a stranger"
+  },
+  {
+    "act_of_kindness": "Help someone struggling with heavy bags"
+  },
+  {
+    "act_of_kindness": "Read a good book recently? Pass it on to someone else"
+  },
+  {
+    "act_of_kindness": "Send flowers to a friend or a family member!"
+  },
+  {
+    "act_of_kindness": "Feeling inspired? Make a meal for your family or roommates"
+  },
+  {
+    "act_of_kindness": "Surprise your siblings with their favourite sweets/chocolate"
+  },
+  {
+    "act_of_kindness": "Know someone who is not coping very well? Give them a call"
+  },
+  {
+    "act_of_kindness": "Send a thank you card to someone who has made a difference in your life (a friend, family member, teacher etc.)"
+  },
+  {
+    "act_of_kindness": "Offer to babysit your siblings/cousins/nephews/nieces etc"
+  },
+  {
+    "act_of_kindness": "Share today’s food with your neighbour!"
+  },
+  {
+    "act_of_kindness": "Gift someone something they complimented you for"
+  },
+  {
+    "act_of_kindness": "Leave a kind message anywhere (in a library book, on a computer etc.)"
+  },
+  {
+    "act_of_kindness": "Buy someone a coffee"
+  },
+  {
+    "act_of_kindness": "Visit a friend who’s sick"
+  },
+  {
+    "act_of_kindness": "Buy more ethically sourced foods"
+  },
+  {
+    "act_of_kindness": "We walk past homeless people every day; can you spare them 5 minutes of your time?"
+  },
+  {
+    "act_of_kindness": "Feeling brave? Give blood"
+  },
+  {
+    "act_of_kindness": "Make amends with someone you may have wronged"
+  },
+  {
+    "act_of_kindness": "Smile at 3 people today"
+  },
+  {
+    "act_of_kindness": "Is that litter on the floor? Pick it up and bin it"
+  },
+  {
+    "act_of_kindness": "Share something interesting you’ve learnt today"
+  },
+  {
+    "act_of_kindness": "Make your voice count - sign a petition for a good cause"
+  },
+  {
+    "act_of_kindness": "Make someone a cup of coffee"
+  },
+  {
+    "act_of_kindness": "Tell a friend about ARK/World Kindness Day"
+  },
+  {
+    "act_of_kindness": "Neighbour’s lawn looking messy? Offer to mow it"
+  },
+  {
+    "act_of_kindness": "Remember that family member you haven’t seen for a while? See how they are doing"
+  },
+  {
+    "act_of_kindness": "Taking public transport? Offer your seat to someone else"
+  },
+  {
+    "act_of_kindness": "Forgive someone who has wronged you"
+  },
+  {
+    "act_of_kindness": "Make someone’s day – tell a friend why you appreciate them"
+  },
+  {
+    "act_of_kindness": "Help someone carry their pushchair up/down the stairs"
+  },
+  {
+    "act_of_kindness": "Treat a friend – buy them lunch!"
+  },
+  {
+    "act_of_kindness": "Know someone who’s feeling under the weather? Pay them a visit!"
+  },
+  {
+    "act_of_kindness": "Lend a friend a book you think they’d like"
+  },
+  {
+    "act_of_kindness": "Go green – don’t waste paper"
+  },
+  {
+    "act_of_kindness": "Feed a stray animal if you spot one"
+  },
+  {
+    "act_of_kindness": "Remember to turn the lights off when you leave a room!"
+  },
+  {
+    "act_of_kindness": "Save water – turn the tap off when brushing your teeth!"
+  },
+  {
+    "act_of_kindness": "Save water – take a shorter shower today"
+  },
+  {
+    "act_of_kindness": "Fight climate change – go vegetarian for today!"
+  },
+  {
+    "act_of_kindness": "Recycle 3 things today"
+  },
+  {
+    "act_of_kindness": "Put your phone down and have a conversation with a friend"
+  },
+  {
+    "act_of_kindness": "Hug your parents"
+  },
+  {
+    "act_of_kindness": "Google 'survey for charity' and complete one. They receive money for every one you fill out!"
+  },
+  {
+    "act_of_kindness": "Who will be making dinner for your family today? Tag, you’re it!"
+  },
+  {
+    "act_of_kindness": "Help somebody with a chore they need done!"
+  },
+  {
+    "act_of_kindness": "Go out of your way to thank someone today!"
+  },
+  {
+    "act_of_kindness": "Pick up somebody else’ tab next time you go for a coffee"
+  },
+  {
+    "act_of_kindness": "Support a small, local business as a customer"
+  },
+  {
+    "act_of_kindness": "Oooh wait! There’s somebody behind you; hold the door open!"
+  },
+  {
+    "act_of_kindness": "Pay for someone’s bus ticket"
+  },
+  {
+    "act_of_kindness": "Volunteer your time for a good cause"
+  },
+  {
+    "act_of_kindness": "Empty your wallet for charity"
+  },
+  {
+    "act_of_kindness": "Good servicing requires a lot of effort; tip them!"
+  },
+  {
+    "act_of_kindness": "No matter how annoying they can be, tell your siblings how much you appreciate them"
+  },
+  {
+    "act_of_kindness": "Help someone improve, give them constructive feedback"
+  },
+  {
+    "act_of_kindness": "Share your lunch with a friend"
+  },
+  {
+    "act_of_kindness": "It can get lonely when you are old, pay your grandparents a visit"
+  },
+  {
+    "act_of_kindness": "Remember that friend you haven’t seen for ages? Give them a call"
+  },
+  {
+    "act_of_kindness": "Start the day right – make breakfast for everyone"
+  },
+  {
+    "act_of_kindness": "Be proactive – sign a petition for a good cause"
+  },
+  {
+    "act_of_kindness": "Hand out balloons to a passersby"
+  },
+  {
+    "act_of_kindness": "Give a homeless person your doggie bag"
+  },
+  {
+    "act_of_kindness": "Make kindness bookmarks and give them away"
+  },
+  {
+    "act_of_kindness": "Set up a lemonade stand on a hot day and give it our for free"
+  },
+  {
+    "act_of_kindness": "Pull out someone’s chair for them at the dinner table"
+  },
+  {
+    "act_of_kindness": "Offer someone a piece of gum"
+  },
+  {
+    "act_of_kindness": "Each time you get a new item of clothing, give away something"
+  },
+  {
+    "act_of_kindness": "Bring a treat to work to share with your coworkers"
+  },
+  {
+    "act_of_kindness": "Send a letter"
+  },
+  {
+    "act_of_kindness": "Put something you no longer need on craigslist.org for free"
+  },
+  {
+    "act_of_kindness": "Share you umbrella"
+  },
+  {
+    "act_of_kindness": "Drop off a toy or game at a hospital"
+  },
+  {
+    "act_of_kindness": "If you print an internet coupon before going to a store, print a few extras to give to other customers"
+  },
+  {
+    "act_of_kindness": "Write a note of appreciation to your mailman"
+  },
+  {
+    "act_of_kindness": "Find a local blood drive or go to your local blood bank and donate"
+  },
+  {
+    "act_of_kindness": "Give free car washes"
+  },
+  {
+    "act_of_kindness": "Drop off teddy bears to police department to give to traumatized children"
+  },
+  {
+    "act_of_kindness": "Offer to take a friend’s child to ball practice"
+  },
+  {
+    "act_of_kindness": "Give a lottery ticket to a stranger"
+  },
+  {
+    "act_of_kindness": "Leave flowers in front of someone’s house"
+  },
+  {
+    "act_of_kindness": "Give free hugs"
+  },
+  {
+    "act_of_kindness": "Bake cookies and give them away"
+  },
+  {
+    "act_of_kindness": "Share a positive blog post"
+  },
+  {
+    "act_of_kindness": "Let you staff leave work an hour early"
+  },
+  {
+    "act_of_kindness": "Keep an extra umbrella at work, so you can lend it out when it rains"
+  },
+  {
+    "act_of_kindness": "Help an elderly person care for their pet(s)"
+  },
+  {
+    "act_of_kindness": "Invite a friend to the movies or dinner"
+  },
+  {
+    "act_of_kindness": "Drop off books and magazines to hospitals, nursing homes and doctor’s offices"
+  },
+  {
+    "act_of_kindness": "Out of the blue, send flowers to a friend"
+  },
+  {
+    "act_of_kindness": "Carry around a care package of food or toiletries that you can give to a homeless person"
+  },
+  {
+    "act_of_kindness": "Bring a box of doughnuts to share at the office"
+  },
+  {
+    "act_of_kindness": "Give away your parking spot"
+  },
+  {
+    "act_of_kindness": "Cut coupons out and leave them at the grocer register for others"
+  },
+  {
+    "act_of_kindness": "Give a phone card to someone"
+  },
+  {
+    "act_of_kindness": "Send a card to someone in the military overseas"
+  },
+  {
+    "act_of_kindness": "Bring in your neighbor’s trash cans"
+  },
+  {
+    "act_of_kindness": "Transport someone who can’t drive"
+  },
+  {
+    "act_of_kindness": "At the post office eave some extra stamps at the stamp machine"
+  },
+  {
+    "act_of_kindness": "Offer to return a shopping cart to the store for someone unloading a car"
+  },
+  {
+    "act_of_kindness": "Send a thank you note to someone you appreciate"
+  },
+  {
+    "act_of_kindness": "Mow a neighbor’s lawn"
+  },
+  {
+    "act_of_kindness": "Cut an article out of the newspaper that would interest a friend and mail it to them"
+  },
+  {
+    "act_of_kindness": "Offer your seat on a plane"
+  },
+  {
+    "act_of_kindness": "Offer the handyman a drink"
+  },
+  {
+    "act_of_kindness": "Offer to pick up groceries for an elderly neighbor, especially in extreme weather"
+  },
+  {
+    "act_of_kindness": "Hold the door for someone"
+  },
+  {
+    "act_of_kindness": "Send a car package"
+  },
+  {
+    "act_of_kindness": "Help people pack their groceries into their cars"
+  },
+  {
+    "act_of_kindness": "Give a bottle with cold water to a bus driver"
+  },
+  {
+    "act_of_kindness": "Donate your vehicle"
+  },
+  {
+    "act_of_kindness": "Treat someone to fresh fruit"
+  },
+  {
+    "act_of_kindness": "Give out free popsicles"
+  },
+  {
+    "act_of_kindness": "Write an inspirational note to someone how needs inspiration"
+  },
+  {
+    "act_of_kindness": "Take blankets or warm clothing to a homeless person"
+  },
+  {
+    "act_of_kindness": "Leave a book you already finished somewhere for someone else to read"
+  },
+  {
+    "act_of_kindness": "On Memorial Day or Veteran’s Day, go to your local memorial or event and pass out mini flags or flowers to veteran’s"
+  },
+  {
+    "act_of_kindness": "Be a good neighbor"
+  },
+  {
+    "act_of_kindness": "Write a list of what you are grateful for RIGHT NOW and share with friends, friends and/or coworkers to promote an attitude of gratitude"
+  },
+  {
+    "act_of_kindness": "Send unexpected bouquet of flowers to someone you appreciate"
+  },
+  {
+    "act_of_kindness": "Take a child to a mall to give a “just because” flower to five elders, with a heartfelt “have a nice day” greeting"
+  },
+  {
+    "act_of_kindness": "Deliver fresh-baked cookies to town or city workers"
+  },
+  {
+    "act_of_kindness": "Give friends and family kindness coupons they can redeem for kind favors"
+  },
+  {
+    "act_of_kindness": "Open the car door for your passenger"
+  },
+  {
+    "act_of_kindness": "Be a role model"
+  },
+  {
+    "act_of_kindness": "Send cards with beautiful messages to anonymous people. Give someone a chocolate heart… just because"
+  },
+  {
+    "act_of_kindness": "Get together with friends, neighbors, classmates, co-workers and family and brainstorm ways you can show kindness to yourselves, to others and to the earth"
+  },
+  {
+    "act_of_kindness": "Do as many kind things as you can by being anonymous. It is a wonderful feeling"
+  },
+  {
+    "act_of_kindness": "Pick flowers for someone special"
+  },
+  {
+    "act_of_kindness": "Ask someone if you can help"
+  },
+  {
+    "act_of_kindness": "Thank your teachers with a homemade gift or message"
+  },
+  {
+    "act_of_kindness": "Take a cute photo of someone you love and mail or email it to them"
+  },
+  {
+    "act_of_kindness": "When it’s freezing outside offer hot chocolate to crossing guards, police officers and others"
+  },
+  {
+    "act_of_kindness": "Call a friend randomly and let them know you’re thinking of them"
+  },
+  {
+    "act_of_kindness": "Do something special that you know your significant other will appreciate"
+  },
+  {
+    "act_of_kindness": "Include a note in your child’s or spouse’s lunch box"
+  },
+  {
+    "act_of_kindness": "Wave back to children who wave to you"
+  },
+  {
+    "act_of_kindness": "Make little gift baskets for the kids in your neighborhood"
+  },
+  {
+    "act_of_kindness": "Leave a chocolate for a co-worker"
+  },
+  {
+    "act_of_kindness": "Forgive someone"
+  },
+  {
+    "act_of_kindness": "Give another person your parking spot"
+  },
+  {
+    "act_of_kindness": "Laugh often"
+  },
+  {
+    "act_of_kindness": "Tell a story to kids in the park"
+  },
+  {
+    "act_of_kindness": "Thank your bus or taxi driver"
+  },
+  {
+    "act_of_kindness": "Smile at five strangers"
+  },
+  {
+    "act_of_kindness": "When you’re on a crowded train or bus, offer your seat to an elderly, disabled or pregnant person"
+  },
+  {
+    "act_of_kindness": "Forgive someone a debt and never bring it up"
+  },
+  {
+    "act_of_kindness": "Say something nice to everyone you meet today"
+  },
+  {
+    "act_of_kindness": "Make a helpful introduction"
+  },
+  {
+    "act_of_kindness": "Ask a teenager for their opinion… and then really listen to them"
+  },
+  {
+    "act_of_kindness": "Hold the door open for someone"
+  },
+  {
+    "act_of_kindness": "Tell your employees how much you appreciate their work"
+  },
+  {
+    "act_of_kindness": "Tell your boss that you think he/she does a good job"
+  },
+  {
+    "act_of_kindness": "Don’t interrupt when someone is explaining herself"
+  },
+  {
+    "act_of_kindness": "Write a letter to an older teacher who influenced your life"
+  },
+  {
+    "act_of_kindness": "Find opportunities to give compliments. It costs nothing, takes no time, and could make someone’s entire day. Don’t just think it , Say it"
+  },
+  {
+    "act_of_kindness": "Incorporate acts of kindness into your family meals, classrooms, and workplaces. Perhaps spend 5 minutes each day sharing your kindness ideas or the acts you shared during the day. Make kindness a daily habit in all your environments"
+  },
+  {
+    "act_of_kindness": "Listen don’t interrupt"
+  },
+  {
+    "act_of_kindness": "Be a positive person"
+  },
+  {
+    "act_of_kindness": "Help someone for free"
+  },
+  {
+    "act_of_kindness": "Say I love you to someone you love"
+  },
+  {
+    "act_of_kindness": "Wipe rainwater off shopping carts of hold umbrellas for shoppers on the way to their car"
+  },
+  {
+    "act_of_kindness": "Pat someone on the back"
+  },
+  {
+    "act_of_kindness": "Say a nice thing to someone in a sour mood"
+  },
+  {
+    "act_of_kindness": "Write letters of appreciation to groups who are helping the community, the environment,etc."
+  },
+  {
+    "act_of_kindness": "Compliment a stranger sincerely"
+  },
+  {
+    "act_of_kindness": "Make a cd of your favorite songs and give to a friend"
+  },
+  {
+    "act_of_kindness": "Put a surprise note or sketch in with your spouse’s or kid’s lunch"
+  },
+  {
+    "act_of_kindness": "When drivers try to merge into your lane, let them in with a wave and a smile"
+  },
+  {
+    "act_of_kindness": "Hold the elevator"
+  },
+  {
+    "act_of_kindness": "Say “good morning”"
+  },
+  {
+    "act_of_kindness": "Be generous with compliments"
+  },
+  {
+    "act_of_kindness": "Email a friend to thank them for being there for you through hardships"
+  },
+  {
+    "act_of_kindness": "Call your parents. Hi Mom and Dad"
+  },
+  {
+    "act_of_kindness": "Say “thank you” to someone who made a difference… send a card to people who dedicate their lives to helping us – soldiers, police officers, fire fighters and teachers to name a few"
+  },
+  {
+    "act_of_kindness": "Write a card of thanks and leave it with your tip. Be sure to be specific in your thanks"
+  },
+  {
+    "act_of_kindness": "Offer to take a picture of a group, family, or couple who have a camera"
+  },
+  {
+    "act_of_kindness": "Say something nice to someone"
+  },
+  {
+    "act_of_kindness": "Call your grandparents or parents and let them know how they’ve impacted your life"
+  },
+  {
+    "act_of_kindness": "Open the door for someone"
+  },
+  {
+    "act_of_kindness": "Express appreciation to workers who provide you with goods and services that don’t usually get noticed for example, the police, firefighters, store clerks, behind the scenes restaurant staff, maintenance staff, etc."
+  },
+  {
+    "act_of_kindness": "Simply say “I’m Sorry” when you’re wrong"
+  },
+  {
+    "act_of_kindness": "Share kind, positive quotes that inspire you"
+  },
+  {
+    "act_of_kindness": "Give someone the benefit of the doubt"
+  },
+  {
+    "act_of_kindness": "Play sports with people you don’t know in the park"
+  },
+  {
+    "act_of_kindness": "Be polite on the road"
+  },
+  {
+    "act_of_kindness": "Create a giant thank you card"
+  },
+  {
+    "act_of_kindness": "Pay it forward"
+  },
+  {
+    "act_of_kindness": "Share a comic strip or something funny with someone else"
+  },
+  {
+    "act_of_kindness": "When a friend makes a meal that you love, ask for the recipe"
+  },
+  {
+    "act_of_kindness": "Obey the rules at school"
+  },
+  {
+    "act_of_kindness": "Help someone with their groceries or bags"
+  },
+  {
+    "act_of_kindness": "Call someone you love tell him you love him"
+  },
+  {
+    "act_of_kindness": "Obey your parents"
+  },
+  {
+    "act_of_kindness": "Smile"
+  },
+  {
+    "act_of_kindness": "Let someone go in line in front of you"
+  },
+  {
+    "act_of_kindness": "Leave have a nice day stickers at a front desk"
+  },
+  {
+    "act_of_kindness": "Rub a loved one’s back"
+  },
+  {
+    "act_of_kindness": "Post a list of random acts of kindness in a public place"
+  },
+  {
+    "act_of_kindness": "Go to a tourist spot and offer couples/families to take their pictures with their camera"
+  },
+  {
+    "act_of_kindness": "Write a letter to the editor reminding people to be kind"
+  },
+  {
+    "act_of_kindness": "Let another care merge in front of you, or stop to let a pedestrian cross the street"
+  },
+  {
+    "act_of_kindness": "Write a letter to a child who could use some extra attention. Kids love getting mail"
+  },
+  {
+    "act_of_kindness": "Write anonymous, friendly post-its for strangers to find"
+  },
+  {
+    "act_of_kindness": "Give the gift of your smile along with a small piece of paper with a smiley face and a note that says “pass it on”"
+  },
+  {
+    "act_of_kindness": "Say something nice about someone"
+  },
+  {
+    "act_of_kindness": "Pay a compliment at least once a day"
+  },
+  {
+    "act_of_kindness": "Leave a nice note on a stranger’s car"
+  },
+  {
+    "act_of_kindness": "Say “please” and “thank you” and really mean it"
+  },
+  {
+    "act_of_kindness": "Slip paper hearts that say “Its random acts of kindness day! Have a great day! Pass it on!” under the windshield wipers of parked cars"
+  },
+  {
+    "act_of_kindness": "Tell your children you love them"
+  },
+  {
+    "act_of_kindness": "Smile and say hello to someone you don’t know"
+  },
+  {
+    "act_of_kindness": "Carry around a $5 gift card so you can give it to someone who does something awesome"
+  },
+  {
+    "act_of_kindness": "Give your pocket change someone who needs it"
+  },
+  {
+    "act_of_kindness": "Buy a movie ticket for the person behind you in line"
+  },
+  {
+    "act_of_kindness": "Put quarters in the laundry machine for the next person"
+  },
+  {
+    "act_of_kindness": "Invite someone to dinner"
+  },
+  {
+    "act_of_kindness": "Send an anonymous scratch card, lottery or theater ticket to someone you know – or a gift voucher, a funny card, a chocolate bar, or whatever you feel they would enjoy"
+  },
+  {
+    "act_of_kindness": "Slip a bit of $$ to a person who you know is having financial difficulty. Even better if they don’t know where it came from."
+  },
+  {
+    "act_of_kindness": "Purchase a couple of umbrellas, blankets, ponchos at a dollar store and keep it in your trunk – when it’s a rainy/cold day, find a person who needs it and give them one."
+  },
+  {
+    "act_of_kindness": "Leave enough money in the vending machine for the next person to get a free treat."
+  },
+  {
+    "act_of_kindness": "Pay for someone’s parking"
+  },
+  {
+    "act_of_kindness": "Leave a big tip"
+  },
+  {
+    "act_of_kindness": "At the post office, leave some extra stamps at the stamp machine"
+  },
+  {
+    "act_of_kindness": "Take someone to the Movies"
+  },
+  {
+    "act_of_kindness": "Stop at a kid’s lemonade stand and buy a drink"
+  },
+  {
+    "act_of_kindness": "Send a treat to a school or day-care center"
+  },
+  {
+    "act_of_kindness": "Tape the exact change for a soda to a vending machine"
+  },
+  {
+    "act_of_kindness": "Buy something for the person behind you in line"
+  },
+  {
+    "act_of_kindness": "Pay for someone’s meal behind you at a fast-food drive-thru"
+  },
+  {
+    "act_of_kindness": "Give coffee to people on their way to work in the morning"
+  },
+  {
+    "act_of_kindness": "Buy a roll of brightly colored stickers and give them out to kids you meet during the day"
+  },
+  {
+    "act_of_kindness": "At a restaurant, pay for a table’s lunch or dinner anonymously"
+  },
+  {
+    "act_of_kindness": "Pay for someone’s groceries"
+  },
+  {
+    "act_of_kindness": "Drop a few coins in an area where children play, where they can easily find them"
+  },
+  {
+    "act_of_kindness": "Send a bouquet of flowers to a hospital and let the hospital know it should go to someone who doesn’t receive any visitors and is alone"
+  },
+  {
+    "act_of_kindness": "Donate $1"
+  },
+  {
+    "act_of_kindness": "Start a Piggy Bank for a Cause"
+  },
+  {
+    "act_of_kindness": "If you know someone who is having a hard time financially, pop $5, $10 or $20 in an envelope, disguise your writing or type the envelope, and mail it to them"
+  },
+  {
+    "act_of_kindness": "Open the phone book, pick a name, and send them something (movie tickets, thank you card, you are appreciated card, book, etc.) anonymously"
+  },
+  {
+    "act_of_kindness": "Buy a phone card and give to a homeless shelter for them to give to someone"
+  },
+  {
+    "act_of_kindness": "Buy a coffee for the person waiting behind you at the coffee shop"
+  },
+  {
+    "act_of_kindness": "Buy a stranger a free pizza or a dessert"
+  },
+  {
+    "act_of_kindness": "When it’s summer and hot, give out cold Gatorades to your mail carrier and garbage men"
+  },
+  {
+    "act_of_kindness": "Send flowers to a local teacher who has dedicated her life to children"
+  },
+  {
+    "act_of_kindness": "Buy a small gift for someone, just because"
+  },
+  {
+    "act_of_kindness": "Give a Random Stranger a gift from their Amazon Wish List"
+  },
+  {
+    "act_of_kindness": "Pay for someone’s dinner"
+  },
+  {
+    "act_of_kindness": "Buy a meal for a homeless person"
+  },
+  {
+    "act_of_kindness": "Give a bag of groceries to a homeless person"
+  },
+  {
+    "act_of_kindness": "Help someone whose car is broken down"
+  },
+  {
+    "act_of_kindness": "Wash a neighbor’s vehicle"
+  },
+  {
+    "act_of_kindness": "Volunteer at a James 2 Kitchen in your neighborhood"
+  },
+  {
+    "act_of_kindness": "Share your knowledge by volunteering in the classroom"
+  },
+  {
+    "act_of_kindness": "Call or visit a homebound person"
+  },
+  {
+    "act_of_kindness": "Shovel snow for a neighbor"
+  },
+  {
+    "act_of_kindness": "Coach a youth sports team"
+  },
+  {
+    "act_of_kindness": "Donate your time or money to a local charity"
+  },
+  {
+    "act_of_kindness": "Read to a child"
+  },
+  {
+    "act_of_kindness": "Visit a nursing home just to spend a little time with residents. Find out if you can bring a dog that would be great with elderly folks"
+  },
+  {
+    "act_of_kindness": "Knit or crochet hats for cancer patients"
+  },
+  {
+    "act_of_kindness": "Offer a couple of hours of baby-sitting to parents"
+  },
+  {
+    "act_of_kindness": "Spend time at a senior community"
+  },
+  {
+    "act_of_kindness": "Offer to baby-sit for a single mom"
+  },
+  {
+    "act_of_kindness": "Pet-sit for free"
+  },
+  {
+    "act_of_kindness": "Give toys to the children at the shelter or safe house"
+  },
+  {
+    "act_of_kindness": "Visit hospitals with smiles, treats, and friendly conversation for patients"
+  },
+  {
+    "act_of_kindness": "Donate clothes to goodwill"
+  },
+  {
+    "act_of_kindness": "Throw away your trash – and someone else’s – after a movie, picnic or visit to a park"
+  },
+  {
+    "act_of_kindness": "Stand outside a supermarket and give people reusable shopping bags"
+  },
+  {
+    "act_of_kindness": "Treat someone to a cup of their favorite coffee. Pick up recyclables, cash them in and do it all over again"
+  },
+  {
+    "act_of_kindness": "Pick up litter"
+  },
+  {
+    "act_of_kindness": "Plant a tree or a seed or a flower"
+  },
+  {
+    "act_of_kindness": "Clean graffiti from neighborhood walls and buildings"
+  },
+  {
+    "act_of_kindness": "Make a bird feeder"
+  },
+  {
+    "act_of_kindness": "Have a cleanup party in the park"
+  },
+  {
+    "act_of_kindness": "Remove debris or other obstacles from a road or path"
+  },
+  {
+    "act_of_kindness": "Organize a carpool"
+  },
+  {
+    "act_of_kindness": "Rake someone’s yard"
+  },
+  {
+    "act_of_kindness": "Pick up three pieces of trash wherever you are"
+  }
+]
+}

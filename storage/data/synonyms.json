@@ -1,0 +1,624 @@
+{
+  "actions": [
+    {
+      "word": {
+        "value": "come",
+        "synonyms": "advance, approach, arrive, near, reach"
+      }
+    },
+    {
+      "word": {
+        "value": "go",
+        "synonyms": "depart, disappear, fade, move, proceed, recede, travel"
+      }
+    },
+    {
+      "word": {
+        "value": "run",
+        "synonyms": "dash, escape, elope, flee, hasten, hurry, race, rush, speed, sprint"
+      }
+    },
+    {
+      "word": {
+        "value": "hurry",
+        "synonyms": "rush, run, speed, race, hasten, urge, accelerate, bustle"
+      }
+    },
+    {
+      "word": {
+        "value": "hide",
+        "synonyms": "conceal, cover, mask, cloak, camouflage, screen, shroud, veil"
+      }
+    },
+    {
+      "word": {
+        "value": "move",
+        "synonyms": "plod, go, creep, crawl, inch, poke, drag, toddle, shuffle, trot, dawdle, walk, traipse, mosey, jog, plug, trudge, slump, lumber, trail, lag, run, sprint, trip, bound, hotfoot, high-tail, streak, stride, tear, breeze, whisk, rush, dash, dart, bolt, fling, scamper, scurry, skedaddle, scoot, scuttle, scramble, race, chase, hasten, hurry, hump, gallop, lope, accelerate, stir, budge, travel, wander, roam, journey, trek, ride, spin, slip, glide, slide, slither, coast, flow, sail, saunter, hobble, amble, stagger, paddle, slouch, prance, straggle, meander, perambulate, waddle, wobble, pace, swagger, promenade, lunge"
+      }
+    },
+    {
+      "word": {
+        "value": "do",
+        "synonyms": "execute, enact, carry out, finish, conclude, effect, accomplish, achieve, attain"
+      }
+    },
+    {
+      "word": {
+        "value": "have",
+        "synonyms": "hold, possess, own, contain, acquire, gain, maintain, believe, bear, beget, occupy, absorb, fill, enjoy"
+      }
+    },
+    {
+      "word": {
+        "value": "use",
+        "synonyms": "employ, utilize, exhaust, spend, expend, consume, exercise"
+      }
+    },
+    {
+      "word": {
+        "value": "get",
+        "synonyms": "acquire, obtain, secure, procure, gain, fetch, find, score, accumulate, win, earn, rep, catch, net, bag, derive, collect, gather, glean, pick up, accept, come by, regain, salvage"
+      }
+    },
+    {
+      "word": {
+        "value": "keep",
+        "synonyms": "hold, retain, withhold, preserve, maintain, sustain, support"
+      }
+    },
+    {
+      "word": {
+        "value": "put",
+        "synonyms": "place, set, attach, establish, assign, keep, save, set aside, effect, achieve, do, build"
+      }
+    },
+    {
+      "word": {
+        "value": "take",
+        "synonyms": "hold, catch, seize, grasp, win, capture, acquire, pick, choose, select, prefer, remove, steal, lift, rob, engage, bewitch, purchase, buy, retract, recall, assume, occupy, consume"
+      }
+    },
+    {
+      "word": {
+        "value": "make",
+        "synonyms": "create, originate, invent, beget, form, construct, design, fabricate, manufacture, produce, build, develop, do, effect, execute, compose, perform, accomplish, earn, gain, obtain, acquire, get"
+      }
+    },
+    {
+      "word": {
+        "value": "break",
+        "synonyms": "fracture, rupture, shatter, smash, wreck, crash, demolish, atomize"
+      }
+    },
+    {
+      "word": {
+        "value": "destroy",
+        "synonyms": "ruin, demolish, raze, waste, kill, slay, end, extinguish"
+      }
+    },
+    {
+      "word": {
+        "value": "kill",
+        "synonyms": "slay, execute, assassinate, murder, destroy, cancel, abolish"
+      }
+    },
+    {
+      "word": {
+        "value": "cut",
+        "synonyms": "gash, slash, prick, nick, sever, slice, carve, cleave, slit, chop, crop, lop, reduce"
+      }
+    },
+    {
+      "word": {
+        "value": "fall",
+        "synonyms": "drop, descend, plunge, topple, tumble"
+      }
+    },
+    {
+      "word": {
+        "value": "fly",
+        "synonyms": "soar, hover, flit, wing, flee, waft, glide, coast, skim, sail, cruise"
+      }
+    },
+    {
+      "word": {
+        "value": "decide",
+        "synonyms": "determine, settle, choose, resolve"
+      }
+    },
+    {
+      "word": {
+        "value": "help",
+        "synonyms": "aid, assist, support, encourage, back, wait on, attend, serve, relieve, succor, benefit, befriend, abet"
+      }
+    },
+    {
+      "word": {
+        "value": "mark",
+        "synonyms": "label, tag, price, ticket, impress, effect, trace, imprint, stamp, brand, sign, note, heed, notice, designate"
+      }
+    },
+    {
+      "word": {
+        "value": "plan",
+        "synonyms": "plot, scheme, design, draw, map, diagram, procedure, arrangement, intention, device, contrivance, method, way, blueprint"
+      }
+    },
+    {
+      "word": {
+        "value": "show",
+        "synonyms": "display, exhibit, present, note, point to, indicate, explain, reveal, prove, demonstrate, expose"
+      }
+    }
+  ],
+  "antonyms": [
+    {
+      "word": {
+        "value": "begin",
+        "synonyms": "start, open, launch, initiate, commence, inaugurate, originate"
+      }
+    },
+    {
+      "word": {
+        "value": "end",
+        "synonyms": "stop, finish, terminate, conclude, close, halt, cessation, discontinuance, cease, halt, stay, pause, discontinue, conclude, finish, quit"
+      }
+    },
+    {
+      "word": {
+        "value": "big",
+        "synonyms": "large, enormous, huge, immense, gigantic, vast, colossal, gargantuan, sizable, grand, great, tall, substantial, mammoth, astronomical, ample, broad, expansive, spacious, stout, tremendous, titanic, mountainous"
+      }
+    },
+    {
+      "word": {
+        "value": "little",
+        "synonyms": "small, tiny, diminutive, shrimp, runt, miniature, puny, exiguous, dinky, cramped, limited, itsy-bitsy, microscopic, slight, petite, minute"
+      }
+    },
+    {
+      "word": {
+        "value": "new",
+        "synonyms": "fresh, unique, original, unusual, novel, modern, current, recent"
+      }
+    },
+    {
+      "word": {
+        "value": "old",
+        "synonyms": "feeble, frail, ancient, weak, aged, used, worn, dilapidated, ragged, faded, broken-down, former, old-fashioned, outmoded, passe, veteran, mature, venerable, primitive, traditional, archaic, conventional, customary, stale, musty, obsolete, extinct"
+      }
+    },
+    {
+      "word": {
+        "value": "false",
+        "synonyms": "wrong, fake, fraudulent, counterfeit, spurious, untrue, unfounded, erroneous, deceptive, groundless, fallacious, incorrect, inaccurate, mistaken, erroneous, improper, unsuitable"
+      }
+    },
+    {
+      "word": {
+        "value": "true",
+        "synonyms": "right, accurate, proper, precise, exact, valid, genuine, real, actual, trusty, steady, loyal, dependable, sincere, staunch, correct, accurate, factual, true, good, just, honest, upright, lawful, moral, proper, suitable, apt, legal, fair"
+      }
+    },
+    {
+      "word": {
+        "value": "fast",
+        "synonyms": "quick, rapid, speedy, fleet, hasty, snappy, mercurial, swiftly, rapidly, quickly, snappily, speedily, lickety-split, posthaste, hastily, expeditiously, like a flash"
+      }
+    },
+    {
+      "word": {
+        "value": "slow",
+        "synonyms": "unhurried, gradual, leisurely, late, behind, tedious, slack"
+      }
+    },
+    {
+      "word": {
+        "value": "cool",
+        "synonyms": "chilly, cold, frosty, wintry, icy, frigid"
+      }
+    },
+    {
+      "word": {
+        "value": "hot",
+        "synonyms": "feverish, warm, heated, sweltering, torrid, equatorial, tropical, erotic, passionate, spicy, peppery, pungent, sharp tangy, tart, fiery, flaming, sizzling, charged, burning, seared, chafed´, inflamed, irritated, red, smarting, stinging"
+      }
+    },
+    {
+      "word": {
+        "value": "quiet",
+        "synonyms": "silent, still, soundless, mute, tranquil, peaceful, calm, restful, hushed, inaudible\nreticent, reserved, taciturn, secretive, uncommunicative, tightlipped"
+      }
+    },
+    {
+      "word": {
+        "value": "noisy",
+        "synonyms": "loudly, earsplitting, stentorian, strident, clamorous, boisterous, clangorous, deafening, roisterous, uproarious, pandemoniac"
+      }
+    },
+    {
+      "word": {
+        "value": "all",
+        "synonyms": "complete, entire, full, gross, outright, perfect, total, utter, whole, any, complete, every, sum, totality, each and every, every bit of, bar none, every single, everything, everyone"
+      }
+    },
+    {
+      "word": {
+        "value": "none",
+        "synonyms": "nothing, nobody, no one, zero, zilch, no one at all, no part, not a bit, not a soul, not a thing, not any, not anyone, not anything, not one, nonexistent, null, nadir, nil, naught, void, nada, blank, nix"
+      }
+    },
+    {
+      "word": {
+        "value": "normal",
+        "synonyms": "daily, traditional, familiar, routine, proper, ordinary, typical, everyday, usual, commonplace, natural, classic, standard, general, bona fide, established, habitual, orthodox, prevalent, run-of-the-mill, time-honored, unvarying, average, conventional, customary, common, regular, garden-variety, household, plain, simple, balanced"
+      }
+    },
+    {
+      "word": {
+        "value": "strange",
+        "synonyms": "abnormal, aberrant, anomalous, bent, bizarre, deviant, queer, eccentric, freakish, fanatical, odd, eerie, peculiar, weird, unorthodox, nonstandard, atypical, different, irregular, nonconforming, offbeat, unusual, extraordinary, insane, irrational, disorderly, rare, exceptional, extreme, outlandish"
+      }
+    }
+  ],
+  "descriptive": [
+    {
+      "word": {
+        "value": "describe",
+        "synonyms": "portray, characterize, picture, narrate, relate, recount, represent, report, record"
+      }
+    },
+    {
+      "word": {
+        "value": "difference",
+        "synonyms": "disagreement, inequity, contrast, dissimilarity, incompatibility"
+      }
+    },
+    {
+      "word": {
+        "value": "explain",
+        "synonyms": "elaborate, clarify, define, interpret, justify, account for"
+      }
+    },
+    {
+      "word": {
+        "value": "idea",
+        "synonyms": "thought, concept, conception, notion, understanding, opinion, plan, view, belief"
+      }
+    },
+    {
+      "word": {
+        "value": "look",
+        "synonyms": "gaze, see, glance, watch, survey, study, seek, search for, peek, peep, glimpse, stare, contemplate, examine, gape, ogle, scrutinize, inspect, leer, behold, observe, view, witness, perceive, spy, sight, discover, notice, recognize, peer, eye, gawk, peruse, explore"
+      }
+    },
+    {
+      "word": {
+        "value": "story",
+        "synonyms": "tale, myth, legend, fable, yarn, account, narrative, chronicle, epic, sage, anecdote, record, memoir"
+      }
+    },
+    {
+      "word": {
+        "value": "tell",
+        "synonyms": "disclose, reveal, show, expose, uncover, relate, narrate, inform, advise, explain, divulge, declare, command, order, bid, recount, repeat"
+      }
+    },
+    {
+      "word": {
+        "value": "think",
+        "synonyms": "judge, deem, assume, believe, consider, contemplate, reflect, mediate"
+      }
+    }
+  ],
+  "feelings": [
+    {
+      "word": {
+        "value": "anger",
+        "synonyms": "enrage, infuriate, arouse, nettle, exasperate, inflame, madden"
+      }
+    },
+    {
+      "word": {
+        "value": "angry",
+        "synonyms": "mad, furious, enraged, excited, wrathful, indignant, exasperated, aroused, inflamed"
+      }
+    },
+    {
+      "word": {
+        "value": "calm",
+        "synonyms": "quiet, peaceful, still, tranquil, mild, serene, smooth, composed, collected, unruffled, level-headed, unexcited, detached, aloof"
+      }
+    },
+    {
+      "word": {
+        "value": "eager",
+        "synonyms": "keen, fervent, enthusiastic, involved, interested, alive to"
+      }
+    },
+    {
+      "word": {
+        "value": "fear",
+        "synonyms": "fright, dread, terror, alarm, dismay, anxiety, scare, awe, horror, panic, apprehension"
+      }
+    },
+    {
+      "word": {
+        "value": "happy",
+        "synonyms": "pleased, contented, satisfied, delighted, elated, joyful, cheerful, ecstatic, jubilant, gay, tickled, gratified, glad, blissful, overjoyed"
+      }
+    },
+    {
+      "word": {
+        "value": "hate",
+        "synonyms": "despise, loathe, detest, abhor, disfavor, dislike, disapprove, abominate"
+      }
+    },
+    {
+      "word": {
+        "value": "love",
+        "synonyms": "like, admire, esteem, fancy, care for, cherish, adore, treasure, worship, appreciate, savor"
+      }
+    },
+    {
+      "word": {
+        "value": "moody",
+        "synonyms": "temperamental, changeable, short-tempered, glum, morose, sullen, mopish, irritable, testy, peevish, fretful, spiteful, sulky, touchy"
+      }
+    },
+    {
+      "word": {
+        "value": "sad",
+        "synonyms": "miserable, uncomfortable, wretched, heart-broken, unfortunate, poor, downhearted, sorrowful, depressed, dejected, melancholy, glum, gloomy, dismal, discouraged, unhappy"
+      }
+    },
+    {
+      "word": {
+        "value": "scared",
+        "synonyms": "afraid, frightened, alarmed, terrified, panicked, fearful, unnerved, insecure, timid, shy, skittish, jumpy, disquieted, worried, vexed, troubled, disturbed, horrified, terrorized, shocked, petrified, haunted, timorous, shrinking, tremulous, stupefied, paralyzed, stunned, apprehensive"
+      }
+    }
+  ],
+  "negative": [
+    {
+      "word": {
+        "value": "awful",
+        "synonyms": "dreadful, terrible, abominable, bad, poor, unpleasant"
+      }
+    },
+    {
+      "word": {
+        "value": "bad",
+        "synonyms": "evil, immoral, wicked, corrupt, sinful, depraved, rotten, contaminated, spoiled, tainted, harmful, injurious, unfavorable, defective, inferior, imperfect, substandard, faulty, improper, inappropriate, unsuitable, disagreeable, unpleasant, cross, nasty, unfriendly, irascible, horrible, atrocious, outrageous, scandalous, infamous, wrong, noxious, sinister, putrid, snide, deplorable, dismal, gross, heinous, nefarious, base, obnoxious, detestable, despicable, contemptible, foul, rank, ghastly, execrable"
+      }
+    },
+    {
+      "word": {
+        "value": "crooked",
+        "synonyms": "bent, twisted, curved, hooked, zigzag"
+      }
+    },
+    {
+      "word": {
+        "value": "dangerous",
+        "synonyms": "perilous, hazardous, risky, uncertain, unsafe"
+      }
+    },
+    {
+      "word": {
+        "value": "dark",
+        "synonyms": "shadowy, unlit, murky, gloomy, dim, dusky, shaded, sunless, black, dismal, sad"
+      }
+    },
+    {
+      "word": {
+        "value": "dull",
+        "synonyms": "boring, tiring,, tiresome, uninteresting, slow, dumb, stupid, unimaginative, lifeless, dead, insensible, tedious, wearisome, listless, expressionless, plain, monotonous, humdrum, dreary"
+      }
+    },
+    {
+      "word": {
+        "value": "fat",
+        "synonyms": "stout, corpulent, fleshy, beefy, paunchy, plump, full, rotund, tubby, pudgy, chubby, chunky, burly, bulky, elephantine"
+      }
+    },
+    {
+      "word": {
+        "value": "gross",
+        "synonyms": "improper, rude, coarse, indecent, crude, vulgar, outrageous, extreme, grievous, shameful, uncouth, obscene, low"
+      }
+    },
+    {
+      "word": {
+        "value": "hurt",
+        "synonyms": "damage, harm, injure, wound, distress, afflict, pain"
+      }
+    },
+    {
+      "word": {
+        "value": "lazy",
+        "synonyms": "indolent, slothful, idle, inactive, sluggish"
+      }
+    },
+    {
+      "word": {
+        "value": "predicament",
+        "synonyms": "quandary, dilemma, pickle, problem, plight, spot, scrape, jam"
+      }
+    },
+    {
+      "word": {
+        "value": "trouble",
+        "synonyms": "distress, anguish, anxiety, worry, wretchedness, pain, danger, peril, disaster, grief, misfortune, difficulty, concern, pains, inconvenience, exertion, effort"
+      }
+    },
+    {
+      "word": {
+        "value": "ugly",
+        "synonyms": "hideous, frightful, frightening, shocking, horrible, unpleasant, monstrous, terrifying, gross, grisly, ghastly, horrid, unsightly, plain, homely, evil, repulsive, repugnant, gruesome"
+      }
+    }
+  ],
+  "positive": [
+    {
+      "word": {
+        "value": "amazing",
+        "synonyms": "incredible, unbelievable, improbable, fabulous, wonderful, fantastic, astonishing, astounding, extraordinary"
+      }
+    },
+    {
+      "word": {
+        "value": "beautiful",
+        "synonyms": "pretty, lovely, handsome, attractive, gorgeous, dazzling, splendid, magnificent, comely, fair, ravishing, graceful, elegant, fine, exquisite, aesthetic, pleasing, shapely, delicate, stunning, glorious, heavenly, resplendent, radiant, glowing, blooming, sparkling"
+      }
+    },
+    {
+      "word": {
+        "value": "brave",
+        "synonyms": "courageous, fearless, dauntless, intrepid, plucky, daring, heroic, valorous, audacious, bold, gallant, valiant, doughty, mettlesome"
+      }
+    },
+    {
+      "word": {
+        "value": "bright",
+        "synonyms": "shining, shiny, gleaming, brilliant, sparkling, shimmering, radiant, vivid, colorful, lustrous, luminous, incandescent, intelligent, knowing, quick-witted, smart, intellectual"
+      }
+    },
+    {
+      "word": {
+        "value": "delicious",
+        "synonyms": "savory, delectable, appetizing, luscious, scrumptious, palatable, delightful, enjoyable, toothsome, exquisite"
+      }
+    },
+    {
+      "word": {
+        "value": "enjoy",
+        "synonyms": "appreciate, delight in, be pleased, indulge in, luxuriate in, bask in, relish, devour, savor, like"
+      }
+    },
+    {
+      "word": {
+        "value": "famous",
+        "synonyms": "well-known, renowned, celebrated, famed, eminent, illustrious, distinguished, noted, notorious"
+      }
+    },
+    {
+      "word": {
+        "value": "funny",
+        "synonyms": "humorous, amusing, droll, comic, comical, laughable, silly"
+      }
+    },
+    {
+      "word": {
+        "value": "good",
+        "synonyms": "excellent, fine, superior, wonderful, marvelous, qualified, suited, suitable, apt, proper, capable, generous, kindly, friendly, gracious, obliging, pleasant, agreeable, pleasurable, satisfactory, well-behaved, obedient, honorable, reliable, trustworthy, safe, favorable, profitable, advantageous, righteous, expedient, helpful, valid, genuine, ample, salubrious, estimable, beneficial, splendid, great, noble, worthy, first-rate, top-notch, grand, sterling, superb, respectable, edifying"
+      }
+    },
+    {
+      "word": {
+        "value": "great",
+        "synonyms": "noteworthy, worthy, distinguished, remarkable, grand, considerable, powerful, much, mighty"
+      }
+    },
+    {
+      "word": {
+        "value": "mischievous",
+        "synonyms": "prankish, playful, naughty, roguish, waggish, impish, sportive"
+      }
+    },
+    {
+      "word": {
+        "value": "neat",
+        "synonyms": "clean, orderly, tidy, trim, dapper, natty, smart, elegant, well-organized, super, desirable, spruce, shipshape, well-kept, shapely"
+      }
+    },
+    {
+      "word": {
+        "value": "popular",
+        "synonyms": "well-liked, approved, accepted, favorite, celebrated, common, current"
+      }
+    }
+  ],
+  "talk_speech": [
+    {
+      "word": {
+        "value": "answer",
+        "synonyms": "reply, respond, retort, acknowledge"
+      }
+    },
+    {
+      "word": {
+        "value": "ask",
+        "synonyms": "question, inquire of, seek information from, put a question to, demand, request, expect, inquire, query, interrogate, examine, quiz"
+      }
+    },
+    {
+      "word": {
+        "value": "cry",
+        "synonyms": "shout, yell, yowl, scream, roar, bellow, weep, wail, sob, bawl"
+      }
+    },
+    {
+      "word": {
+        "value": "say/tell",
+        "synonyms": "inform, notify, advise, relate, recount, narrate, explain, reveal, disclose, divulge, declare, command, order, bid, enlighten, instruct, insist, teach, train, direct, issue, remark, converse, speak, affirm, suppose, utter, negate, express, verbalize, voice, articulate, pronounce, deliver, convey, impart, assert, state, allege, mutter, mumble, whisper, sigh, exclaim, yell, sing, yelp, snarl, hiss, grunt, snort, roar, bellow, thunder, boom, scream, shriek, screech, squawk, whine, philosophize, stammer, stutter, lisp, drawl, jabber, protest, announce, swear, vow, content, assure, deny, dispute"
+      }
+    },
+    {
+      "word": {
+        "value": "mean (something)",
+        "synonyms": "add up to, affect, be important, be of value, be substantive, carry weight, connote, count, denote, express, imply, intend, involve, signify, spell, stand for, suggest, value, weigh in"
+      }
+    }
+  ],
+  "other": [
+    {
+      "word": {
+        "value": "somewhat",
+        "synonyms": "a little, sort of, kind of, a bit, relatively, slightly, moderately, to some extent / degree , reasonably, partially, more or less, not much, rather, quite, fairly, by a long shot, by far, rather, significantly, well"
+      }
+    },
+    {
+      "word": {
+        "value": "somehow",
+        "synonyms": "in a way, virtually, to a certain extent, in some measure, to some extent, to a certain degree, quasi , in a manner of speaking, effectively, anyhow, anyway, anywise, by hook or by crook, another, howsoever, in any way, somehow or other, someway, by some means"
+      }
+    },
+    {
+      "word": {
+        "value": "definite",
+        "synonyms": "certain, sure, positive, determined, clear, distinct, obvious"
+      }
+    },
+    {
+      "word": {
+        "value": "fair",
+        "synonyms": "just, impartial, unbiased, objective, unprejudiced, honest"
+      }
+    },
+    {
+      "word": {
+        "value": "important",
+        "synonyms": "necessary, vital, critical, indispensable, valuable, essential, significant, primary, principal, considerable, famous, distinguished, notable, well-known"
+      }
+    },
+    {
+      "word": {
+        "value": "interesting",
+        "synonyms": "fascinating, engaging, sharp, keen, bright, intelligent, animated, spirited, attractive, inviting, intriguing, provocative, thought-provoking, challenging, inspiring, involving, moving, titillating, tantalizing, exciting, entertaining, piquant, lively, racy, spicy, engrossing, absorbing, consuming, gripping, arresting, enthralling, spellbinding, curious, captivating, enchanting, bewitching, appealing"
+      }
+    },
+    {
+      "word": {
+        "value": "part",
+        "synonyms": "portion, share, piece, allotment, section, fraction, fragment"
+      }
+    },
+    {
+      "word": {
+        "value": "place",
+        "synonyms": "space, area, spot, plot, region, location, situation, position, residence, dwelling, set, site, station, status, state"
+      }
+    }
+  ]
+}

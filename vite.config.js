@@ -53,8 +53,12 @@ export default defineConfig({
         reportCompressedSize: false,
     },
     server: {
+        host: '0.0.0.0', // Binds to all network interfaces to make it accessible externally
+        port: 5173, // Ensure this matches the exposed port in your Docker setup
+        cors: true,
         hmr: {
-            host: 'localhost',
+            host: 'host.docker.internal', // Use Docker internal host for HMR from containers
+            port: 5173, // Match this with your Vite port
         },
         watch: {
             usePolling: true,

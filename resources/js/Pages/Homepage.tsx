@@ -1,27 +1,42 @@
-import { Head } from '@inertiajs/react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { Link } from '@inertiajs/react';
 import GeneratorLayout from '@/Layouts/GeneratorLayout';
-import WordGeneratorForm from '@/Components/Homepage/WordGeneratorForm';
-import WordsDisplay from '@/Components/Homepage/WordsDisplay';
-import ArticleContent from '@/Components/Homepage/ArticleContent';
-import OtherGenerators from '@/Components/Homepage/OtherGenerators';
-
-interface HomepageProps {
-    auth: {
-        user: any;
-    };
-}
+import WordGeneratorForm from '@/Components/Shared/WordGeneratorForm';
+import ItemsDisplay from '@/Components/Shared/ItemsDisplay';
+import ArticleContent from '@/Components/Shared/ArticleContent';
+import OtherGenerators from '@/Components/Shared/OtherGenerators';
+import ErrorBoundary from '@/Components/ErrorBoundary';
+import SEO from '@/Components/SEO';
+import { useGenerator } from "@/hooks/useGenerator";;
+import { HomepageProps } from '@/types';
 
 export default function Homepage({ auth }: HomepageProps) {
-    const [words, setWords] = useState<string[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [showMoreOptions, setShowMoreOptions] = useState(true);
-    const [favorites, setFavorites] = useState<string[]>([]);
-    const [showFavorites, setShowFavorites] = useState(false);
+    // Use the shared word generator hook
+    const {
+        words,
+        loading,
+        showLoading,
+        quantity,
+        favorites,
+        showFavorites,
+        setQuantity,
+        setShowFavorites,
+        generateWords,
+        addToFavorites,
+        removeFromFavorites,
+        clearAllFavorites,
+        copyToClipboard,
+    } = useGenerator({
+        favoritesKey: "wordsFavorites",
+        apiEndpoint: "/api/generate/words",
+        itemName: "words",
+        defaultType: 'all',
+        autoGenerate: true
+    });
 
-    // Form state
-    const [quantity, setQuantity] = useState(1);
+    // Form state specific to Homepage
+    const [showMoreOptions, setShowMoreOptions] = useState(false);
     const [wordType, setWordType] = useState('all');
     const [language, setLanguage] = useState('es');
     const [firstLetter, setFirstLetter] = useState('');
@@ -30,51 +45,22 @@ export default function Homepage({ auth }: HomepageProps) {
     const [comparing, setComparing] = useState('equals');
     const [count, setCount] = useState(5);
 
-    const generateWords = async () => {
-        setLoading(true);
-        try {
-            const mockWords = [
-                'serendipity', 'ephemeral', 'wanderlust', 'mellifluous', 'ineffable',
-                'petrichor', 'solitude', 'luminous', 'cascade', 'whisper',
-                'harmony', 'reverie', 'tranquil', 'radiant', 'mystique',
-                'eloquent', 'pristine', 'enigma', 'velvet', 'crimson',
-                'adventure', 'brilliant', 'delightful', 'fascinating', 'gorgeous'
-            ];
+    // Generate words with homepage-specific parameters
+    const handleGenerateWords = () => {
+        const params: any = {
+            type: wordType,
+            language: language,
+        };
 
-            const shuffled = mockWords.sort(() => Math.random() - 0.5);
-            const selectedWords = shuffled.slice(0, quantity);
-
-            setWords(selectedWords);
-        } catch (error) {
-            console.error('Error generating words:', error);
-        } finally {
-            setLoading(false);
+        if (firstLetter.trim()) params.firstLetter = firstLetter;
+        if (lastLetter.trim()) params.lastLetter = lastLetter;
+        if (wordSizeType.trim()) {
+            params.sizeType = wordSizeType;
+            params.comparing = comparing;
+            params.count = count;
         }
-    };
 
-    useEffect(() => {
-        generateWords();
-    }, []);
-
-    const addToFavorites = (word: string) => {
-        if (!favorites.includes(word)) {
-            setFavorites([...favorites, word]);
-            toast.success(`"${word}" added to favorites!`);
-        } else {
-            toast.error(`"${word}" is already in favorites`);
-        }
-    };
-
-    const removeFromFavorites = (word: string) => {
-        setFavorites(favorites.filter(fav => fav !== word));
-        toast.success(`"${word}" removed from favorites!`);
-    };
-
-    const copyToClipboard = () => {
-        const text = showFavorites ? favorites.join('\n') : words.join('\n');
-        navigator.clipboard.writeText(text);
-        const count = showFavorites ? favorites.length : words.length;
-        toast.success(`${count} word${count !== 1 ? 's' : ''} copied to clipboard!`);
+        generateWords(params);
     };
 
     const resetOptions = () => {
@@ -86,64 +72,135 @@ export default function Homepage({ auth }: HomepageProps) {
         setWordSizeType('');
         setComparing('equals');
         setCount(5);
+        setShowFavorites(false);
+        toast.success('Options reset to defaults');
     };
 
     return (
-        <GeneratorLayout user={auth.user}>
-            <Head title="Random Word Generator - Generate Random Words for Creative Ideas" />
+        <GeneratorLayout>
+            <SEO
+                title="Random Word Generator"
+                description="Generate random words, nouns, verbs, adjectives, letters, phrases, sentences or numbers to brainstorm and create new ideas at Random Word Generator."
+                keywords={['random word generator', 'word generator', 'random words', 'vocabulary', 'creative writing', 'games', 'pictionary', 'madlibs']}
+                ogImage="https://randomwordgenerator.com/img/random-word-generator.jpg"
+                ogType="website"
+                twitterCard="summary_large_image"
+            />
 
             <div className="min-h-screen bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Options Panel - Left Column */}
-                        <WordGeneratorForm
-                            quantity={quantity}
-                            setQuantity={setQuantity}
-                            wordType={wordType}
-                            setWordType={setWordType}
-                            language={language}
-                            setLanguage={setLanguage}
-                            firstLetter={firstLetter}
-                            setFirstLetter={setFirstLetter}
-                            lastLetter={lastLetter}
-                            setLastLetter={setLastLetter}
-                            wordSizeType={wordSizeType}
-                            setWordSizeType={setWordSizeType}
-                            comparing={comparing}
-                            setComparing={setComparing}
-                            count={count}
-                            setCount={setCount}
-                            showMoreOptions={showMoreOptions}
-                            setShowMoreOptions={setShowMoreOptions}
-                            loading={loading}
-                            generateWords={generateWords}
-                            resetOptions={resetOptions}
-                        />
+                        <ErrorBoundary>
+                            <WordGeneratorForm
+                                quantity={quantity}
+                                setQuantity={setQuantity}
+                                wordType={wordType}
+                                setWordType={setWordType}
+                                language={language}
+                                setLanguage={setLanguage}
+                                firstLetter={firstLetter}
+                                setFirstLetter={setFirstLetter}
+                                lastLetter={lastLetter}
+                                setLastLetter={setLastLetter}
+                                wordSizeType={wordSizeType}
+                                setWordSizeType={setWordSizeType}
+                                comparing={comparing}
+                                setComparing={setComparing}
+                                count={count}
+                                setCount={setCount}
+                                showMoreOptions={showMoreOptions}
+                                setShowMoreOptions={setShowMoreOptions}
+                                loading={loading}
+                                generateWords={handleGenerateWords}
+                                resetOptions={resetOptions}
+                            />
+                        </ErrorBoundary>
 
                         {/* Results Panel - Right Column */}
-                        <WordsDisplay
-                            words={words}
-                            favorites={favorites}
-                            showFavorites={showFavorites}
-                            setShowFavorites={setShowFavorites}
-                            quantity={quantity}
-                            loading={loading}
-                            addToFavorites={addToFavorites}
-                            removeFromFavorites={removeFromFavorites}
-                            copyToClipboard={copyToClipboard}
-                        />
+                        <ErrorBoundary>
+                            <div className="w-full">
+                                <ItemsDisplay
+                                    words={words}
+                                    favorites={favorites}
+                                    showFavorites={showFavorites}
+                                    setShowFavorites={setShowFavorites}
+                                    quantity={quantity}
+                                    loading={showLoading}
+                                    addToFavorites={addToFavorites}
+                                    removeFromFavorites={removeFromFavorites}
+                                    copyToClipboard={copyToClipboard}
+                                    clearAllFavorites={clearAllFavorites}
+                                />
+                            </div>
+                        </ErrorBoundary>
                     </div>
 
                     {/* About Section */}
-                    <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
-                        <div className="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
+                    <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
                             {/* Left Column - Article Content */}
-                            <ArticleContent />
+                            <ArticleContent>
+                                <p>Welcome to the website. If you're here, you're likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn't a word creator, it is a word generator that will generate random words for a variety of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs.</p>
+
+                                <p>The first option the tool allows you to adjust is the number of random words to be generated. You can choose as many or as few as you'd like. You also have the option of choosing words that only begin with a certain letter, only end with a certain letter or only begin and end with certain letters. If you leave these blank, the randomized words that appear will be from the complete list.</p>
+
+                                <p>Another option you have is choosing the number of syllables of the words or the word length of the randomized words. There are also ways to further refine these by choosing the "less than" or "greater than" options for both syllables and word length. Again, if you leave the space blank, the complete list of randomized words will be used.</p>
+
+                                <p>You have the option of choosing the types of words you want to be displayed using the "Word Type" dropdown. The default is "All" which is a curated list of thousands of the more common English words. You can also opt to only display nouns, verbs, or adjectives from this curated list. If you want to choose from all the words out there, you can choose "Extended" which is a list that includes over half a million different English words.</p>
+
+                                <p>If you're interested in random words in languages other than English, you can choose the "Non English" word type. Doing so will give you the option to generate words in ten different languages other than English. This includes Spanish words, Hindi words, Arabic words, German words, Russian words, Chinese words, Japanese words, Korean words. Latin words, or Italian words. You simply need to choose the language and then words from that language will randomly appear with each refresh of the page.</p>
+
+                                <p>Once you have input all of your specifications, all you have to do is to press the Generate Random Words button, and a list of random words will appear. Below are some of the common ways people use this tool.</p>
+
+                                <h2 className="text-2xl font-bold mt-6 mb-4 text-gray-800">Games</h2>
+
+                                <p>This tool can be useful for games like <Link href="/pictionary.php" className="text-blue-600 hover:text-blue-700 underline">Pictionary</Link> or MadLibs. Since the words are random, this helps to keep a game like Pictionary fair for all those playing. For a game like MadLibs, it can help kids improve their vocabulary by generating words they may not have ever considered to fill in the blank spaces. The tool has the potential to help with any word game that doesn't require a specific word.</p>
+
+                                <h2 className="text-2xl font-bold mt-6 mb-4 text-gray-800">Creative Writing</h2>
+
+                                <p>For those who write, this tool can be an excellent device to aid in the creative writing process. By using the tool to create 5 random words, a writer could then attempt to use all of them in a single paragraph. Longer random word lists could be incorporated into a short story. Since the writer doesn't know which words will appear, creativity must be used to successfully incorporate all the words. To make the challenge even more difficult, the writer could try to use the words in the exact order they were generated. In this way, writers can challenge their creativity to push their writing skills.</p>
+
+                                <h2 className="text-2xl font-bold mt-6 mb-4 text-gray-800">Spelling and Vocabulary</h2>
+
+                                <p>This tool can be an excellent way to <Link href="/vocabulary.php" className="text-blue-600 hover:text-blue-700 underline">improve vocabulary</Link> or practice for spelling bees. If an unfamiliar word appears, looking up the meaning will help students increase the number of words they know. Working with a partner, students can test each other on the spelling for the randomized words generated.</p>
+
+                                <h2 className="text-2xl font-bold mt-6 mb-4 text-gray-800">Name Inspiration</h2>
+
+                                <p>If you need to create a name for a product, an event, a band or for anything else, this tool can be quite helpful. As you consider names, generate a number of random words and see how they impact what you have already come up with. Inputting unique words you may not have considered can spark additional creativity to eventually help you produce the perfect name for your project. If you're looking for good character names or baby names, you might be interested in our random <Link href="/name.php" className="text-blue-600 hover:text-blue-700 underline">name generator</Link>.</p>
+
+                                <p>The above list is not comprehensive. There are literally hundreds of ways the Random Word Generator can be used. Please feel free to share the way you use this tool, and we always welcome suggestions on how we can improve it to serve you better. We are also interested in new word generators you'd be interested in us creating. Many of the tools on this website came from ideas from people like you who contacted us. Please take the time to explore the other random generators we have available which can be found in the right sidebar of the page.</p>
+
+                                <div className="mt-8" id="faq">
+                                    <h2 className="text-2xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h2>
+
+                                    <div className="space-y-4">
+                                        <div>
+                                            <h3 className="text-xl font-semibold mb-2 text-gray-800">What is the most common word?</h3>
+                                            <p>The most common word in English is the word "the" while the most common spoken word is "be" including its other forms (is, are, am).</p>
+                                        </div>
+
+                                        <div>
+                                            <h3 className="text-xl font-semibold mb-2 text-gray-800">What is a random word?</h3>
+                                            <p>In the case of our random word generator, a random word is a word that is randomly chosen from the database of words we have in our generator. It's a word that you have no idea or control over appearing, so you aren't able to influence the resulting word in any way.</p>
+                                        </div>
+
+                                        <div>
+                                            <h3 className="text-xl font-semibold mb-2 text-gray-800">What is the most random word?</h3>
+                                            <p>The most random word in English is aardvark. Of course, there's really no way to answer this question because its entirely based on opinion. That being said, feel free to contact us if you think you know a more random word than aardvark.</p>
+                                        </div>
+
+                                        <div>
+                                            <h3 className="text-xl font-semibold mb-2 text-gray-800">Is every word in English in your random word generator?</h3>
+                                            <p>No. It doesn't makes sense to include every word since many words aren't often used these days and many words the average person doesn't necessarily know the meaning. We have a curated list of words that aren't too common or too difficult that the vast majority of people using this generator will know and understand.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ArticleContent>
 
                             {/* Right Column - Other Random Generators */}
                             <div>
-                                <OtherGenerators />
+                                <OtherGenerators currentPage="/" />
                             </div>
                         </div>
                     </div>

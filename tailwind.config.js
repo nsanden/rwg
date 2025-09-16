@@ -12,6 +12,10 @@ export default {
 
     theme: {
         extend: {
+            screens: {
+                'xs': '475px',
+                'custom': '875px',
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

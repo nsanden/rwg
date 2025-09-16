@@ -94,13 +94,18 @@ services:
         networks:
             - sail
     selenium:
-        image: selenium/standalone-chromium
+        image: selenium/standalone-chrome
+        environment:
+            LARAVEL_SAIL: 1
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         volumes:
             - '/dev/shm:/dev/shm'
         networks:
             - sail
+        ports:
+            - '${FORWARD_SELENIUM_PORT:-4444}:4444'
+            - '${FORWARD_SELENIUM_HEADFUL_PORT:-7900}:7900'
 networks:
     sail:
         driver: bridge

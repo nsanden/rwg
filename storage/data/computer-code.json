@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "code": {
+        "language": "PHP",
+        "code": "<pre><code class=\"language-php\">$date = strtotime(\"now\");\necho date(\"m/d/Y h:i:s\", $date);</code></pre>",
+        "description": "Print date"
+      }
+    },
+    {
+      "code": {
+        "language": "PHP",
+        "code": "<pre><code class=\"language-php\">$value = 10;\nprint ($value &gt;= 10) ? \"true\" : \"false\";</code></pre>",
+        "description": "Ternary operator"
+      }
+    },
+    {
+      "code": {
+        "language": "PHP",
+        "code": "<pre><code class=\"language-php\">$someValue = 1;\nif ($someValue === 1) {\n   echo \"someValue is equal to one\";\n}</code></pre>",
+        "description": "If condition"
+      }
+    },
+    {
+      "code": {
+        "language": "PHP",
+        "code": "<pre><code class=\"language-php\">for ($i = 0; $i &lt; 100; $i++) { \n     echo $i . \"\\n\"; \n} </code></pre>",
+        "description": "For loop"
+      }
+    },
+    {
+      "code": {
+        "language": "PHP",
+        "code": "<pre><code class=\"language-php\">$i = 0;\nwhile ($i &lt; 100) { \n    echo $i . \"\\n\"; \n    $i++;\n} </code></pre>",
+        "description": "While loop"
+      }
+    },
+    {
+      "code": {
+        "language": "Javascript",
+        "code": "<pre><code class=\"language-javascript\">function myFunction() {\n  document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;\n}</code></pre>\n<pre><code class=\"language-html\">&lt;p id=&quot;demo&quot;&gt;A Paragraph.&lt;/p&gt;\n&lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Change Text&lt;/button&gt;</code></pre>\n",
+        "description": "Change text"
+      }
+    },
+    {
+      "code": {
+        "language": "Javascript",
+        "code": "<pre><code class=\"language-javascript\">Math.random().toString(36).substring(2);</code></pre>",
+        "description": "Generate random text"
+      }
+    },
+    {
+      "code": {
+        "language": "Javascript",
+        "code": "<pre><code class=\"language-javascript\">for(i=0;++i&lt;101;console.log(i%5?f||i:f+'Buzz'))f=i%3?'':'Fizz';\n</code></pre>",
+        "description": "One line FizzBuzz"
+      }
+    },
+    {
+      "code": {
+        "language": "Javascript",
+        "code": "<pre><code class=\"language-javascript\">let randomHex = (Math.random() * 0xfffff * 1000000).toString(16);\nlet colorCode = '#' + n.slice(0, 6);</code></pre>",
+        "description": "Random hex color code"
+      }
+    },
+    {
+      "code": {
+        "language": "Javascript",
+        "code": "<pre><code class=\"language-javascript\">let rads = 90;\nlet deg = (angle * 180.0) / Math.PI;</code></pre>",
+        "description": "Radians to degrees"
+      }
+    },
+    {
+      "code": {
+        "language": "HTML",
+        "code": "<pre><code class=\"language-html\">&lt;img src=&quot;path/to/image&quot; alt=&quot;Image Name&quot;&gt;</code></pre>\n",
+        "description": "Image tag"
+      }
+    },
+    {
+      "code": {
+        "language": "HTML",
+        "code": "<pre><code class=\"language-html\">&lt;a href=\"https://randomwordgenerator.com\"&gt;Really Cool Random Word Generator&lt;/a&gt;</code></pre>",
+        "description": "Link"
+      }
+    },
+    {
+      "code": {
+        "language": "HTML",
+        "code": "<pre><code class=\"language-html\">&lt;table&gt;\n    &lt;tr&gt;\n        &lt;td&gt;Cell 1,1&lt;/td&gt;\n        &lt;td&gt;Cell 1,2&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n        &lt;td&gt;Cell 2,1&lt;/td&gt;\n        &lt;td&gt;Cell 2,2&lt;/td&gt;\n    &lt;/tr&gt;\n&lt;/table&gt;</code></pre>",
+        "description": "Table"
+      }
+    },
+    {
+      "code": {
+        "language": "HTML",
+        "code": "<pre><code class=\"language-html\">&lt;link rel=\"stylesheet\" type=\"text/css\" href=\"theme.css\"&gt;</code></pre>",
+        "description": "CSS import"
+      }
+    },
+    {
+      "code": {
+        "language": "HTML",
+        "code": "<pre><code class=\"language-html\">&lt;ol&gt;\n  &lt;li&gt;Coffee&lt;/li&gt;\n  &lt;li&gt;Tea&lt;/li&gt;\n  &lt;li&gt;Milk&lt;/li&gt;\n&lt;/ol&gt; </code></pre>",
+        "description": "Ordered list"
+      }
+    },
+    {
+      "code": {
+        "language": "CSS",
+        "code": "<pre><code class=\"language-css\">body {\n  background-color: lightblue;\n}</code></pre>",
+        "description": "Background color"
+      }
+    },
+    {
+      "code": {
+        "language": "CSS",
+        "code": "<pre><code class=\"language-css\">img {\n  opacity: 0.5;\n}</code></pre>",
+        "description": "Opacity"
+      }
+    },
+    {
+      "code": {
+        "language": "CSS",
+        "code": "<pre><code class=\"language-css\">.rounded-corners {\n  border-radius: 25px;\n  background: red;\n}</code></pre>",
+        "description": "Rounded corners"
+      }
+    },
+    {
+      "code": {
+        "language": "CSS",
+        "code": "<pre><code class=\"language-css\">h1 {\n  text-shadow: 2px 2px;\n}</code></pre>",
+        "description": "Text shadow"
+      }
+    },
+    {
+      "code": {
+        "language": "CSS",
+        "code": "<pre><code class=\"language-css\">body {\n  background-image: linear-gradient(blue, green);\n}</code></pre>",
+        "description": "Gradient background"
+      }
+    },
+    {
+      "code": {
+        "language": "Python",
+        "code": "<pre><code class=\"language-python\">print(\"Hello, World!\")</code></pre>",
+        "description": "Hello world!"
+      }
+    },
+    {
+      "code": {
+        "language": "Python",
+        "code": "<pre><code class=\"language-python\">a = \"Hello, World!\"\nprint(len(a))</code></pre>",
+        "description": "String length"
+      }
+    },
+    {
+      "code": {
+        "language": "Python",
+        "code": "<pre><code class=\"language-python\">my_list = [\"apple\", \"banana\", \"cherry\"]\nprint(my_list)</code></pre>",
+        "description": "Create list"
+      }
+    },
+    {
+      "code": {
+        "language": "Python",
+        "code": "<pre><code class=\"language-python\">fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\n  print(x) \n</code></pre>",
+        "description": "For loop"
+      }
+    },
+    {
+      "code": {
+        "language": "Python",
+        "code": "<pre><code class=\"language-python\">import datetime\n\ncurrent_date = datetime.datetime.now()\n\nprint(current_date.year)</code></pre>",
+        "description": "Curent year"
+      }
+    }
+  ]
+}
