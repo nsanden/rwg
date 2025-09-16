@@ -45,6 +45,7 @@ class RestrictApiAccess
         $allowedDomains = [
             'https://randomwordgenerator.com',
             'https://www.randomwordgenerator.com',
+            'https://newrwg.vps.webdock.cloud',
             config('app.url'),
             'http://localhost',
             'http://localhost:8000',
