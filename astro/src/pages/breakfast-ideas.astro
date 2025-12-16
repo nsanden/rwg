@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import BreakfastIdeasGenerator from '../components/generators/BreakfastIdeasGenerator';
+
+const title = 'Breakfast Ideas — 500+ Easy and Healthy Breakfast Ideas';
+const description = 'The Breakfast Ideas Generator helps you find both healthy and easy breakfast ideas. Get inspired with random breakfast recipes when you can\'t decide what to cook.';
+const keywords = ['breakfast ideas', 'breakfast ideas generator', 'what to make for breakfast', 'easy breakfast ideas', 'healthy breakfast ideas', 'random breakfast'];
+const ogImage = 'https://randomwordgenerator.com/img/breakfast-ideas-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <BreakfastIdeasGenerator client:load basePath={basePath} />
+</GeneratorLayout>

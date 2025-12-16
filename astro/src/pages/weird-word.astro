@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import WeirdWordsGenerator from '../components/generators/WeirdWordsGenerator';
+
+const title = 'Weird Words — 1000+ Weird Words with Definitions';
+const description = 'The Weird Words Generator has 1000+ words and their weird definitions. Have fun learning new weird words, strange words and uncommon words.';
+const keywords = ['weird words', 'strange words', 'uncommon words', 'unusual words', 'vocabulary', 'word definitions', 'unique words'];
+const ogImage = 'https://randomwordgenerator.com/img/weird-words.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <WeirdWordsGenerator client:load basePath={basePath} />
+</GeneratorLayout>

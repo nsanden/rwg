@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import WouldYouRatherGenerator from '../components/generators/WouldYouRatherGenerator';
+
+const title = 'Would You Rather Questions — 1000+ Kids Questions to Hard Questions';
+const description = 'Generate random Would You Rather questions for games and fun conversation starters. Over 600 thought-provoking questions to choose from.';
+const keywords = ['would you rather questions', 'random would you rather', 'would you rather generator', 'conversation starters', 'party games'];
+const ogImage = 'https://randomwordgenerator.com/img/would-you-rather-questions.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <WouldYouRatherGenerator client:load basePath={basePath} />
+</GeneratorLayout>

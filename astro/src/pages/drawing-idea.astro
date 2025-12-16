@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import DrawingIdeasGenerator from '../components/generators/DrawingIdeasGenerator';
+
+const title = 'Random Things to Draw — Drawing Ideas & Art Inspiration';
+const description = 'Get instant drawing inspiration with our random things to draw generator! Perfect for artists, beginners, and anyone looking for creative drawing ideas and art prompts.';
+const keywords = ['drawing ideas', 'things to draw', 'art inspiration', 'drawing prompts', 'random drawing generator', 'sketch ideas', 'creative drawing', 'easy things to draw'];
+const ogImage = 'https://randomwordgenerator.com/img/random-word-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <DrawingIdeasGenerator client:load basePath={basePath} />
+</GeneratorLayout>

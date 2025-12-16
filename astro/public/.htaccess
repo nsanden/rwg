@@ -1,0 +1,70 @@
+# Apache Rewrite Rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.randomwordgenerator\.com [NC]
+    RewriteRule ^(.*)$ https://randomwordgenerator.com/$1 [L,R=301]
+
+    # Pass /api requests to Laravel (don't rewrite)
+    RewriteRule ^api/ - [L]
+
+    # Serve .php URLs from Astro static pages (internal rewrite, not redirect)
+    # This keeps URLs as .php but serves the static HTML
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]+)\.php$ /$1/ [L]
+</IfModule>
+
+# Legacy URL redirects (from old site)
+Redirect 301 /unusual-word.php /weird-word.php
+Redirect 301 /sentence.html /sentence.php
+Redirect 301 /noun.html /noun.php
+Redirect 301 /phrase.html /phrase.php
+Redirect 301 /inspirational-quote.php /motivational-quote.php
+Redirect 301 /single-letter.php /letter.php
+Redirect 301 /wedding.php /wedding-hashtags.php
+Redirect 301 /bible-verse.php /bible.php
+
+# Old /site/ prefix redirects
+Redirect 301 /site/would-you-rather-question.php /would-you-rather-question.php
+Redirect 301 /site/coin-flip.php /coin-flip.php
+Redirect 301 /site/letter-sequence.php /
+Redirect 301 /site/dice-roll.php /dice-roll.php
+Redirect 301 /site/privacy-policy.php /privacy-policy.php
+Redirect 301 /site/fake-word.php /fake-word.php
+Redirect 301 /site/weird-word.php /weird-word.php
+Redirect 301 /site/books-everyone-should-read.php /
+Redirect 301 /site/make-money.php /
+Redirect 301 /site/wedding-hashtags.php /wedding-hashtags.php
+Redirect 301 /site/inspirational-quote.php /motivational-quote.php
+Redirect 301 /site/writing-prompt.php /writing-prompt.php
+Redirect 301 /site/gift-ideas.php /
+Redirect 301 /site/never-have-i-ever-question.php /never-have-i-ever-question.php
+
+# Deprecated pages - redirect to homepage
+Redirect 301 /act-of-kindness.php /
+Redirect 301 /act-of-kindness /
+Redirect 301 /gift-ideas.php /
+Redirect 301 /gift-ideas /
+Redirect 301 /letter-sequence.php /
+Redirect 301 /letter-sequence /
+Redirect 301 /computer-code.php /
+Redirect 301 /computer-code /
+Redirect 301 /make-money-ideas.php /
+Redirect 301 /make-money-ideas /
+Redirect 301 /books-everyone-should-read.php /
+Redirect 301 /books-everyone-should-read /
+
+# Cache headers
+<IfModule mod_headers.c>
+    # One year for image files
+    <FilesMatch "\.(jpg|jpeg|png|gif|ico|webp|svg)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    # One month for css and js
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=2628000, public"
+    </FilesMatch>
+</IfModule>

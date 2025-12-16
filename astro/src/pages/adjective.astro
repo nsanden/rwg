@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import AdjectiveGenerator from '../components/generators/AdjectiveGenerator';
+
+const title = 'Random Adjective Generator — Generate 1000+ Random Adjectives';
+const description = 'The Random Adjective Generator contains 1000+ random adjectives including common adjectives for creative writing and word games.';
+const keywords = ['random adjective generator', 'adjectives', 'random adjectives', 'vocabulary', 'creative writing', 'word games'];
+const ogImage = 'https://randomwordgenerator.com/img/random-adjective-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <AdjectiveGenerator client:load basePath={basePath} />
+</GeneratorLayout>

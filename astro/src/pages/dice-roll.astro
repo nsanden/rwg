@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import DiceRollGenerator from '../components/generators/DiceRollGenerator';
+
+const title = 'Dice Roll Generator — Fast Online Dice Roller';
+const description = 'The Dice Roll Generator will roll dice to give you a random die roll. The best online dice roller!';
+const keywords = ['dice roll', 'dice roller', 'random dice', 'virtual dice', 'online dice', 'dice generator'];
+const ogImage = 'https://randomwordgenerator.com/img/dice-roll.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <DiceRollGenerator client:load basePath={basePath} />
+</GeneratorLayout>

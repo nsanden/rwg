@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import PhraseGenerator from '../components/generators/PhraseGenerator';
+
+const title = 'Random Phrase Generator — 1000+ Phrases and Idioms';
+const description = 'The Random Phrase Generator includes 1000+ random phrases and idioms with definition. Learn random idioms to improve your English.';
+const keywords = ['random phrase generator', 'phrases', 'idioms', 'random phrases', 'english phrases', 'expressions', 'sayings'];
+const ogImage = 'https://randomwordgenerator.com/img/random-phrase-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <PhraseGenerator client:load basePath={basePath} />
+</GeneratorLayout>

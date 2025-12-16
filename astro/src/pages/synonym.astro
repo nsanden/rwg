@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import SynonymsGenerator from '../components/generators/SynonymsGenerator';
+
+const title = 'Random Synonym Generator';
+const description = 'The Random Synonyms Generator helps you find alternative words with similar meanings to improve your writing.';
+const keywords = ['random synonyms', 'synonym generator', 'alternative words', 'vocabulary', 'writing tool'];
+const ogImage = 'https://randomwordgenerator.com/img/random-synonym-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <SynonymsGenerator client:load basePath={basePath} />
+</GeneratorLayout>

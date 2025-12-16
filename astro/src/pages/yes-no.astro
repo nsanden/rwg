@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import YesNoOracleGenerator from '../components/generators/YesNoOracleGenerator';
+
+const title = 'Yes or No Oracle — Let the Oracle Decide';
+const description = 'The Yes or No Oracle provides instant random yes or no answers to your questions. Include the maybe option for more nuanced decisions.';
+const keywords = ['yes or no', 'oracle', 'random answer', 'decision maker', 'yes no generator', 'random oracle'];
+const ogImage = 'https://randomwordgenerator.com/img/yes-no-oracle.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <YesNoOracleGenerator client:load basePath={basePath} />
+</GeneratorLayout>

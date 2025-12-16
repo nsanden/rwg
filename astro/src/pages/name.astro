@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import NameGenerator from '../components/generators/NameGenerator';
+
+const title = 'Random Name Generator — Easy Random Name Picker';
+const description = 'The Random Name Generator creates random names including girl names, boy names, baby names and last names. Use this random name picker to create the best names for your characters.';
+const keywords = ['random name generator', 'names', 'random names', 'baby names', 'character names', 'first names', 'last names'];
+const ogImage = 'https://randomwordgenerator.com/img/random-name-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <NameGenerator client:load basePath={basePath} />
+</GeneratorLayout>

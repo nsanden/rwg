@@ -1,0 +1,162 @@
+---
+import '../styles/global.css';
+import MobileNav from '../components/MobileNav';
+
+interface Props {
+    title: string;
+    description: string;
+    keywords?: string[];
+    ogImage?: string;
+    canonical?: string;
+}
+
+const { title, description, keywords = [], ogImage, canonical } = Astro.props;
+// Convert clean URLs to .php for SEO continuity
+const pathname = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '') + '.php';
+const currentUrl = canonical || `https://randomwordgenerator.com${pathname}`;
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const generators = [
+    { name: 'Word', href: '/' },
+    { name: 'Noun', href: '/noun.php' },
+    { name: 'Verb', href: '/verb.php' },
+    { name: 'Name', href: '/name.php' },
+    { name: 'Sentence', href: '/sentence.php' },
+    { name: 'Phrase', href: '/phrase.php' },
+    { name: 'Number', href: '/number.php' },
+    { name: 'Letter', href: '/letter.php' },
+];
+
+const getHref = (href: string) => {
+    if (href === '/') return basePath || '/';
+    // Add .php extension if not already present
+    const phpHref = href.endsWith('.php') ? href : `${href}.php`;
+    return `${basePath}${phpHref}`;
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-8949118578199171" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8949118578199171" crossorigin="anonymous"></script>
+
+    <!-- Preconnect to API -->
+    <link rel="preconnect" href="https://randomwordgenerator.com" />
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Navigation - matching /var/www/rwg exactly -->
+    <nav class="bg-brand-teal shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href={getHref('/')} class="flex items-center">
+                        <!-- Shuffle icon matching original -->
+                        <svg class="w-8 h-8 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 14 4 4-4 4"/>
+                            <path d="m18 2 4 4-4 4"/>
+                            <path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/>
+                            <path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/>
+                            <path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/>
+                        </svg>
+                        <span class="font-bold text-lg lg:text-xl text-white whitespace-nowrap">Random Word Generator</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href={getHref('/')} class="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Word
+                    </a>
+                    <a href={getHref('/noun')} class="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Noun
+                    </a>
+                    <a href={getHref('/verb')} class="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Verb
+                    </a>
+                    <a href={getHref('/name')} class="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Name
+                    </a>
+                    <a href={getHref('/sentence')} class="text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Sentence
+                    </a>
+                    <a href={getHref('/phrase')} class="hidden xl:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Phrase
+                    </a>
+                    <a href={getHref('/number')} class="hidden lg:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Number
+                    </a>
+                    <a href={getHref('/letter')} class="hidden lg:block text-white hover:text-emerald-200 px-2 xl:px-3 py-2 rounded-md text-sm font-medium">
+                        Letter
+                    </a>
+                    <a href={getHref('/more')} class="bg-white/20 hover:bg-white/30 text-white px-3 py-2 rounded-md text-sm font-medium ml-2">
+                        All Generators
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <MobileNav navLinks={generators} basePath={basePath} client:load />
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <slot />
+    </main>
+
+    <!-- Footer - matching /var/www/rwg exactly -->
+    <footer class="bg-gray-900 text-white mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: <a href="mailto:info@1s0s.com" class="text-gray-400 hover:text-white underline underline-offset-2">info@1s0s.com</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-400 mb-4">We created this website to generate random words and more.</p>
+                    <a href={getHref('/privacy-policy')} class="text-gray-400 hover:text-white underline underline-offset-2">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">
+                    &copy; {new Date().getFullYear()} RandomWordGenerator.com. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast container for notifications -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+</body>
+</html>

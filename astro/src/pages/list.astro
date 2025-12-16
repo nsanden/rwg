@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import RandomListGenerator from '../components/generators/RandomListGenerator';
+
+const title = "Random List — Randomize a list of names or things";
+const description = "The Random List Generator helps you pick random results from your own custom list. Perfect for choosing random items, names, or anything from any list.";
+const keywords = ['random list', 'list randomizer', 'pick random item', 'random picker', 'random selector', 'randomize list'];
+const ogImage = 'https://randomwordgenerator.com/img/random-list.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <RandomListGenerator client:load basePath={basePath} />
+</GeneratorLayout>

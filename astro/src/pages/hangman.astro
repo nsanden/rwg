@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import HangmanGenerator from '../components/generators/HangmanGenerator';
+
+const title = 'Hangman Words — Random Words for Hangman Game';
+const description = 'Generate random hangman words instantly! Perfect challenging words for the classic word-guessing game. Great for family fun and educational activities.';
+const keywords = ['hangman words', 'hangman generator', 'word games', 'spelling games', 'educational games', 'family games'];
+const ogImage = 'https://randomwordgenerator.com/img/hangman.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <HangmanGenerator client:load basePath={basePath} />
+</GeneratorLayout>

@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import VocabularyGenerator from '../components/generators/VocabularyGenerator';
+
+const title = 'Vocabulary Words — Generate 1000+ Vocab Words';
+const description = 'The Vocabulary Words Generator contains 1000+ vocabulary words with definitions. Study vocab and increase your English vocabulary.';
+const keywords = ['random vocabulary words', 'vocabulary generator', 'SAT vocabulary', 'ACT vocabulary', 'GRE vocabulary', 'spelling bee words'];
+const ogImage = 'https://randomwordgenerator.com/img/vocabulary-words.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <VocabularyGenerator client:load basePath={basePath} />
+</GeneratorLayout>

@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import MotivationalQuotesGenerator from '../components/generators/MotivationalQuotesGenerator';
+
+const title = 'Motivational Quotes';
+const description = 'A free online tool that will generate random motivational quotes including uplifting quotes, inspirational quotes, and interesting quotes.';
+const keywords = ['motivational quotes', 'inspirational quotes', 'uplifting quotes', 'random quotes', 'motivational quote generator'];
+const ogImage = 'https://randomwordgenerator.com/img/motivational-quotes.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <MotivationalQuotesGenerator client:load basePath={basePath} />
+</GeneratorLayout>

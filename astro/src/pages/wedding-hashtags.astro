@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import WeddingHashtagGenerator from '../components/generators/WeddingHashtagGenerator';
+
+const title = "Wedding Hashtags Generator — Find the perfect wedding hashtag";
+const description = "Generate unique wedding hashtags for your special day. Choose from traditional, fun, or offbeat styles to create memorable hashtags for social media.";
+const keywords = ['wedding hashtags', 'wedding hashtag generator', 'wedding social media', 'custom hashtags', 'wedding planning'];
+const ogImage = 'https://randomwordgenerator.com/img/random-wedding-hashtags.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <WeddingHashtagGenerator client:load basePath={basePath} />
+</GeneratorLayout>

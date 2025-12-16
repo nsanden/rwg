@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import TongueTwisterGenerator from '../components/generators/TongueTwisterGenerator';
+
+const title = 'Random Tongue Twister Generator — Fun Speech Practice';
+const description = 'Generate random tongue twisters for speech practice, fun challenges, and entertainment. Perfect for improving pronunciation and having fun with language.';
+const keywords = ['tongue twisters', 'random tongue twister', 'speech practice', 'pronunciation practice', 'fun word games', 'tongue twister generator'];
+const ogImage = 'https://randomwordgenerator.com/img/tongue-twister.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <TongueTwisterGenerator client:load basePath={basePath} />
+</GeneratorLayout>

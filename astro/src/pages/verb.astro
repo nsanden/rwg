@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import VerbGenerator from '../components/generators/VerbGenerator';
+
+const title = 'Random Verb Generator — 1000+ Random Verbs';
+const description = 'The Random Verb Generator creates random action words including action verbs, linking verbs, regular verbs, irregular verbs, and more.';
+const keywords = ['random verb generator', 'verbs', 'random verbs', 'action words', 'vocabulary', 'creative writing'];
+const ogImage = 'https://randomwordgenerator.com/img/random-verb-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <VerbGenerator client:load basePath={basePath} />
+</GeneratorLayout>

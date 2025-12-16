@@ -1,0 +1,40 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+
+const title = '404 - Page Not Found — Random Word Generator';
+const description = 'The page you are looking for could not be found.';
+const keywords = ['404', 'not found', 'error'];
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords}>
+    <div class="min-h-screen bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                <h1 class="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Page Not Found</h2>
+                <p class="text-gray-600 mb-8">
+                    Sorry, the page you are looking for doesn't exist or has been moved.
+                </p>
+                <a
+                    href={basePath || '/'}
+                    style="display: inline-block; padding: 12px 24px; background-color: #2563eb; color: white; border-radius: 6px; text-decoration: none;"
+                >
+                    Go to Homepage
+                </a>
+                <div class="mt-8">
+                    <p class="text-gray-500 mb-4">Or try one of these popular generators:</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href={`${basePath}/noun.php`} class="text-blue-600 hover:underline">Random Noun</a>
+                        <a href={`${basePath}/verb.php`} class="text-blue-600 hover:underline">Random Verb</a>
+                        <a href={`${basePath}/name.php`} class="text-blue-600 hover:underline">Random Name</a>
+                        <a href={`${basePath}/number.php`} class="text-blue-600 hover:underline">Random Number</a>
+                        <a href={`${basePath}/sentence.php`} class="text-blue-600 hover:underline">Random Sentence</a>
+                        <a href={`${basePath}/more.php`} class="text-blue-600 hover:underline">All Generators</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</GeneratorLayout>

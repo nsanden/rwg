@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import DecisionMakerGenerator from '../components/generators/DecisionMakerGenerator';
+
+const title = 'Decision Maker — Easy Decision Making';
+const description = 'The Decision Maker helps you make random decisions from multiple options. Enter your choices and let chance decide for you.';
+const keywords = ['decision maker', 'random choice', 'decision generator', 'random decision', 'choice maker', 'decide for me'];
+const ogImage = 'https://randomwordgenerator.com/img/decision-maker.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <DecisionMakerGenerator client:load basePath={basePath} />
+</GeneratorLayout>

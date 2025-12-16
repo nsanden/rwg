@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import ColoringPagesGenerator from '../components/generators/ColoringPagesGenerator';
+
+const title = 'Random Coloring Pages Generator — Free Printable Coloring Sheets';
+const description = 'Generate random coloring pages for kids and adults. Free printable coloring sheets perfect for relaxation, stress relief, and creative fun.';
+const keywords = ['coloring pages', 'printable coloring sheets', 'coloring pages for kids', 'adult coloring pages', 'free coloring pages', 'random coloring generator'];
+const ogImage = 'https://randomwordgenerator.com/img/random-word-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <ColoringPagesGenerator client:load basePath={basePath} />
+</GeneratorLayout>

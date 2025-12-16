@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import ParagraphGenerator from '../components/generators/ParagraphGenerator';
+
+const title = "Random Paragraph Generator — 1000's of random paragraphs";
+const description = 'The Random Paragraph Generator is a free online tool to generate random paragraphs to help writers with creative writing and overcoming writers block.';
+const keywords = ['random paragraph generator', 'paragraphs', 'random paragraphs', 'creative writing', 'writing tool', 'content generator'];
+const ogImage = 'https://randomwordgenerator.com/img/random-paragraph-generator.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <ParagraphGenerator client:load basePath={basePath} />
+</GeneratorLayout>

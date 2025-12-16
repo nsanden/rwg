@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import CursiveLettersGenerator from '../components/generators/CursiveLettersGenerator';
+
+const title = "Cursive Letters — The Cursive Alphabet Including Cursive Capital Letters";
+const description = "The Cursive Letters Generator creates cursive letters including cursive capital letters. Practice cursive writing with multiple font styles.";
+const keywords = ['cursive letters', 'cursive alphabet', 'cursive capital letters', 'cursive writing', 'cursive generator', 'handwriting practice'];
+const ogImage = 'https://randomwordgenerator.com/img/cursive-letters.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <CursiveLettersGenerator client:load basePath={basePath} />
+</GeneratorLayout>

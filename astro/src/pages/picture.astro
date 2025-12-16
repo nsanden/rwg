@@ -1,0 +1,15 @@
+---
+import GeneratorLayout from '../layouts/GeneratorLayout.astro';
+import RandomPicturesGenerator from '../components/generators/RandomPicturesGenerator';
+
+const title = "Random Pictures — 1000+ Random Images";
+const description = "Generate random pictures and images instantly! Perfect for inspiration, creative projects, and artistic endeavors. Over 1000 free-to-use random photos available.";
+const keywords = ['random pictures', 'random images', 'free photos', 'random photo generator', 'creative inspiration', 'image placeholder', 'artistic inspiration'];
+const ogImage = 'https://randomwordgenerator.com/img/random-pictures.jpg';
+
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
+    <RandomPicturesGenerator client:load basePath={basePath} />
+</GeneratorLayout>
