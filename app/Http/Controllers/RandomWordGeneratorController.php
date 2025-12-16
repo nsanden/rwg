@@ -135,6 +135,11 @@ class RandomWordGeneratorController extends Controller
                 'comparing' => 'nullable|string|in:equals,less_than,greater_than',
                 'count' => 'nullable|integer|min:1|max:100',
                 'case' => 'nullable|string|in:uppercase,lowercase,mixed',
+                // Letter generator specific params
+                'letterLanguage' => 'nullable|string|in:English,Spanish,Chinese,French,German,Japanese,Russian,Armenian',
+                'includeCapital' => 'nullable|boolean',
+                'includeLowercase' => 'nullable|boolean',
+                'allowDuplicates' => 'nullable|string|in:true,false,1,0',
             ]);
 
             $quantity = $request->get('quantity', 5);
@@ -147,6 +152,12 @@ class RandomWordGeneratorController extends Controller
             $count = $request->get('count', 5);
             $case = $request->get('case', 'mixed');
 
+            // Letter generator specific params
+            $letterLanguage = $request->get('letterLanguage', 'English');
+            $includeCapital = $request->boolean('includeCapital', true);
+            $includeLowercase = $request->boolean('includeLowercase', true);
+            $allowDuplicates = $request->boolean('allowDuplicates', true);
+
             // Log API request
             Log::channel('api')->info('Word generation request', [
                 'quantity' => $quantity,
@@ -157,7 +168,7 @@ class RandomWordGeneratorController extends Controller
                 'user_agent' => $request->userAgent(),
             ]);
 
-            $words = $this->generateWordsFromData($quantity, $type, $language, $firstLetter, $lastLetter, $sizeType, $comparing, $count, $case);
+            $words = $this->generateWordsFromData($quantity, $type, $language, $firstLetter, $lastLetter, $sizeType, $comparing, $count, $case, $letterLanguage, $includeCapital, $includeLowercase, $allowDuplicates);
 
             $duration = round((microtime(true) - $startTime) * 1000, 2);
 
@@ -256,11 +267,11 @@ class RandomWordGeneratorController extends Controller
     /**
      * Generate words from actual word data files
      */
-    private function generateWordsFromData(int $quantity, string $type, string $language = 'en', string $firstLetter = '', string $lastLetter = '', string $sizeType = '', string $comparing = 'equals', int $count = 5, string $case = 'mixed'): array
+    private function generateWordsFromData(int $quantity, string $type, string $language = 'en', string $firstLetter = '', string $lastLetter = '', string $sizeType = '', string $comparing = 'equals', int $count = 5, string $case = 'mixed', string $letterLanguage = 'English', bool $includeCapital = true, bool $includeLowercase = true, bool $allowDuplicates = true): array
     {
         // Handle letter generation separately
         if ($type === 'letter' || $type === 'cursive-letter') {
-            return $this->generateRandomLetters($quantity, $firstLetter, $lastLetter, $case);
+            return $this->generateRandomLetters($quantity, $letterLanguage, $includeCapital, $includeLowercase, $allowDuplicates);
         }
 
         $wordData = $this->loadWordData($type, $language);
@@ -574,6 +585,7 @@ class RandomWordGeneratorController extends Controller
                 'category' => 'string|in:real,fantasy,place,pop-culture',
                 'subCategory' => 'string',
                 'gender' => 'string|in:male,female,both',
+                'allowDuplicates' => 'nullable|string|in:true,false,1,0',
                 'firstNameFirstLetter' => 'nullable|string|max:1',
                 'firstNameLastLetter' => 'nullable|string|max:1',
                 'lastNameFirstLetter' => 'nullable|string|max:1',
@@ -760,6 +772,7 @@ class RandomWordGeneratorController extends Controller
         $category = $params['category'] ?? 'real';
         $subCategory = $params['subCategory'] ?? 'any';
         $gender = $params['gender'] ?? 'both';
+        $allowDuplicates = filter_var($params['allowDuplicates'] ?? true, FILTER_VALIDATE_BOOLEAN);
 
         // Load the appropriate name data
         $nameData = $this->loadNameData($category, $subCategory);
@@ -769,8 +782,12 @@ class RandomWordGeneratorController extends Controller
         }
 
         $names = [];
+        $maxAttempts = $quantity * 10; // Prevent infinite loops
+        $attempts = 0;
 
-        for ($i = 0; $i < $quantity; $i++) {
+        while (count($names) < $quantity && $attempts < $maxAttempts) {
+            $attempts++;
+
             if ($category === 'real') {
                 $name = $this->generateRealName($nameData, $gender, $params);
             } else {
@@ -778,6 +795,10 @@ class RandomWordGeneratorController extends Controller
             }
 
             if ($name) {
+                // Check for duplicates if not allowed
+                if (!$allowDuplicates && in_array($name, $names)) {
+                    continue;
+                }
                 $names[] = $name;
             }
         }
@@ -975,6 +996,26 @@ class RandomWordGeneratorController extends Controller
     {
         $basePath = storage_path('data/names');
 
+        // Handle "any" case for non-real categories by picking a random file
+        if ($subCategory === 'any' && $category !== 'real') {
+            $dirPath = match($category) {
+                'fantasy' => "{$basePath}/fantasy-characters",
+                'place' => "{$basePath}/fantasy-places",
+                'pop-culture' => "{$basePath}/pop-culture",
+                default => ''
+            };
+
+            if (!empty($dirPath) && is_dir($dirPath)) {
+                $files = glob("{$dirPath}/*.json");
+                if (!empty($files)) {
+                    $filePath = $files[array_rand($files)];
+                    $jsonContent = file_get_contents($filePath);
+                    return json_decode($jsonContent, true) ?? [];
+                }
+            }
+            return [];
+        }
+
         $filePath = match($category) {
             'real' => $this->getRealNameFilePath($basePath, $subCategory),
             'fantasy' => "{$basePath}/fantasy-characters/{$subCategory}.json",
@@ -1040,47 +1081,64 @@ class RandomWordGeneratorController extends Controller
     /**
      * Generate random letters
      */
-    private function generateRandomLetters(int $quantity, string $firstLetter = '', string $lastLetter = '', string $case = 'mixed'): array
+    private function generateRandomLetters(int $quantity, string $language = 'English', bool $includeCapital = true, bool $includeLowercase = true, bool $allowDuplicates = true): array
     {
-        $letters = [];
-        $alphabet = range('A', 'Z');
+        // Load multi-language letter data
+        $filePath = storage_path('data/letters-multilang.json');
+        $letterData = $this->getJsonData($filePath);
+        $allLetters = $letterData[$language] ?? $letterData['English'] ?? [];
 
-        for ($i = 0; $i < $quantity; $i++) {
-            $letter = '';
+        if (empty($allLetters)) {
+            // Fallback to basic English alphabet
+            $allLetters = array_merge(
+                array_map(fn($l) => ['letter' => $l], range('a', 'z')),
+                array_map(fn($l) => ['letter' => $l], range('A', 'Z'))
+            );
+        }
 
-            // If a specific first letter is requested and we're generating the first letter
-            if ($firstLetter && $i === 0) {
-                $letter = strtoupper($firstLetter);
-            }
-            // If a specific last letter is requested and we're generating the last letter
-            elseif ($lastLetter && $i === $quantity - 1) {
-                $letter = strtoupper($lastLetter);
-            }
-            // Generate a random letter
-            else {
-                $letter = $alphabet[array_rand($alphabet)];
-            }
+        // Languages without case distinctions - include all letters
+        $noCaseLanguages = ['Chinese', 'Japanese', 'Armenian', 'Hebrew', 'Greek'];
+        if (in_array($language, $noCaseLanguages)) {
+            $availableLetters = array_column($allLetters, 'letter');
+        } else {
+            // For case-sensitive languages, filter based on preferences
+            $availableLetters = [];
+            foreach ($allLetters as $letterObj) {
+                $letter = $letterObj['letter'];
+                // Use simple ASCII check for performance (works for most Western alphabets)
+                $isUpper = preg_match('/^\p{Lu}$/u', $letter);
+                $isLower = preg_match('/^\p{Ll}$/u', $letter);
 
-            // Apply case transformation
-            switch ($case) {
-                case 'lowercase':
-                    $letters[] = strtolower($letter);
-                    break;
-                case 'uppercase':
-                    $letters[] = strtoupper($letter);
-                    break;
-                case 'mixed':
-                default:
-                    // Randomly choose between upper and lower case
-                    $letters[] = rand(0, 1) ? strtoupper($letter) : strtolower($letter);
-                    break;
+                if ($includeCapital && $isUpper) {
+                    $availableLetters[] = $letter;
+                } elseif ($includeLowercase && $isLower) {
+                    $availableLetters[] = $letter;
+                } elseif (!$isUpper && !$isLower) {
+                    // Characters without case (numbers, symbols) - include them
+                    $availableLetters[] = $letter;
+                }
             }
         }
 
+        if (empty($availableLetters)) {
+            return [['word' => 'No letters available for selected options']];
+        }
+
+        $letters = [];
+
+        if ($allowDuplicates) {
+            for ($i = 0; $i < $quantity; $i++) {
+                $letters[] = $availableLetters[array_rand($availableLetters)];
+            }
+        } else {
+            // Shuffle and take first N for no duplicates (more efficient)
+            $shuffled = $availableLetters;
+            shuffle($shuffled);
+            $letters = array_slice($shuffled, 0, min($quantity, count($shuffled)));
+        }
+
         // Format letters as word objects for the frontend
-        return array_map(function($letter) {
-            return ['word' => $letter];
-        }, $letters);
+        return array_map(fn($letter) => ['word' => $letter], $letters);
     }
 
     /**
@@ -1848,7 +1906,7 @@ class RandomWordGeneratorController extends Controller
 
             // Format facts for display
             $formattedFacts = array_map(function($fact) {
-                return $fact['fact'] . (isset($fact['source_url']) ? "\n\nSource: <a href=\"" . $fact['source_url'] . "\" rel=\"nofollow noreferrer\" target=\"_blank\" class=\"text-blue-600 hover:text-blue-700 underline break-words\">" . $fact['source_url'] . "</a>" : '');
+                return $fact['fact'] . (isset($fact['source_url']) ? "\n\n<a href=\"" . $fact['source_url'] . "\" rel=\"nofollow noreferrer\" target=\"_blank\" class=\"text-blue-600 hover:text-blue-700 underline inline-flex items-center gap-1\">Source <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14\" /></svg></a>" : '');
             }, $selectedFacts);
 
             $endTime = microtime(true);
@@ -2959,13 +3017,14 @@ class RandomWordGeneratorController extends Controller
                     break;
 
                 case 'both':
-                    // One truth and one dare (ignore quantity for this mode)
+                    // Pairs of truth and dare questions (quantity = number of pairs)
                     shuffle($truths);
                     shuffle($dares);
-                    $selectedQuestions = [
-                        array_merge($truths[0], ['type' => 'Truth']),
-                        array_merge($dares[0], ['type' => 'Dare'])
-                    ];
+                    $selectedQuestions = [];
+                    for ($i = 0; $i < $quantity; $i++) {
+                        $selectedQuestions[] = array_merge($truths[$i % count($truths)], ['type' => 'Truth']);
+                        $selectedQuestions[] = array_merge($dares[$i % count($dares)], ['type' => 'Dare']);
+                    }
                     break;
 
                 case 'any':
@@ -3341,24 +3400,59 @@ class RandomWordGeneratorController extends Controller
         try {
             $request->validate([
                 'quantity' => 'integer|min:1|max:50',
+                'category' => 'string|in:all,car,cat,dog,dragon,flower,lion,love,national-park,people',
             ]);
 
             $quantity = $request->get('quantity', 3);
+            $category = $request->get('category', 'all');
 
             // Log API request
             Log::channel('api')->info('Pictures generation request', [
                 'quantity' => $quantity,
+                'category' => $category,
                 'ip' => $request->ip(),
                 'user_agent' => $request->userAgent(),
             ]);
 
-            $filePath = storage_path('data/pictures.json');
-            if (!file_exists($filePath)) {
-                throw new \Exception('Pictures data file not found');
-            }
+            $allPictures = [];
 
-            $picturesData = $this->getJsonData($filePath);
-            $allPictures = $picturesData['data'] ?? [];
+            if ($category === 'all') {
+                // Load local pictures
+                $filePath = storage_path('data/pictures.json');
+                if (!file_exists($filePath)) {
+                    throw new \Exception('Pictures data file not found');
+                }
+
+                $picturesData = $this->getJsonData($filePath);
+                $allPictures = $picturesData['data'] ?? [];
+
+                // Add local image path prefix
+                foreach ($allPictures as &$picture) {
+                    $picture['image_url'] = '/img/pictures/' . $picture['image_url'];
+                }
+            } else {
+                // Fetch from randompicturegenerator.com
+                $jsonUrl = "https://randompicturegenerator.com/json/{$category}.json";
+                $context = stream_context_create([
+                    'http' => [
+                        'header' => "Referer: https://randompicturegenerator.com/\r\n" .
+                                   "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\r\n"
+                    ]
+                ]);
+                $jsonContent = @file_get_contents($jsonUrl, false, $context);
+
+                if ($jsonContent === false) {
+                    throw new \Exception("Failed to fetch pictures for category: {$category}");
+                }
+
+                $picturesData = json_decode($jsonContent, true);
+                $allPictures = $picturesData['data'] ?? [];
+
+                // Add remote image path prefix
+                foreach ($allPictures as &$picture) {
+                    $picture['image_url'] = "https://randompicturegenerator.com/img/{$category}-generator/" . $picture['image_url'];
+                }
+            }
 
             if (empty($allPictures)) {
                 throw new \Exception('No pictures available');
@@ -3372,6 +3466,7 @@ class RandomWordGeneratorController extends Controller
 
             Log::channel('api')->info('Pictures generation completed', [
                 'pictures_count' => count($selectedPictures),
+                'category' => $category,
                 'execution_time' => round(($endTime - $startTime) * 1000, 2) . 'ms',
                 'ip' => $request->ip(),
             ]);
