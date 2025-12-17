@@ -321,7 +321,7 @@ export default function ColorGenerator({ basePath = '' }: ColorGeneratorProps) {
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>You have likely come to this page because you're interested in colors. If that happens to be the case, we think you'll have some fun using the random color generator. This random color picker is quite easy to use and gives you color information in three different ways. You will get to see the name of the color, the hex color code for the color, and the RGB color code. Which of these will be more useful to you will depend on why you need the random color, but you can use any of them depending on your needs.</p>
 

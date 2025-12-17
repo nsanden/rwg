@@ -73,7 +73,7 @@ export default function AdjectiveGenerator({ basePath = '' }: AdjectiveGenerator
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>You're likely here looking for a number of different adjectives. If you are, you have come exactly to the right page. This random adjective calculator has hundreds of commonly used adjectives which will randomly appear with a click of a mouse depending on the number you would like to generate. Whether you're stuck trying to come up with new ways to describe something or you're just looking for creative adjectives to spice up your writing, the random adjective calculator should be a great help.</p>
 

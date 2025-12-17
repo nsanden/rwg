@@ -332,7 +332,7 @@ export default function PasswordGenerator({ basePath = '' }: PasswordGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you are looking to create a strong password for any of your accounts, creating a random password is an excellent way to protect them. This Random Password Generator will allow you to create passwords while also allowing you to determine which special characters you would like to include in the password. This will allow you to create the strongest possible password while only including the special characters you are comfortable with and will more easily remember.</p>
 

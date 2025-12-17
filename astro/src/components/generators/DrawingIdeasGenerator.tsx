@@ -238,7 +238,7 @@ export default function DrawingIdeasGenerator({ basePath = '' }: DrawingIdeasGen
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you have wandered onto this page, you are likely here because you're interested in finding cool things to draw, cute things to draw, or at least something to draw. Or maybe you're wondering "What should I draw?" If you're looking for stuff to draw then you have definitely landed in the right place because the random things to draw generator will give you plenty of drawing ideas. While all the drawing ideas are random, the results will be cute drawing ideas, simple drawing ideas, fun drawing ideas, or some other type of interesting drawing ideas.</p>
 

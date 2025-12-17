@@ -77,7 +77,7 @@ export default function VerbGenerator({ basePath = '' }: VerbGeneratorProps) {
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>For those who need to create a random word or a list of random words, there are times when it's beneficial to have a specific word type generated as opposed to just a list of words in general. If you find yourself in need of creating a random verb, the Random Verb Generator is exactly the tool you need. It sifts through over 1,000 verbs to pick out the number of random verbs you need for your particular project.</p>

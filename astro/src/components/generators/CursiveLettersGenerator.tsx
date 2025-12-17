@@ -371,7 +371,7 @@ export default function CursiveLettersGenerator({ basePath = '' }: CursiveLetter
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>In all likelihood, you ended up on this page because you were searching for cursive letters. If that happens to be the case, you're in luck. The Cursive Letters Generator was built specifically for those who were looking for cursive writing and all of the letters of the cursive alphabet. The best part is that this tool offers a number of different cursive letter options so you're able to adapt it to your specific needs. You can also go to <a href="https://cursiveletters.com/" className="text-blue-600 hover:underline">Cursive Letters</a> if you're looking for information on how to actually write the different letters of the alphabet in cursive.</p>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import MobileNav from '../components/MobileNav';
+import FeedbackWidget from '../components/FeedbackWidget';
 
 interface Props {
     title: string;
@@ -64,16 +65,24 @@ const getHref = (href: string) => {
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Google AdSense -->
+    <!-- Google AdSense account verification -->
     <meta name="google-adsense-account" content="ca-pub-8949118578199171" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8949118578199171" crossorigin="anonymous"></script>
 
     <!-- Preconnect to API -->
     <link rel="preconnect" href="https://randomwordgenerator.com" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9JP09EK201"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9JP09EK201');
+    </script>
 </head>
 <body class="min-h-screen bg-gray-50">
     <!-- Navigation - matching /var/www/rwg exactly -->
-    <nav class="bg-brand-teal shadow-lg sticky top-0 z-50">
+    <nav class="bg-brand-teal-800 shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -123,7 +132,7 @@ const getHref = (href: string) => {
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <MobileNav navLinks={generators} basePath={basePath} client:load />
+                    <MobileNav navLinks={generators} basePath={basePath} client:idle />
                 </div>
             </div>
         </div>
@@ -140,7 +149,10 @@ const getHref = (href: string) => {
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <p class="text-gray-400">Email: <a href="mailto:info@1s0s.com" class="text-gray-400 hover:text-white underline underline-offset-2">info@1s0s.com</a></p>
+                    <p class="text-gray-400">Email: <a id="contact-email" href="#" class="text-gray-400 hover:text-white underline underline-offset-2"></a></p>
+                    <script>
+                        (function(){var e='info',d='1s0s.com',a=document.getElementById('contact-email');a.href='mailto:'+e+'@'+d;a.textContent=e+'@'+d;})();
+                    </script>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4">About Us</h3>
@@ -156,7 +168,23 @@ const getHref = (href: string) => {
         </div>
     </footer>
 
+    <!-- Feedback widget -->
+    <FeedbackWidget client:idle />
+
     <!-- Toast container for notifications -->
     <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+
+    <!-- Google AdSense - loaded after page render -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var script = document.createElement('script');
+                script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8949118578199171';
+                script.async = true;
+                script.crossOrigin = 'anonymous';
+                document.body.appendChild(script);
+            }, 100);
+        });
+    </script>
 </body>
 </html>

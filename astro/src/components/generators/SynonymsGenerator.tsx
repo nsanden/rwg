@@ -107,7 +107,7 @@ export default function SynonymsGenerator({ basePath = '' }: SynonymsGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Welcome to the random synonym generator. Since you likely arrived here looking for the different synonyms for the word "random" the first result of the random synonym generator is the word "random" -- yes, we realize this first result isn't random since it's always the same, but if you press the generate button after this first result, you'll get a random word with all its synonyms. You should definitely give it a try and stick around for a while as playing with this tool can help spur your creativity and introduce new and better words for your creative writing.</p>
 

@@ -86,7 +86,7 @@ export default function WritingPromptGenerator({ basePath = '' }: WritingPromptG
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you're in search of random things to write about, you're in the correct place. We created the Random Writing Prompt Generator for the express purpose of helping you to find interesting things to write about. This tool is easy to use. First, choose the number of writing prompts you'd like to see and then click on the button. A random assortment of fun writing prompts will instantly appear.</p>
 

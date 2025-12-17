@@ -270,7 +270,7 @@ export default function ColoringPagesGenerator({ basePath = '' }: ColoringPagesG
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>We're happy that you found your way to our little spot on the Internet. If you ended up here because you were looking for coloring pages, you may have found the perfect tool. There are going to be times in your life when you just want to color and when those moments hit, this is the perfect generator for you.</p>
 

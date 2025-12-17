@@ -84,7 +84,7 @@ export default function WouldYouRatherGenerator({ basePath = '' }: WouldYouRathe
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Are you ready to play a game of Would You Rather but you're having trouble coming up with good Would You Rather questions? You've ended up at exactly the place to solve that dilemma. With over 500 Would You Rather questions appearing randomly, you're sure to find plenty of questions to make you think long and hard about which you'd prefer. You can decide to generate one random question at a time or several and choose the one that you like best. No matter how you decide to use the generator, you're bound to have a lot of fun deciding which option you would choose with these Would You Rather questions.</p>
 

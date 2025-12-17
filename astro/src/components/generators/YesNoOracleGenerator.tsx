@@ -193,7 +193,7 @@ export default function YesNoOracleGenerator({ basePath = '' }: YesNoOracleGener
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>Welcome to the Random Yes / No Oracle. If you have a question and you're looking for an answer to it, you've come to the correct place. Our random decision-maker will give a random "yes" or a random "no" to every question you have. Using this free online tool is easy. All you do is type in your question, hit the button and you'll instantly get a "yes" or "no" answer to the question that's been on your mind.</p>

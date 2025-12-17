@@ -156,7 +156,7 @@ export default function WordGenerator({ basePath = '' }: WordGeneratorProps) {
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>Welcome to the website. If you're here, you're likely looking to find random words. Random Word Generator is the perfect tool to help you do this. While this tool isn't a word creator, it is a word generator that will generate random words for a variety of activities or uses. Even better, it allows you to adjust the parameters of the random words to best fit your needs.</p>

@@ -209,7 +209,7 @@ export default function TongueTwisterGenerator({ basePath = '' }: TongueTwisterG
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you love tongue twisters, you've come to the correct place. The only thing the random tongue twisters generator does is spit out tongue twisters to challenge your ability to say them. This includes both funny tongue twisters and hard tongue twisters among a variety of others. There are plenty of tongue twisters for adults and kids. All you need to do is to press the generate button and a tongue twister will instantly appear to challenge your English speaking ability.</p>
 

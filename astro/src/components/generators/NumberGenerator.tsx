@@ -198,7 +198,7 @@ export default function NumberGenerator({ basePath = '' }: NumberGeneratorProps)
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you're looking to generate random numbers, you've found the correct website. Our Random Number Generator gives you several different options when you need to generate random numbers. The entire process is quite simple. First, pick the number of random numbers you need to be generated, then choose the number range you'd like the random number to be generated between. Once done, click the "Generate Random Numbers" button and they will instantly appear. You can determine a specific range of numbers or you can use one of the several set number generators. These include random numbers between 1 and 10, random numbers between 1 and 100, and random numbers between 1 and 1000. For those who may need to generate negative numbers, we also have the option of random numbers from -100 to 100.</p>
 

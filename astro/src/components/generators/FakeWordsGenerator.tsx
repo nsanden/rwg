@@ -79,7 +79,7 @@ export default function FakeWordsGenerator({ basePath = '' }: FakeWordsGenerator
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>You have arrived at this webpage in all likelihood because you are in need of some fake words or a fake word generator. If that's the case, you're in exactly the right place. We created the Random Fake Word Generator specifically so you can find a bunch of fake words (sometimes called pseudo words, made up words, or nonsense words). Creating these made-up words is simple. All you need to do is choose the number of fake words you'd like to see and then hit the button. You'll instantly see the results.</p>

@@ -117,7 +117,7 @@ export default function NeverHaveIEverGenerator({ basePath = '' }: NeverHaveIEve
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you arrived here because you're interested in playing a game of Never Have I Ever, you've come to the right place. The Never Have I Ever Questions Generator has hundreds of questions for you to choose from including entertainment, funny, good, for kids, embarrassing, gross, food, rule-breaking, drinking, and dirty. You simply need to choose which of the categories of questions you want to use for your group and then click the button. Once done, a random Never Have I Ever question will appear and the game can begin.</p>
 

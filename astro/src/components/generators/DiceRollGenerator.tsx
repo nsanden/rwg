@@ -210,7 +210,7 @@ export default function DiceRollGenerator({ basePath = '' }: DiceRollGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>In all likelihood, you've reached this web-page because you're in search of a tool that'll allow you to roll dice. You're in luck since this is exactly why the Random Dice Roll Generator was created. One of the best aspects of this free online tool is that you can choose to roll as many dice as you want which can save you countless hours trying to locate the right number of dice in your house. It also makes it much easier to record the results if you need to roll the dice hundreds of times.</p>
 

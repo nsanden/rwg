@@ -212,7 +212,7 @@ export default function BreakfastIdeasGenerator({ basePath = '' }: BreakfastIdea
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>If you've been having trouble deciding what to make for breakfast, you've landed at the perfect spot. We completely understand. You have fallen into a breakfast routine where you have the same or similar breakfasts day after day and you have reached the point where you'd like to try something different. It's completely frustrating knowing you want something new for breakfast but not being able to come up with breakfast ideas for something different. That's exactly why we created the Breakfast Ideas generator. We hope this random breakfast idea generator will help you find new and exciting breakfast ideas by showing you options that you may not have otherwise considered. You may also find our <a href={`${basePath}/dinner-ideas.php`} className="text-blue-600 hover:text-blue-800">dinner ideas</a> tool useful if you're having the same issue of having a difficult time deciding on that meal as well.</p>

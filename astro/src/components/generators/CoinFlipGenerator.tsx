@@ -253,7 +253,7 @@ export default function CoinFlipGenerator({ basePath = '' }: CoinFlipGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Welcome to the Random Coin Flip Generator, a free online tool that allows you to produce random heads or tails results with a simple click of a mouse. Even better, this coin flipper allows you to flip multiple coins all at once saving you a lot of time and effort if you happen to need to flip a coin 100 times or even 1,000 times. If you're looking for random coin flipping results, you've come to the right place.</p>
 

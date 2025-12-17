@@ -108,7 +108,7 @@ export default function CharadesGenerator({ basePath = '' }: CharadesGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>You likely ended up at this webpage because you're looking to play a game of charades. If that happens to be the case, we think you'll find our random charades generator of great help. One of the biggest problems when playing the game of charades is coming up with quality charades words to use in the game. The random charade words generator completely takes this issue away and makes playing charades with family or friends super easy whenever the desire to play happens.</p>
 

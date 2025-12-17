@@ -82,7 +82,7 @@ export default function VocabularyGenerator({ basePath = '' }: VocabularyGenerat
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Chances are you ended up on this webpage because you're in search of random vocabulary words. Luckily, that's exactly why we created the Random Vocabulary Generator. Using this vocabulary word picker is straightforward. Take a moment to decide how many vocabulary words you would like to see at one time, then press the button. A random set of vocabulary words will instantly appear on the screen.</p>
 

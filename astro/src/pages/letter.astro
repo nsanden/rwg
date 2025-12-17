@@ -11,5 +11,5 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
-    <LetterGenerator client:load basePath={basePath} />
+    <LetterGenerator client:idle basePath={basePath} />
 </GeneratorLayout>

@@ -110,7 +110,7 @@ export default function TruthOrDareGenerator({ basePath = '' }: TruthOrDareGener
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Playing Truth or Dare is a right of passage for anyone growing up. It's a game that's fun, exciting and a bit nerve-wracking at the same time. One of the most difficult parts of the game is coming up with good truth questions and good dare questions when playing. That's where the Truth or Dare Questions generator comes in. It contains over 1000 good Truth or Dare questions for 2025 so that the game will always be interesting without all the players having to spend time during the game trying to think of good questions to ask. The game of Truth or Dare is a timeless classic that can entertain for hours. Friendships can be forged in the silly and wild or dramatic and moving outcomes that come from the simple question "truth or dare?"</p>
 

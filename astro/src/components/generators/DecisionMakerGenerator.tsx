@@ -207,7 +207,7 @@ export default function DecisionMakerGenerator({ basePath = '' }: DecisionMakerG
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>There are going to be many times in your life when you're going to need to make a decision when you may not really have a preference. Wouldn't it be great to have a decision maker in these instances? That's exactly the reason we created this decision making tool. Using this tool is quite simple. All you need to do is fill in the choices for the decision you need to make and then hit the button. The decision maker will randomly choose one of the choices you provided to give you an answer.</p>
 

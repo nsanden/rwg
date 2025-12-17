@@ -76,7 +76,7 @@ export default function QuestionGenerator({ basePath = '' }: QuestionGeneratorPr
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires. The process is straightforward. Indicate the number of random questions you want to see and then click on the "Generate Random Questions" button. You will instantly see a random assortment of questions corresponding to the number you indicated you wanted to see. There are a number of ways random questions can be useful.</p>
 

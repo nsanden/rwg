@@ -744,7 +744,7 @@ export default function NameGenerator({ basePath = '' }: NameGeneratorProps) {
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>For those who are looking to create a random name or who are looking for a name randomizer, the Random Name Generator is the perfect tool for you. The tool is quite easy to use. The first step is to choose the actual way you want to use it. There are two distinct ways it can be used depending on whether you want to create entirely new random names or if you want to use a name randomizer as a name picker from a list of names you already have.</p>
 

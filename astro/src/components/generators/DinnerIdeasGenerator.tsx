@@ -212,7 +212,7 @@ export default function DinnerIdeasGenerator({ basePath = '' }: DinnerIdeasGener
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>Welcome to Dinner Ideas. You're likely here because it's time to think about what you want to eat for dinner and you can't decide. Even more frustrating is that nothing that you can think of sounds appealing. We've all been there. In fact, we created the Dinner Ideas Generator for exactly that reason. Nothing is more frustrating than knowing it's time to decide what meal to make and not being able to come up with anything that sounds appealing. We hope that this random dinner idea generator will help you solve this issue by presenting a number of meal ideas you may not have previously considered. We've found that people use this free online tool in a variety of ways, but below you'll find a few of the more common ones. If you find this tool useful, you may also be interested in checking out some <a href={`${basePath}/breakfast-ideas.php`} className="text-blue-600 hover:text-blue-800">breakfast ideas</a>.</p>

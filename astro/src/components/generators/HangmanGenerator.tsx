@@ -82,7 +82,7 @@ export default function HangmanGenerator({ basePath = '' }: HangmanGeneratorProp
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>Hangman is a great game for plenty of occasions. It's a great way for kids to entertain themselves in the car on a long trip or if you need to keep them occupied for a bit before dinner. A group of students can entertain themselves if there is extra time at the end of class. It's a good suggestion for friends who "have nothing to do." In fact, it's a fun game to play for anyone at any time they have some free time and aren't sure what to do to fill it. Hangman can even be used to reveal a surprise like a question or exciting news.</p>
 

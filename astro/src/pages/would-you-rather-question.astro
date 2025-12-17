@@ -11,5 +11,5 @@ const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <GeneratorLayout title={title} description={description} keywords={keywords} ogImage={ogImage}>
-    <WouldYouRatherGenerator client:load basePath={basePath} />
+    <WouldYouRatherGenerator client:idle basePath={basePath} />
 </GeneratorLayout>

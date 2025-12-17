@@ -76,7 +76,7 @@ export default function FactsGenerator({ basePath = '' }: FactsGeneratorProps) {
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>If you're looking for random facts, you've arrived at the correct webpage. The Random Fact Generator has thousands of facts ready to be revealed with a simple click of a mouse. Even better, all the random fun facts also come with a source link so that you know they're true. One of the most frustrating parts of many of the many random fun fact lists on the Internet is that many of the supposed facts aren't actually facts. If you take the time to check the "fact" it ends up not being true or only partially true. By providing the source for every fun fact in our generator, you can research to easily confirm that the fact is actually true.</p>
 

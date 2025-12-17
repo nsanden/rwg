@@ -180,7 +180,7 @@ export default function LetterGenerator({ basePath = '' }: LetterGeneratorProps)
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>The Random Letter Generator is a free online tool that allows you to generate random letters. If you want to see letters in cursive, check our our <a href={`${basePath}/cursive-letter.php`} className="text-blue-600 hover:underline">Cursive Letters</a> generator instead. The process is quite easy. All you need to do is select the number of different random letters your want generated, what language alphabet you want and then if you want upper, lower or both cases displayed. Once this is done, all you need to do is hit the "Generate Random Letter" button and your random letters will appear.</p>
 

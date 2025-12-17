@@ -77,7 +77,7 @@ export default function NounGenerator({ basePath = '' }: NounGeneratorProps) {
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>There may be times when you'll want to generate a random list of a particular part of speech rather than all words in general. For example, you may want to create a random list of just nouns. That's exactly what the random noun generator does.</p>

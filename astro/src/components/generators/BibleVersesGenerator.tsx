@@ -81,7 +81,7 @@ export default function BibleVersesGenerator({ basePath = '' }: BibleVersesGener
 
                 {/* About Section */}
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}
                         <ArticleContent>
                             <p>You're likely on this webpage because you're interested in finding new and interesting Bible verses. If that's the case, you're in luck. We created the Random Bible Verses Generator for the express purpose of allowing people to discover all the wonderful Bible verses within the Holy Book. Using this free Bible tool is quite simple. You simply need to choose the number of Bible verses you want to see and then click on the button. You'll instantly see your Bible verses appear before your eyes.</p>

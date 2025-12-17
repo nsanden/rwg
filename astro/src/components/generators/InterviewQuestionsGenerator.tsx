@@ -212,7 +212,7 @@ export default function InterviewQuestionsGenerator({ basePath = '' }: Interview
                 </div>
 
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         <ArticleContent>
                             <p>One of the most important aspects of getting the job you want is doing well during your job interview. While there are a wide variety of factors that play into how a job interview ultimately goes, one key aspect is how well you manage to answer interview questions given to you by those at the company. The truth is it's impossible to know exactly what questions you will be asked during your job interview, but that doesn't mean you should leave this part of the job interview to chance. In fact, the best course of action you can take is to practice your responses to job interview questions as this will provide the opportunity to improve your answers and increase the likelihood of landing the job.</p>
 
