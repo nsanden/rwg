@@ -76,6 +76,10 @@ export default function WeirdWordsGenerator({ basePath = '' }: WeirdWordsGenerat
                 </div>
 
                 {/* About Section */}
+                <div id="RWG_Below_Generator_Mobile_300px" className="md:hidden google-ad-container flex justify-center mt-8" style={{ height: '280px', maxWidth: '336px', margin: '2rem auto' }}>
+                    <div id="div-gpt-ad-1578531360465-0" className="text-center"></div>
+                </div>
+
                 <div className="mt-8 bg-white rounded-lg shadow-lg p-8">
                     <div className="grid grid-cols-1 md:grid-cols-[1fr_355px] gap-8">
                         {/* Left Column - Article Content */}

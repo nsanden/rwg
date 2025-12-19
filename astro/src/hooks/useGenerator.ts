@@ -17,6 +17,23 @@ interface GenerateParams {
     [key: string]: any;
 }
 
+// Client-side word cache for instant regeneration
+const wordCache: { [key: string]: string[] } = {};
+const CACHEABLE_TYPES = ['all', 'noun', 'verb', 'adjective', 'basic'];
+const CACHE_SIZE = 500; // Fetch 500 words to cache
+
+// Helper to check if filters are applied
+const hasFilters = (params: GenerateParams): boolean => {
+    const filterKeys = ['firstLetter', 'lastLetter', 'sizeType', 'comparing', 'count'];
+    return filterKeys.some(key => params[key] && params[key] !== '');
+};
+
+// Helper to get random items from array
+const getRandomFromCache = (cache: string[], qty: number): string[] => {
+    const shuffled = [...cache].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, qty);
+};
+
 // Simple toast function for Astro (no react-hot-toast dependency in component)
 const showToast = (message: string, type: 'success' | 'error' = 'success') => {
     const container = document.getElementById('toast-container');
@@ -66,6 +83,20 @@ export function useGenerator(options: UseGeneratorOptions = {}) {
 
     // Generate items function
     const generateItems = async (params: GenerateParams = {}) => {
+        const wordType = params.type || defaultType;
+        const cacheKey = wordType;
+
+        // Check if we can use cached words (cacheable type + no filters)
+        const canUseCache = CACHEABLE_TYPES.includes(wordType) && !hasFilters(params);
+
+        // If we have cached words and can use cache, return instantly from cache
+        if (canUseCache && wordCache[cacheKey] && wordCache[cacheKey].length >= quantity) {
+            const cachedResults = getRandomFromCache(wordCache[cacheKey], quantity);
+            setItems(cachedResults);
+            setShowFavorites(false);
+            return;
+        }
+
         // Cancel any pending request (only if still active)
         if (abortControllerRef.current && !abortControllerRef.current.signal.aborted) {
             abortControllerRef.current.abort();
@@ -90,7 +121,9 @@ export function useGenerator(options: UseGeneratorOptions = {}) {
 
         try {
             const searchParams = new URLSearchParams();
-            searchParams.append('quantity', quantity.toString());
+            // If cacheable and no cache yet, request more words to cache
+            const requestQuantity = (canUseCache && !wordCache[cacheKey]) ? CACHE_SIZE : quantity;
+            searchParams.append('quantity', requestQuantity.toString());
 
             // Add type if not already in params and defaultType exists
             if (!params.type && defaultType && defaultType !== 'all') {
@@ -140,17 +173,26 @@ export function useGenerator(options: UseGeneratorOptions = {}) {
 
             if (data.success) {
                 // Use custom transform if provided
+                let resultItems: any[];
                 if (transformResponse) {
-                    const transformedItems = transformResponse(data);
-                    setItems(transformedItems);
+                    resultItems = transformResponse(data);
                 } else {
                     // Handle different response formats - prioritize new 'data' field, fallback to legacy fields
-                    const resultItems = data.data || data.words || data.numbers || data.passwords || data.sentences || data.paragraphs || data.prompts || data.phrases || data.names || data.questions || data.facts || data.gifts || data.dinners || data.ideas || data.books || [];
+                    resultItems = data.data || data.words || data.numbers || data.passwords || data.sentences || data.paragraphs || data.prompts || data.phrases || data.names || data.questions || data.facts || data.gifts || data.dinners || data.ideas || data.books || [];
                     // Convert numbers to strings if needed
-                    const processedItems = resultItems.map((item: any) =>
+                    resultItems = resultItems.map((item: any) =>
                         typeof item === 'number' ? item.toString() : item
                     );
-                    setItems(processedItems);
+                }
+
+                // Cache the results if cacheable
+                if (canUseCache && !wordCache[cacheKey]) {
+                    wordCache[cacheKey] = resultItems as string[];
+                    // Return only the requested quantity
+                    const displayItems = getRandomFromCache(resultItems as string[], quantity);
+                    setItems(displayItems);
+                } else {
+                    setItems(resultItems);
                 }
                 setShowFavorites(false);
             } else {

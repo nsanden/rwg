@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { usePersistedState } from './useFormPersistence';
 
 // Simple toast function for Astro
 const showToast = (message: string, type: 'success' | 'error' = 'success') => {
@@ -30,18 +31,22 @@ interface UseGeneratorFormOptions {
     customState?: {
         [key: string]: CustomStateItem;
     };
+    /** Key prefix for localStorage persistence (e.g., 'words', 'nouns'). If not provided, uses wordType. */
+    persistKey?: string;
 }
 
-export function useGeneratorForm({ wordType, onGenerate, setShowFavorites, setQuantity, customParamBuilder, customState }: UseGeneratorFormOptions) {
-    // Common form states
+export function useGeneratorForm({ wordType, onGenerate, setShowFavorites, setQuantity, customParamBuilder, customState, persistKey }: UseGeneratorFormOptions) {
+    const key = persistKey || wordType;
+
+    // Common form states - persisted to localStorage
     const [showMoreOptions, setShowMoreOptions] = useState(false);
     const [showMobileShare, setShowMobileShare] = useState(false);
-    const [firstLetter, setFirstLetter] = useState('');
-    const [lastLetter, setLastLetter] = useState('');
-    const [sizeType, setSizeType] = useState('');
-    const [comparing, setComparing] = useState('equals');
-    const [count, setCount] = useState(5);
-    const [noDuplicates, setNoDuplicates] = useState(false);
+    const [firstLetter, setFirstLetter] = usePersistedState(`${key}_firstLetter`, '');
+    const [lastLetter, setLastLetter] = usePersistedState(`${key}_lastLetter`, '');
+    const [sizeType, setSizeType] = usePersistedState(`${key}_sizeType`, '');
+    const [comparing, setComparing] = usePersistedState(`${key}_comparing`, 'equals');
+    const [count, setCount] = usePersistedState(`${key}_count`, 5);
+    const [noDuplicates, setNoDuplicates] = usePersistedState(`${key}_noDuplicates`, false);
 
     // Generate function that builds params based on form state
     const handleGenerate = () => {

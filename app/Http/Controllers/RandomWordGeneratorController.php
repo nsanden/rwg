@@ -126,7 +126,7 @@ class RandomWordGeneratorController extends Controller
 
         try {
             $request->validate([
-                'quantity' => 'integer|min:1|max:100',
+                'quantity' => 'integer|min:1|max:500',
                 'type' => 'string|in:all,basic,noun,verb,adjective,extended,non-english,synonym_all,actions,antonyms,descriptive,feelings,negative,positive,talk_speech,other,weird,fake,letter,cursive-letter',
                 'language' => 'string|in:en,es,hi,ar,de,ru,zh,jp,ko,la,it',
                 'firstLetter' => 'nullable|string|max:1',
@@ -215,7 +215,7 @@ class RandomWordGeneratorController extends Controller
 
         try {
             $request->validate([
-                'quantity' => 'integer|min:1|max:100',
+                'quantity' => 'integer|min:1|max:500',
             ]);
 
             $quantity = $request->get('quantity', 5);
@@ -349,11 +349,37 @@ class RandomWordGeneratorController extends Controller
             }
         }
 
-        // Get random words - use database random sampling
-        $words = $query->inRandomOrder()->limit($quantity)->get(['word', 'syllables']);
-
-        // Return as word strings array
-        return $words->pluck('word')->toArray();
+        // Fast random selection using random offsets instead of ORDER BY RAND()
+        $totalCount = $query->count();
+        
+        if ($totalCount === 0) {
+            return [];
+        }
+        
+        // If we need more words than available, just get all
+        if ($totalCount <= $quantity) {
+            return $query->pluck('word')->shuffle()->toArray();
+        }
+        
+        // Get random offsets and fetch words at those positions
+        $words = collect();
+        $usedOffsets = [];
+        $attempts = 0;
+        $maxAttempts = $quantity * 3; // Prevent infinite loops
+        
+        while ($words->count() < $quantity && $attempts < $maxAttempts) {
+            $offset = mt_rand(0, $totalCount - 1);
+            if (!in_array($offset, $usedOffsets)) {
+                $usedOffsets[] = $offset;
+                $word = (clone $query)->offset($offset)->limit(1)->value('word');
+                if ($word) {
+                    $words->push($word);
+                }
+            }
+            $attempts++;
+        }
+        
+        return $words->toArray();
     }
 
     /**
@@ -581,7 +607,7 @@ class RandomWordGeneratorController extends Controller
 
         try {
             $request->validate([
-                'quantity' => 'integer|min:1|max:100',
+                'quantity' => 'integer|min:1|max:500',
                 'category' => 'string|in:real,fantasy,place,pop-culture',
                 'subCategory' => 'string',
                 'gender' => 'string|in:male,female,both',
@@ -1149,7 +1175,7 @@ class RandomWordGeneratorController extends Controller
         $startTime = microtime(true);
         try {
             $request->validate([
-                'quantity' => 'integer|min:1|max:100',
+                'quantity' => 'integer|min:1|max:500',
             ]);
             $quantity = $request->get('quantity', 5);
             // Log API request
@@ -1608,7 +1634,7 @@ class RandomWordGeneratorController extends Controller
         $startTime = microtime(true);
         try {
             $request->validate([
-                'quantity' => 'integer|min:1|max:100',
+                'quantity' => 'integer|min:1|max:500',
             ]);
 
             $quantity = $request->get('quantity', 10);

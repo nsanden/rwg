@@ -50,6 +50,7 @@ return [
     'allowed_domains' => [
         'https://randomwordgenerator.com',
         'https://www.randomwordgenerator.com',
+        'https://staging.randomwordgenerator.com',
         'https://newrwg.vps.webdock.cloud',
         'http://localhost',
         'http://localhost:8000',

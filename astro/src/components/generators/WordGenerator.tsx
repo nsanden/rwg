@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import BaseGeneratorForm from '../Forms/BaseGeneratorForm';
 import ItemsDisplay from '../Shared/ItemsDisplay';
 import OtherGenerators from '../Shared/OtherGenerators';
 import ArticleContent from '../Shared/ArticleContent';
 import { useGenerator } from '../../hooks/useGenerator';
 import { useGeneratorForm } from '../../hooks/useGeneratorForm';
+import { usePersistedState } from '../../hooks/useFormPersistence';
 
 interface WordGeneratorProps {
     basePath?: string;
@@ -13,13 +14,13 @@ interface WordGeneratorProps {
 const LANGUAGES = [
     { code: 'es', name: 'Spanish' },
     { code: 'de', name: 'German' },
-    { code: 'fr', name: 'French' },
+    { code: 'hi', name: 'Hindi' },
     { code: 'it', name: 'Italian' },
     { code: 'ru', name: 'Russian' },
     { code: 'zh', name: 'Chinese' },
     { code: 'jp', name: 'Japanese' },
+    { code: 'ko', name: 'Korean' },
     { code: 'ar', name: 'Arabic' },
-    { code: 'el', name: 'Greek' },
     { code: 'la', name: 'Latin' },
 ];
 
@@ -40,15 +41,15 @@ export default function WordGenerator({ basePath = '' }: WordGeneratorProps) {
         copyToClipboard,
     } = useGenerator({
         defaultType: 'all',
-        autoGenerate: true,
+        autoGenerate: false,
         favoritesKey: 'wordsFavorites',
         apiEndpoint: '/api/generate/words',
         itemName: 'words'
     });
 
-    // Word type state (specific to word generator)
-    const [wordType, setWordType] = useState('all');
-    const [language, setLanguage] = useState('es');
+    // Word type state (specific to word generator) - persisted
+    const [wordType, setWordType] = usePersistedState('words_wordType', 'all');
+    const [language, setLanguage] = usePersistedState('words_language', 'es');
 
     // Use the shared form state management hook with custom param builder
     const formState = useGeneratorForm({
@@ -60,8 +61,17 @@ export default function WordGenerator({ basePath = '' }: WordGeneratorProps) {
             generateWords({ ...params, ...extraParams });
         },
         setShowFavorites,
-        setQuantity
+        setQuantity,
+        persistKey: 'words'
     });
+
+    // Initial generation with persisted values
+    useEffect(() => {
+        const params = wordType === 'non-english'
+            ? { type: wordType, language }
+            : { type: wordType };
+        generateWords(params);
+    }, []);
 
     // Custom options for word type selector
     const wordTypeOptions = (

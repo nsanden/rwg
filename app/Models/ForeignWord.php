@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ForeignWord extends Model
 {
-    protected $table = 'foreign_words';
+    protected $table = 'foreign_word';
 
     protected $primaryKey = 'word';
 

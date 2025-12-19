@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ExtendedWord extends Model
 {
-    protected $table = 'extended_words';
+    protected $table = 'word';
 
     protected $primaryKey = 'word';
 
